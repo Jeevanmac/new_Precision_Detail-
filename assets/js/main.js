@@ -2,10 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 0. Glass Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     if (navbar) {
-        const isAlwaysScrolled = navbar.classList.contains('always-scrolled');
         const onScroll = () => {
-            if (isAlwaysScrolled) return;
-             const isAlwaysScrolled = navbar.classList.contains('always-scrolled') || 
+            const isAlwaysScrolled = navbar.classList.contains('always-scrolled') || 
                 (navbar.classList.contains('always-scrolled-light') && !document.documentElement.classList.contains('dark'));
             
             if (isAlwaysScrolled || window.scrollY > 40) {
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const updateThemeIcons = () => {
-        
         const isDark = html.classList.contains('dark');
         themeToggles.forEach(btn => {
             const darkIcon = btn.querySelector('.hidden.dark\\:block');
