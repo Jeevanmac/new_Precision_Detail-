@@ -24,62 +24,7 @@
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
 
-<!-- SCRIPTS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-// AOS INIT
-AOS.init({
-  duration: 800,
-  once: true,
-  disable: window.innerWidth < 768
-});
-
-// SCROLL TOP
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// ADMIN EDIT
-function editText() {
-  let text = prompt("Edit Title:");
-  if (text) {
-    document.getElementById("heroTitle").innerText = text;
-    localStorage.setItem("heroTitle", text);
-  }
-}
-
-document.getElementById("heroTitle").innerText =
-  localStorage.getItem("heroTitle") || "The Art of Precision";
-
-// SLIDER (RESPONSIVE)
-const container = document.getElementById("sliderContainer");
-const before = document.getElementById("beforeImage");
-const handle = document.getElementById("sliderHandle");
-
-function moveSlider(x) {
-  const rect = container.getBoundingClientRect();
-  let pos = x - rect.left;
-
-  if (pos < 0) pos = 0;
-  if (pos > rect.width) pos = rect.width;
-
-  before.style.width = pos + "px";
-  handle.style.left = pos + "px";
-}
-
-// Mouse
-container.addEventListener("mousemove", (e) => {
-  if (e.buttons === 1) moveSlider(e.clientX);
-});
-
-// Touch
-container.addEventListener("touchmove", (e) => {
-  moveSlider(e.touches[0].clientX);
-});
-</script>
-
-        
+      
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
 <header id="navbar" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-transparent px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 <div class="flex items-center gap-3">
@@ -598,5 +543,69 @@ container.addEventListener("touchmove", (e) => {
                 </div>
 </div>
 </footer>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // AOS INIT
+  AOS.init({
+    duration: 800,
+    once: true,
+    disable: window.innerWidth < 768
+  });
+
+  // HERO TEXT
+  const hero = document.getElementById("heroTitle");
+  if (hero) {
+    hero.innerText = localStorage.getItem("heroTitle") || hero.innerText;
+  }
+
+  // EDIT FUNCTION
+  window.editText = function () {
+    let text = prompt("Edit Title:");
+    if (text && hero) {
+      hero.innerText = text;
+      localStorage.setItem("heroTitle", text);
+    }
+  };
+
+  // SCROLL TOP
+  window.scrollToTop = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // SLIDER FIX
+  const container = document.getElementById("sliderContainer");
+  const before = document.getElementById("beforeImage");
+  const handle = document.getElementById("sliderHandle");
+
+  if (container && before && handle) {
+    function moveSlider(x) {
+      const rect = container.getBoundingClientRect();
+      let pos = x - rect.left;
+
+      pos = Math.max(0, Math.min(pos, rect.width));
+
+      before.style.width = pos + "px";
+      handle.style.left = pos + "px";
+    }
+
+    container.addEventListener("mousemove", (e) => {
+      if (e.buttons === 1) moveSlider(e.clientX);
+    });
+
+    container.addEventListener("touchmove", (e) => {
+      moveSlider(e.touches[0].clientX);
+    });
+  }
+
+});
+</script>
+
+  
+        
 <script src="../assets/js/main.js"></script>
 </body></html>
