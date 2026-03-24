@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 0. Glass Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     if (navbar) {
+        const isAlwaysScrolled = navbar.classList.contains('always-scrolled');
         const onScroll = () => {
+            if (isAlwaysScrolled) return;
             if (window.scrollY > 40) {
                 navbar.classList.add('scrolled');
             } else {
