@@ -165,6 +165,9 @@
         </p>
     </div>
 </div><!-- End Mobile Drawer -->
+
+
+    
 <main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-12 pt-[90px] md:pt-[5%]">
 <section class="flex flex-col gap-4 text-center mb-16">
 <h1 class="text-slate-900 dark:text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight">Detailing Packages</h1>
@@ -343,6 +346,24 @@
 </div>
 </section>
 </main>
+
+<script>
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.className = navbar.className
+      .replace(/bg-white|dark:bg-charcoal/g, "")
+      .trim();
+
+    navbar.classList.add("bg-black", "shadow");
+  } else {
+    navbar.classList.remove("bg-black", "shadow");
+  }
+});
+</script>
+
+    
 <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
 <div class="max-w-7xl mx-auto px-6 lg:px-20 py-12">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
