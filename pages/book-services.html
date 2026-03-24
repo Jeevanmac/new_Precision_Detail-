@@ -33,7 +33,8 @@
 <script>
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
-  if (window.scrollY > 40) {
+   const isAlwaysScrolledLight = navbar.classList.contains("always-scrolled-light") && !document.documentElement.classList.contains("dark");
+  if (isAlwaysScrolledLight || window.scrollY > 40) {
     navbar.classList.add("backdrop-blur-xl", "bg-black/20", "border-white/10", "shadow-lg");
   } else {
     navbar.classList.remove("backdrop-blur-xl", "bg-black/20", "border-white/10", "shadow-lg");
@@ -41,8 +42,8 @@ window.addEventListener("scroll", function () {
 });
 </script>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<header id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-5 lg:px-8 py-3 min-h-[72px] bg-transparent border-b border-transparent transition-all duration-500">
-  <div class="flex items-center gap-4">
+<header id="navbar" class="always-scrolled-light fixed top-0 left-0 w-full z-50 flex items-center justify-between px-5 lg:px-8 py-3 min-h-[72px] bg-transparent border-b border-transparent transition-all duration-500">
+    <div class="flex items-center gap-4">
     <a href="index.html" class="flex items-center gap-2">
       <h2 class="hidden md:block text-slate-900 dark:text-slate-100 text-[15px] font-black tracking-tighter uppercase italic">
         Precision Detail <span class="text-orange-500 text-[10px]">●</span>
