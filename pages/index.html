@@ -23,6 +23,141 @@
     <link rel="stylesheet" href="../assets/css/rtl.css">
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
+
+        <!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- BEFORE AFTER SLIDER -->
+<section class="py-16 md:py-24 bg-background-dark" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto px-4 md:px-6">
+
+    <h2 class="serif-heading text-3xl md:text-5xl text-white text-center mb-8">
+      Transformation Reveal
+    </h2>
+
+    <div id="sliderContainer" class="relative w-full h-[250px] sm:h-[350px] md:h-[450px] overflow-hidden rounded-2xl">
+      
+      <!-- AFTER -->
+      <img src="https://images.unsplash.com/photo-1617814065890-6f4b2c5b5b89" class="absolute inset-0 w-full h-full object-cover">
+
+      <!-- BEFORE -->
+      <div id="beforeImage" class="absolute inset-0 w-1/2 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537" class="w-full h-full object-cover">
+      </div>
+
+      <!-- HANDLE -->
+      <div id="sliderHandle" class="absolute top-0 left-1/2 w-1 h-full bg-primary flex items-center justify-center">
+        <div class="w-6 h-6 bg-primary rounded-full border-2 border-white"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-20 bg-background-dark text-center" data-aos="fade-up">
+  <h2 class="serif-heading text-4xl text-white mb-10">Why Choose Us</h2>
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+
+    <div class="p-6 border border-white/10 rounded-xl">
+      <h3 class="text-primary text-xl font-bold">Premium Quality</h3>
+      <p class="text-slate-400 text-sm mt-2">Top-tier detailing products & methods.</p>
+    </div>
+
+    <div class="p-6 border border-white/10 rounded-xl">
+      <h3 class="text-primary text-xl font-bold">Expert Team</h3>
+      <p class="text-slate-400 text-sm mt-2">Professionals with years of experience.</p>
+    </div>
+
+    <div class="p-6 border border-white/10 rounded-xl">
+      <h3 class="text-primary text-xl font-bold">Guaranteed Finish</h3>
+      <p class="text-slate-400 text-sm mt-2">Showroom-level perfection every time.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FLOATING BUTTONS -->
+<div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 flex flex-col gap-2 z-50">
+
+  <a href="https://wa.me/91XXXXXXXXXX"
+     class="w-12 h-12 md:w-14 md:h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+    <span class="material-symbols-outlined text-white">chat</span>
+  </a>
+
+  <button onclick="scrollToTop()"
+     class="w-12 h-12 md:w-14 md:h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+    <span class="material-symbols-outlined text-white">rocket_launch</span>
+  </button>
+
+</div>
+
+<!-- ADMIN EDIT -->
+<div class="text-center py-10">
+  <h1 id="heroTitle" class="serif-heading text-4xl md:text-6xl text-white">
+    The Art of Precision
+  </h1>
+  <button onclick="editText()" class="mt-4 px-4 py-2 bg-primary text-white rounded">
+    Edit Title
+  </button>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+// AOS INIT
+AOS.init({
+  duration: 800,
+  once: true,
+  disable: window.innerWidth < 768
+});
+
+// SCROLL TOP
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ADMIN EDIT
+function editText() {
+  let text = prompt("Edit Title:");
+  if (text) {
+    document.getElementById("heroTitle").innerText = text;
+    localStorage.setItem("heroTitle", text);
+  }
+}
+
+document.getElementById("heroTitle").innerText =
+  localStorage.getItem("heroTitle") || "The Art of Precision";
+
+// SLIDER (RESPONSIVE)
+const container = document.getElementById("sliderContainer");
+const before = document.getElementById("beforeImage");
+const handle = document.getElementById("sliderHandle");
+
+function moveSlider(x) {
+  const rect = container.getBoundingClientRect();
+  let pos = x - rect.left;
+
+  if (pos < 0) pos = 0;
+  if (pos > rect.width) pos = rect.width;
+
+  before.style.width = pos + "px";
+  handle.style.left = pos + "px";
+}
+
+// Mouse
+container.addEventListener("mousemove", (e) => {
+  if (e.buttons === 1) moveSlider(e.clientX);
+});
+
+// Touch
+container.addEventListener("touchmove", (e) => {
+  moveSlider(e.touches[0].clientX);
+});
+</script>
+
+        
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
 <header id="navbar" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-transparent px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 <div class="flex items-center gap-3">
@@ -250,6 +385,10 @@
 </div>
 </div>
 </section>
+
+        
+
+        
 <!-- Results of Perfection Gallery -->
 <section class="py-24 bg-background-light dark:bg-[#0f0f0f]">
 <div class="max-w-7xl mx-auto px-6">
