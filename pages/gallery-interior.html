@@ -28,6 +28,56 @@
         }
     </script>
 <title>Precision Detail - Interior Restoration Gallery</title>
+<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .comparison-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .before-label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 2px 6px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            z-index: 10;
+        }
+        .after-label {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #2559f4;
+            color: white;
+            padding: 2px 6px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            z-index: 10;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 16px;
+            z-index: 50;
+        }
+        @media (max-width: 640px) {
+            .floating-btn {
+                bottom: 80px; /* avoids overlap with footer */
+            }
+        }
+    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
 <header id="navbar" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-transparent px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
@@ -35,9 +85,9 @@
     <div class="flex items-center gap-2">
         <div class="relative group flex items-center gap-2">
             <a href="index.html" class="flex items-center gap-1">
-                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
+                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
                     Precision Detail
-                    <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
                 </h2>
             </a>
         </div>
@@ -66,7 +116,7 @@
 <a class="nav-dashboard dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
 <div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
 <a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
-<a href="user-profile.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
+<a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
 </div>
 </div>
 </nav>
@@ -95,7 +145,8 @@
     <!-- Header -->
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
-            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
+            <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
+            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
                 Precision Detail
                 <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
             </h2>
@@ -150,7 +201,7 @@
                     Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
-                <a href="user-profile.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                <a href="user-dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
                     User Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
@@ -180,8 +231,8 @@
         </p>
     </div>
 </div><!-- End Mobile Drawer -->
-<main class="flex-1 px-6 py-12 lg:px-20 pt-[5%] flex flex-col items-center">
-<div class="w-full max-w-[1200px]">
+<main class="flex flex-1 justify-center py-6 pt-[70px] md:pt-[5%] overflow-x-hidden">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1 px-5 sm:px-6 md:px-8">
 <nav class="flex flex-wrap items-center gap-2 mb-6">
 <a class="text-slate-400 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
 <span class="text-slate-500 dark:text-slate-600 text-sm">/</span>
@@ -190,7 +241,7 @@
 <span class="text-slate-900 dark:text-white text-sm font-bold">Interiors</span>
 </nav>
 <!-- Hero Section -->
-<div class="flex flex-col gap-4 mb-12">
+<div class="flex flex-col gap-3 mb-10">
 <h1 class="text-slate-900 dark:text-slate-100 text-5xl font-black leading-tight tracking-[-0.033em]">Interior Restoration Gallery</h1>
 <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">
                             Witness the revival of luxury. Our specialized deep cleaning and restoration techniques bring worn leather, faded upholstery, and neglected dashboards back to factory showroom condition.
@@ -209,20 +260,20 @@
 <div class="space-y-20">
 <!-- Leather Restoration Section -->
 <section>
-<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-3 mb-6">
 <h2 class="text-2xl font-bold tracking-tight">Leather Restoration: Before &amp; After</h2>
 <div class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-800"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
 <div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900">
-<div class="aspect-video bg-cover bg-center" data-alt="Close up of cracked old leather car seat before restoration" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNmjWwtayUQ26J2yKHN_yOuxbSCFfmsYaUgvj3qo8j8LK6qjknrm7OGQYjzSbbIATIf1rsyWnmEhAQVPxFzHSFABiYqm9b0alOwl4hvZAcr6obOnMlT945SIhQ0g2ePcCSKDLcsOmbZyxiH2oeF0z92rGig4CvqDDoDorSBbC7YUiXGb_D3z20gtke0ze97UkIOBTRp3FJpyLARTMRnsLH65SLyU196Io5WrtpBU_ix7bCSYTzmjUAG0QFI-XwFaNRMD8EbOgk5Kg");'></div>
+<div class="h-[180px] sm:h-[220px] md:aspect-video bg-cover bg-center" data-alt="Close up of cracked old leather car seat before restoration" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNmjWwtayUQ26J2yKHN_yOuxbSCFfmsYaUgvj3qo8j8LK6qjknrm7OGQYjzSbbIATIf1rsyWnmEhAQVPxFzHSFABiYqm9b0alOwl4hvZAcr6obOnMlT945SIhQ0g2ePcCSKDLcsOmbZyxiH2oeF0z92rGig4CvqDDoDorSBbC7YUiXGb_D3z20gtke0ze97UkIOBTRp3FJpyLARTMRnsLH65SLyU196Io5WrtpBU_ix7bCSYTzmjUAG0QFI-XwFaNRMD8EbOgk5Kg");'></div>
 <div class="absolute top-4 left-4 bg-slate-900/80 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Before</div>
 <div class="p-4 bg-white/5 backdrop-blur-sm absolute bottom-0 inset-x-0 border-t border-slate-900/40 dark:border-white/10">
 <p class="text-white font-semibold">Vintage BMW E30 Leather - Cracked &amp; Faded</p>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 border-2 border-primary/50">
-<div class="aspect-video bg-cover bg-center" data-alt="Close up of restored smooth leather car seat after professional treatment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACsmkoQTWYROAKb00mXQQQAPUT1sQ4i4XyUzXOICx0XxcdcSnrfSZeyeezLfXjYYf2dUGacF83PYBJ-qC3vOdVMbCc2ojP9gjxPfydgZpJmQmJfpXtkVavYQVNq6wYYBAymNUr44OZLovSUuXC3wp_P6dgZm4HJqN3_w80-ClffVnbAoUhLHywHy9sBCNjsY10WNMzV0KL4SdE4EfXS2ThJvjhrKMCIY0fhyRb_3mRbgVSAdpzhLKTuPK8Pw2aPLNE9aPzR6E9Moo");'></div>
+<div class="h-[180px] sm:h-[220px] md:aspect-video bg-cover bg-center" data-alt="Close up of restored smooth leather car seat after professional treatment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACsmkoQTWYROAKb00mXQQQAPUT1sQ4i4XyUzXOICx0XxcdcSnrfSZeyeezLfXjYYf2dUGacF83PYBJ-qC3vOdVMbCc2ojP9gjxPfydgZpJmQmJfpXtkVavYQVNq6wYYBAymNUr44OZLovSUuXC3wp_P6dgZm4HJqN3_w80-ClffVnbAoUhLHywHy9sBCNjsY10WNMzV0KL4SdE4EfXS2ThJvjhrKMCIY0fhyRb_3mRbgVSAdpzhLKTuPK8Pw2aPLNE9aPzR6E9Moo");'></div>
 <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">After</div>
 <div class="p-4 bg-primary/90 backdrop-blur-sm absolute bottom-0 inset-x-0">
 <p class="text-white font-semibold">Deep Cleaned &amp; Re-dyed - Like New Finish</p>
@@ -236,35 +287,35 @@
 <h2 class="text-2xl font-bold tracking-tight">Upholstery &amp; Carpet Extraction</h2>
 <div class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-800"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="flex flex-col gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 max-w-[100%]">
+<div class="flex flex-col gap-3 w-full max-w-full">
 <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800">
 <img class="w-full h-full object-cover" data-alt="Mud stained car floor carpet before cleaning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbbiaQlIKAbSMICcsu_dM4gVyYGtH72QQu9Kf9ZwSTCt5mEro0CcCEMCBllyyxDL6oqe4iD3ahIxEJAJrawgMze6uIn6wiOu6Rm_HpyEnAh8wvCKBtx-D_K5jqRR6Kun2aSb9y8zgrmKBSqRoN0jSVO8kA9kHDEUG7NFDieYl7rmqwDYuX7gSxlE68zxpzKpngr_Bsro_CLDVNDkR0-jrGI-3it5bwh3Es0HImYKF2av7t44t0TuRLjdhMT_O4uzfTytiRP7_19kE"/>
 </div>
 <div>
 <span class="text-primary text-xs font-bold uppercase tracking-tighter">Case Study 01</span>
-<h3 class="font-bold text-lg">Coffee Stain Removal</h3>
-<p class="text-slate-500 text-sm">Industrial steam extraction and chemical treatment.</p>
+<h3 class="text-[15px] sm:text-lg md:text-xl font-bold leading-snug">Coffee Stain Removal</h3>
+<p class="text-[11px] sm:text-sm mt-1 leading-relaxed text-slate-500">Industrial steam extraction and chemical treatment.</p>
 </div>
 </div>
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-3 w-full max-w-full">
 <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800">
 <img class="w-full h-full object-cover" data-alt="High quality clean fabric car seat after steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWdMlZu8_N6-3GBYEfSRHn6b9O1XfGRjAPO-nxc_ObgT28K2BLUYow-ICooqxoIoIKffFJbNFoCXeX3XQqIhoq3_md1lsHDydz61TQeKeCFRcXdBFRuMrJj962tjLYFiTyOjiJ3ZrozEN4WDSL79mxjLwvnSC55Oe1_1tRLJ2e7uOEhswkIY9dcqH1tggd91O8GysdM5t2hEDwup6oURC72WtUEjGJyrre3qSkw7KDYw4M9sKQ7K3Qwk-z_Zu1NNDA0qeHI_8a4TU"/>
 </div>
 <div>
 <span class="text-primary text-xs font-bold uppercase tracking-tighter">Case Study 02</span>
-<h3 class="font-bold text-lg">Fabric Odor Neutralization</h3>
-<p class="text-slate-500 text-sm">Ozone treatment and antimicrobial deep scrub.</p>
+<h3 class="text-[15px] sm:text-lg md:text-xl font-bold leading-snug">Fabric Odor Neutralization</h3>
+<p class="text-[11px] sm:text-sm mt-1 leading-relaxed text-slate-500">Ozone treatment and antimicrobial deep scrub.</p>
 </div>
 </div>
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-3 w-full max-w-full">
 <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800">
 <img class="w-full h-full object-cover" data-alt="Close up of a professional cleaning car floor mats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk4ky3LbBWzev9MAC5DDorU5J_LnLYTJGliyT1pjZ8Lje9OTOnSFjxRc4Yt-oZxg5RoiWgJynfCzhpSXSmdL03g0j_600nkBVV3Uz3FMgimVYpArGqA67t_a8MAvEnnfWi6-zpxsNxJQIZcypb-DWuRVHW0JhlDMZG3fGKGRgD3RDqRs68E3sNA265dUx1HZqRkB79g03oYWvW395yW_Hso6DQNAfjtmgf5pbkAnscZCJ-4WwbrfE573kZWs6j4uVLpEgjMyhURVo"/>
 </div>
 <div>
 <span class="text-primary text-xs font-bold uppercase tracking-tighter">Case Study 03</span>
-<h3 class="font-bold text-lg">Pet Hair Removal</h3>
-<p class="text-slate-500 text-sm">Precision brushing and triple-pass vacuuming.</p>
+<h3 class="text-[15px] sm:text-lg md:text-xl font-bold leading-snug">Pet Hair Removal</h3>
+<p class="text-[11px] sm:text-sm mt-1 leading-relaxed text-slate-500">Precision brushing and triple-pass vacuuming.</p>
 </div>
 </div>
 </div>
@@ -275,7 +326,7 @@
 <h2 class="text-2xl font-bold tracking-tight">Dashboards &amp; Trim Restoration</h2>
 <div class="h-[1px] flex-1 bg-slate-200 dark:bg-slate-800"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
 <div class="md:col-span-2 relative rounded-xl overflow-hidden aspect-[21/9]">
 <img class="w-full h-full object-cover" data-alt="Luxurious car dashboard after restoration and cleaning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyZjGpkmASacYjzosAgzlqirnMcgKOao97ej8hzzUOH7Ws8dNirZz2rG8VcNp9qR8fUqiw4c99qUx3dOozzMiJy_0zV2pCNdrr9T6qPRzv01PE4rc0S9X1KIKnICcpSdaoddrhckd4QbN-beqly8fBwGgqdqnrHhu8THH6S6JyIU3OiRy6xvkXg9HGvJZxmAy3o2hEJSlVUAqYT2TAfwSSdDR64mNRGfEXIP0dOYWUEhccTDSJWzJqbCtyauUa65kkKMnxx6IpMKk"/>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-8">
@@ -293,14 +344,14 @@
 </section>
 </div>
 <!-- CTA Section -->
-<div class="mt-24 bg-slate-900 rounded-2xl p-12 text-center relative overflow-hidden border border-slate-800">
+<div class="mt-16 bg-slate-900 rounded-2xl p-4 sm:p-12 text-center relative overflow-hidden border border-slate-800 flex flex-col gap-4">
 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px]"></div>
 <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 blur-[100px]"></div>
 <h2 class="text-3xl font-bold text-white mb-4 relative z-10">Ready to restore your vehicle's interior?</h2>
 <p class="text-slate-400 mb-8 max-w-xl mx-auto relative z-10">Our specialists are ready to transform your car's cabin back into a pristine, luxurious environment.</p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-<button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-bold transition-all shadow-lg shadow-primary/20">Get a Free Quote</button>
-<button class="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-bold backdrop-blur-sm transition-all border border-slate-900/40 dark:border-white/10">Contact Support</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-2 text-sm rounded-lg font-bold transition-all shadow-lg shadow-primary/20">Get a Free Quote</button>
+<button class="bg-white/10 hover:bg-white/20 text-white px-8 py-2 text-sm rounded-lg font-bold backdrop-blur-sm transition-all border border-slate-900/40 dark:border-white/10">Contact Support</button>
 </div>
 </div>
 </div>

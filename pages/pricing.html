@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Pricing | Precision Detail</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="../assets/js/tailwind-config.js"></script>
+<title>Pricing | Precision Detail</title>
+<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-200">
 <header id="navbar" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-transparent px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 <div class="flex items-center gap-3">
     <div class="flex items-center gap-2">
         <div class="relative group flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-1">
-                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
-                    Precision Detail
-                    <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
-                </h2>
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="../assets/images/logo.png" alt="Logo" class="w-6 h-6 rounded-full object-cover">
+                <h2 class="hidden md:block text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
+                    Precision Detail                </h2>
             </a>
         </div>
     </div>
@@ -50,7 +50,7 @@
 <a class="nav-dashboard dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
 <div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
 <a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
-<a href="user-profile.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
+<a href="user-dashboard.html#overview" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
 </div>
 </div>
 </nav>
@@ -79,7 +79,8 @@
     <!-- Header -->
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
-            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
+            <img src="../assets/images/logo.png" alt="Logo" class="w-6 h-6 rounded-full object-cover">
+            <h2 class="hidden md:block text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
                 Precision Detail
                 <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
             </h2>
@@ -111,7 +112,7 @@
                 Services
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
             </a>
-            <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+            <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-primary font-bold text-xl transition-colors">
                 Pricing
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
             </a>
@@ -134,7 +135,7 @@
                     Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
-                <a href="user-profile.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                <a href="user-dashboard.html#overview" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
                     User Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
@@ -164,12 +165,12 @@
         </p>
     </div>
 </div><!-- End Mobile Drawer -->
-<main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-12">
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-12 pt-[90px] md:pt-[5%]">
 <section class="flex flex-col gap-4 text-center mb-16">
 <h1 class="text-slate-900 dark:text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight">Detailing Packages</h1>
 <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">Choose the perfect level of care for your vehicle. From regular maintenance to full restoration, we have a package for every enthusiast.</p>
 </section>
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
 <div class="flex flex-col gap-6 rounded-2xl border-2 border-slate-200 dark:border-slate-800 hover:border-primary bg-white dark:bg-slate-900/50 p-8 shadow-sm hover:shadow-xl transition-all relative overflow-hidden group">
 <div class="flex flex-col gap-2">
 <h3 class="text-slate-900 dark:text-white text-xl font-bold">Essential</h3>
@@ -271,7 +272,9 @@
                         </div>
 </div>
 </div>
-</section>
+</div>
+</div>
+
 <section class="mb-20">
 <h2 class="text-slate-900 dark:text-white text-3xl font-bold mb-8 px-4 border-l-4 border-primary">Feature Comparison</h2>
 <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">

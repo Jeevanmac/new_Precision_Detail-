@@ -193,10 +193,74 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Coming Soon Floating Button Injection
     const footerBtn = document.createElement('a');
     footerBtn.href = 'coming-soon.html';
-    footerBtn.className = 'fixed bottom-6 right-6 z-[60] bg-[#ec5b13] hover:bg-[#ec5b13]/90 text-white p-3 rounded-full shadow-2xl flex items-center gap-0 group transition-all active:scale-95 overflow-hidden w-12 hover:w-40 border border-white/20';
+    footerBtn.className = 'fixed bottom-24 md:bottom-6 right-6 z-[60] bg-[#ec5b13] hover:bg-[#ec5b13]/90 text-white p-3 rounded-full shadow-2xl flex items-center gap-0 group transition-all active:scale-95 overflow-hidden w-12 hover:w-40 border border-white/20';
     footerBtn.innerHTML = `
         <span class="material-symbols-outlined text-[24px]">rocket_launch</span>
         <span class="font-black text-[10px] uppercase tracking-widest ml-3 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Coming Soon</span>
     `;
     document.body.appendChild(footerBtn);
+
+    // 6. Global Form Validation
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            // Reset previous visual errors
+            form.querySelectorAll('.border-red-500').forEach(el => {
+                el.classList.remove('border-red-500', 'ring-red-500', 'ring-1', '!border-red-500');
+            });
+            form.querySelectorAll('.text-red-500').forEach(el => {
+                if(el.tagName === 'SPAN' && el.classList.contains('absolute')) {
+                     el.classList.remove('text-red-500');
+                }
+            });
+
+            // Find all inputs (exclude hidden/checkboxes)
+            const inputs = form.querySelectorAll('input:not([type="hidden"]):not([type="checkbox"]), textarea, select');
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    showError(input);
+                }
+                
+                if (input.type === 'email' && input.value.trim()) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(input.value)) {
+                        isValid = false;
+                        showError(input);
+                    }
+                }
+            });
+
+            if (isValid && submitBtn) {
+                const originalText = submitBtn.innerHTML;
+                submitBtn.classList.add('bg-emerald-500', '!text-white', 'border-emerald-500');
+                submitBtn.classList.remove('bg-primary', 'bg-orange-600');
+                submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span> Validating...';
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> Success';
+                    setTimeout(() => {
+                        submitBtn.classList.remove('bg-emerald-500', '!text-white', 'border-emerald-500');
+                        submitBtn.classList.add(submitBtn.hasAttribute('data-original-bg') ? submitBtn.getAttribute('data-original-bg') : 'bg-primary');
+                        submitBtn.innerHTML = originalText;
+                        if (!form.classList.contains('no-reset')) form.reset();
+                    }, 2000);
+                }, 1000);
+            }
+        });
+    });
+
+    function showError(input) {
+        input.classList.add('border-red-500', 'ring-red-500', 'ring-1', '!border-red-500', 'transition-all');
+        const parent = input.parentElement;
+        if(parent.classList.contains('relative')){
+             const icon = parent.querySelector('span.absolute');
+             if(icon) icon.classList.add('text-red-500');
+        }
+    }
 });

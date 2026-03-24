@@ -139,3 +139,71 @@ header .nav-dropdown a {
 header nav span.material-symbols-outlined {
     font-size: 14.52px !important;
 }
+
+/* Make light-mode transparent navbar elements white so they contrast dark hero images */
+html:not(.dark) #navbar:not(.scrolled) h2,
+html:not(.dark) #navbar:not(.scrolled) nav > a:not(.text-primary),
+html:not(.dark) #navbar:not(.scrolled) nav > div > a.dropdown-trigger:not(.text-primary) {
+    color: #ffffff !important;
+}
+
+html:not(.dark) #navbar:not(.scrolled) nav > a:hover,
+html:not(.dark) #navbar:not(.scrolled) nav > div > a.dropdown-trigger:hover {
+    color: #ec5b13 !important;
+}
+
+html:not(.dark) #navbar:not(.scrolled) a[href="login.html"],
+html:not(.dark) #navbar:not(.scrolled) [id^="dir-toggle"],
+html:not(.dark) #navbar:not(.scrolled) [id^="theme-toggle"],
+html:not(.dark) #navbar:not(.scrolled) #mobile-menu-trigger {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+html:not(.dark) #navbar:not(.scrolled) a[href="login.html"]:hover,
+html:not(.dark) #navbar:not(.scrolled) [id^="dir-toggle"]:hover,
+html:not(.dark) #navbar:not(.scrolled) [id^="theme-toggle"]:hover,
+html:not(.dark) #navbar:not(.scrolled) #mobile-menu-trigger:hover {
+    color: #ec5b13 !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+html:not(.dark) #navbar:not(.scrolled) .h-4.w-px {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Reduce nav bar font boldness before the scroll animation */
+#navbar:not(.scrolled) h2 {
+    font-weight: 700 !important; /* from black to bold */
+}
+#navbar:not(.scrolled) nav a {
+    font-weight: 500 !important; /* from bold to medium */
+}
+
+/* Dark mode navbar overrides: white text */
+html.dark #navbar h2,
+html.dark #navbar nav > a:not(.text-primary),
+html.dark #navbar nav > div > a.dropdown-trigger:not(.text-primary),
+html.dark #navbar [id^="dir-toggle"],
+html.dark #navbar [id^="theme-toggle"],
+html.dark #navbar #mobile-menu-trigger {
+    color: #ffffff !important;
+}
+
+html.dark #navbar [id^="dir-toggle"] span,
+html.dark #navbar [id^="theme-toggle"] span,
+html.dark #navbar #mobile-menu-trigger span {
+    color: #ffffff !important;
+}
+
+/* Person icon white background in dark mode */
+html.dark #navbar a[href="login.html"] {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #ffffff !important;
+}
+
+html.dark #navbar a[href="login.html"] span {
+    color: #0f172a !important;
+}

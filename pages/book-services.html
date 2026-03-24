@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Precision Detail | Premium Car Booking</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="../assets/js/tailwind-config.js"></script>
-<style>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Precision Detail | Premium Car Booking</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <style>
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
@@ -31,246 +30,95 @@
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
- <script>
+<script>
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
-
   if (window.scrollY > 40) {
-    navbar.classList.add(
-      "backdrop-blur-xl",
-      "bg-black/20",
-      "border-white/10",
-      "shadow-lg"
-    );
+    navbar.classList.add("backdrop-blur-xl", "bg-black/20", "border-white/10", "shadow-lg");
   } else {
-    navbar.classList.remove(
-      "backdrop-blur-xl",
-      "bg-black/20",
-      "border-white/10",
-      "shadow-lg"
-    );
+    navbar.classList.remove("backdrop-blur-xl", "bg-black/20", "border-white/10", "shadow-lg");
   }
 });
 </script>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<header id="navbar"
-class="fixed top-0 left-0 w-full z-50
-flex items-center justify-between
-px-5 lg:px-8 py-3 min-h-[72px]
-bg-transparent border-b border-transparent
-transition-all duration-500">
-
-  <!-- LEFT -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-5 lg:px-8 py-3 min-h-[72px] bg-transparent border-b border-transparent transition-all duration-500">
   <div class="flex items-center gap-4">
-
     <a href="index.html" class="flex items-center gap-2">
-      <h2 class="text-slate-900 dark:text-slate-100 text-[15px] font-black tracking-tighter uppercase italic">
-        Precision Detail
-        <span class="text-orange-500 text-[10px]">●</span>
+      <h2 class="hidden md:block text-slate-900 dark:text-slate-100 text-[15px] font-black tracking-tighter uppercase italic">
+        Precision Detail <span class="text-orange-500 text-[10px]">●</span>
       </h2>
     </a>
-
     <div class="h-5 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
-
-    <a href="login.html"
-      class="flex items-center justify-center size-9 rounded-full
-      bg-slate-50 dark:bg-slate-800/50
-      text-slate-600 dark:text-slate-400
-      border border-slate-200 dark:border-slate-700
-      hover:text-primary transition">
+    <a href="login.html" class="flex items-center justify-center size-9 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:text-primary transition">
       <span class="material-symbols-outlined text-[22px]">account_circle</span>
     </a>
-
   </div>
-
-  <!-- RIGHT -->
   <div class="flex flex-1 justify-end items-center gap-5">
-
-    <!-- NAV -->
     <nav class="hidden nav-mobile:flex items-center gap-5">
-
-      <a href="index.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        Home
-      </a>
-
-      <a href="services.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        Services
-      </a>
-
-      <a href="pricing.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        Pricing
-      </a>
-
-      <a href="gallery.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        Gallery
-      </a>
-
-      <a href="blog.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        Blog
-      </a>
-
-      <a href="contact.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        Contact
-      </a>
-
-      <a href="about.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        About
-      </a>
-
-      <a href="dashboard.html"
-        class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        Dashboard
-      </a>
-
+      <a href="index.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Home</a>
+      <a href="services.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Services</a>
+      <a href="pricing.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Pricing</a>
+      <a href="gallery.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Gallery</a>
+      <a href="blog.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Blog</a>
+      <a href="contact.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Contact</a>
+      <a href="about.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">About</a>
+      <a href="dashboard.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Dashboard</a>
     </nav>
-
-    <!-- CONTROLS -->
     <div class="flex items-center gap-3 border-l border-slate-200 dark:border-slate-800 pl-4">
-
-      <!-- LTR -->
-      <button id="dir-toggle-nav"
-        class="flex items-center justify-center size-9 text-[11px] font-bold rounded-lg
-        bg-white/60 dark:bg-slate-800/60
-        border border-slate-200 dark:border-slate-700
-        text-slate-600 dark:text-slate-400 hover:text-primary transition">
-        LTR
-      </button>
-
-      <!-- DARK MODE -->
-      <button id="theme-toggle-nav"
-        class="flex items-center justify-center size-9 rounded-lg
-        bg-white/60 dark:bg-slate-800/60
-        border border-slate-200 dark:border-slate-700
-        text-slate-600 dark:text-slate-400 transition">
+      <button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-[11px] font-bold rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-primary transition">LTR</button>
+      <button id="theme-toggle-nav" class="flex items-center justify-center size-9 rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 transition">
         <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
         <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
       </button>
-
-      <!-- CTA -->
-      <a href="book-services.html"
-        class="hidden nav-mobile:flex items-center justify-center
-        h-9 px-5 rounded-lg bg-primary
-        text-white text-[11px] font-black uppercase tracking-wider
-        shadow-md hover:brightness-110 transition">
-        Book Services
-      </a>
-
-      <!-- MOBILE -->
-      <button id="mobile-menu-trigger"
-        class="nav-mobile:hidden flex items-center justify-center
-        h-9 w-9 rounded-lg
-        bg-slate-100 dark:bg-slate-800/50
-        border border-slate-200 dark:border-slate-700">
-        <span class="material-symbols-outlined text-[22px]">menu</span>
-      </button>
-
+      <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center h-9 px-5 rounded-lg bg-primary text-white text-[11px] font-black uppercase tracking-wider shadow-md hover:brightness-110 transition">Book Services</a>
+      <button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center h-9 w-9 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"><span class="material-symbols-outlined text-[22px]">menu</span></button>
     </div>
-
   </div>
 </header>
 
-<!-- Mobile Drawer Overlay -->
 <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
-
-<!-- Mobile Drawer -->
-<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
-    <!-- Header -->
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
-            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
-                Precision Detail
-                <span class="absolute -right-2 top-0 text-orange-500 text-[11px]">●</span>
-            </h2>
+            <h2 class="hidden md:block text-slate-900 dark:text-white text-lg font-black tracking-tighter uppercase italic relative">Precision Detail <span class="absolute -right-2 top-0 text-orange-500 text-[11px]">●</span></h2>
         </div>
-        <button id="mobile-menu-close" class="text-slate-500 dark:text-white/60 hover:text-primary dark:hover:text-white transition-colors">
-            <span class="material-symbols-outlined text-2xl">close</span>
-        </button>
+        <button id="mobile-menu-close" class="text-slate-500 dark:text-white/60 hover:text-primary transition-colors"><span class="material-symbols-outlined text-2xl">close</span></button>
     </div>
-    
-    <!-- Navigation -->
     <div class="flex-1 overflow-y-auto px-6 py-4">
         <nav class="flex flex-col gap-6">
-            <!-- Home Links -->
             <div>
-                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
-                    Home
-                    <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
-                </div>
+                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">Home <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span></div>
                 <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
-                    <a href="index.html" class="text-slate-900 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
-                        Version 1
-                        <span class="text-[11px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
-                    </a>
+                    <a href="index.html" class="text-slate-900 dark:text-white/70 hover:text-primary text-sm transition-colors">Version 1</a>
                     <a href="home2.html" class="text-slate-900 dark:text-white/70 hover:text-primary text-sm transition-colors">Version 2</a>
                 </div>
             </div>
-
-            <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Services
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-            <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Pricing
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-            <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Gallery
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-            <a href="blog.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Blog
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-            <a href="contact.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Contact
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-
-            <!-- Dashboard/Profile -->
+            <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors">Services <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
+            <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors">Pricing <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
+            <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors">Gallery <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
+            <a href="blog.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors">Blog <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
+            <a href="contact.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors">Contact <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
             <div class="mt-4 pt-6 border-t border-slate-200 dark:border-white/5 space-y-4">
-                 <a href="dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
-                    Dashboard
-                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-                </a>
-                <a href="user-profile.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
-                    User Dashboard
-                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-                </a>
+                 <a href="dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-lg transition-colors">Dashboard <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
+                <a href="user-dashboard.html#overview" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-lg transition-colors">User Dashboard <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
             </div>
         </nav>
     </div>
-    
-    <!-- Footer Section -->
     <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
-        <!-- Book Service Action -->
-        <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
-            <span class="material-symbols-outlined text-lg">auto_awesome</span>
-            Book Service
-        </a>
-
-        <!-- Social Icons -->
+        <Social Icons -->
         <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-white/40 pt-2">
             <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">public</span>
             <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">share</span>
             <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">alternate_email</span>
             <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">chat_bubble</span>
         </div>
-
-        <!-- Copyright -->
-        <p class="text-[9px] text-center text-slate-500 dark:text-white/30 uppercase tracking-[0.2em]">
-            © 2026 Precision Detail Automotive Group
-        </p>
+        <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 transition-all">
+            <span class="material-symbols-outlined text-lg">auto_awesome</span> Book Service
+        </a>
     </div>
-</div><!-- End Mobile Drawer -->
+</div>
 
-<main class="min-h-screen relative py-12 px-4 lg:px-20 pt-[10%]">
+<main class="min-h-screen relative py-12 px-6 lg:px-20 pt-[90px] md:pt-[10%]">
 <!-- Background Glows -->
 <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 blur-[120px] -z-10"></div>
 <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-cyan/10 blur-[120px] -z-10"></div>
@@ -284,27 +132,19 @@ transition-all duration-500">
 <div class="flex items-center justify-between mb-12 relative px-4">
 <div class="absolute top-5 left-0 w-full h-0.5 bg-primary/50 -z-10"></div>
 <div class="flex flex-col items-center gap-2">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white ring-4 ring-primary/20">
-<span class="material-symbols-outlined text-xl">layers</span>
-</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white ring-4 ring-primary/20"><span class="material-symbols-outlined text-xl">layers</span></div>
 <span class="text-xs font-bold text-primary uppercase tracking-widest">Service</span>
 </div>
 <div class="flex flex-col items-center gap-2">
-<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 border border-white/10">
-<span class="material-symbols-outlined text-xl">calendar_month</span>
-</div>
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 border border-white/10"><span class="material-symbols-outlined text-xl">calendar_month</span></div>
 <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Schedule</span>
 </div>
 <div class="flex flex-col items-center gap-2">
-<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 border border-white/10">
-<span class="material-symbols-outlined text-xl">directions_car</span>
-</div>
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 border border-white/10"><span class="material-symbols-outlined text-xl">directions_car</span></div>
 <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Vehicle</span>
 </div>
 <div class="flex flex-col items-center gap-2">
-<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 border border-white/10">
-<span class="material-symbols-outlined text-xl">check_circle</span>
-</div>
+<div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 border border-white/10"><span class="material-symbols-outlined text-xl">check_circle</span></div>
 <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Confirm</span>
 </div>
 </div>
@@ -318,48 +158,22 @@ transition-all duration-500">
 <h3 class="font-sora text-xl font-bold">Step 1: Select Premium Service</h3>
 </div>
 <div class="space-y-4">
-<!-- Service Card 1 -->
-<label class="group relative flex items-center gap-6 p-5 glass-card rounded-xl cursor-pointer border-transparent hover:border-primary/50 transition-all ring-primary/0 checked:ring-2">
+<!-- Service Cards -->
+<label class="group relative flex items-center gap-6 p-5 glass-card rounded-xl cursor-pointer border-transparent hover:border-primary/50 transition-all ring-primary/0 checked:ring-2 w-full">
 <input checked="" class="hidden peer" name="service" type="radio"/>
-<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Close up of a luxury car with ceramic coating shine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkzjkROIE9xEEu--LBopihkIl8L5KENfeOFAl0MhQuO_WWJ_U5cODqicR38UXTZ-r4Wy0Qk-o1r1Se4tAyU6iSk6s5vP45IMv59BXv_aM_tjCZ48Cp7Ib8WyhCBs0QUbhL9d0XcIxet_NFzpc2_xkk8mqBwnup_lzoG69COC38AcFfPS4UJzMTqV0GP4AipZ5tw-AxIfZnZu3da5drW-aQiBePDqUavDJkWTG7ImWIoM8JA8w7Q85GJMby08B-iGVW8boD09a1VpY"/>
-</div>
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkzjkROIE9xEEu--LBopihkIl8L5KENfeOFAl0MhQuO_WWJ_U5cODqicR38UXTZ-r4Wy0Qk-o1r1Se4tAyU6iSk6s5vP45IMv59BXv_aM_tjCZ48Cp7Ib8WyhCBs0QUbhL9d0XcIxet_NFzpc2_xkk8mqBwnup_lzoG69COC38AcFfPS4UJzMTqV0GP4AipZ5tw-AxIfZnZu3da5drW-aQiBePDqUavDJkWTG7ImWIoM8JA8w7Q85GJMby08B-iGVW8boD09a1VpY"/></div>
 <div class="flex-1">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-bold text-lg group-hover:text-primary transition-colors">Ceramic Coating</h4>
-<span class="text-accent-gold font-bold text-lg">$499+</span>
-</div>
+<div class="flex justify-between items-start mb-1"><h4 class="font-bold text-lg group-hover:text-primary transition-colors">Ceramic Coating</h4><span class="text-accent-gold font-bold text-lg">$499+</span></div>
 <p class="text-sm text-slate-400 leading-relaxed">Nano-ceramic shield for 9H hardness and extreme hydrophobicity.</p>
 </div>
 <div class="absolute inset-0 border-2 border-transparent peer-checked:border-primary rounded-xl -z-10"></div>
 </label>
-<!-- Service Card 2 -->
-<label class="group relative flex items-center gap-6 p-5 glass-card rounded-xl cursor-pointer border-transparent hover:border-primary/50 transition-all">
+<label class="group relative flex items-center gap-6 p-5 glass-card rounded-xl cursor-pointer border-transparent hover:border-primary/50 transition-all w-full">
 <input class="hidden peer" name="service" type="radio"/>
-<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Car paint correction detailing process" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdLhL_D_MfLZs0Vt6MTAesRSuuNKDy5LzHh8p2swEtwHNC4RGFy6UaI72O0mO8p_iGvR5aZGRRSTooSIoBM-1RAKocBuvca-TSZprDFd_9vXFQFs5cOag_MZOBN3nEBAckQsw7Jom9L3UIXbolhfjwghCJI376Gq--MgrDj80aNw27ABRgwEWxpTdBFbZem31z8Egdu_kHdCgAMjU6T4RFNXHu-s4jv1evf8ak0pBUMIycBvsGMCtK4u2RHmOf-RCVjAk2sQG7QqI"/>
-</div>
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0"><img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdLhL_D_MfLZs0Vt6MTAesRSuuNKDy5LzHh8p2swEtwHNC4RGFy6UaI72O0mO8p_iGvR5aZGRRSTooSIoBM-1RAKocBuvca-TSZprDFd_9vXFQFs5cOag_MZOBN3nEBAckQsw7Jom9L3UIXbolhfjwghCJI376Gq--MgrDj80aNw27ABRgwEWxpTdBFbZem31z8Egdu_kHdCgAMjU6T4RFNXHu-s4jv1evf8ak0pBUMIycBvsGMCtK4u2RHmOf-RCVjAk2sQG7QqI"/></div>
 <div class="flex-1">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-bold text-lg group-hover:text-primary transition-colors">Paint Correction</h4>
-<span class="text-accent-gold font-bold text-lg">$299+</span>
-</div>
-<p class="text-sm text-slate-400 leading-relaxed">Multi-stage polish to eliminate swirls and restore depth.</p>
-</div>
-<div class="absolute inset-0 border-2 border-transparent peer-checked:border-primary rounded-xl -z-10"></div>
-</label>
-<!-- Service Card 3 -->
-<label class="group relative flex items-center gap-6 p-5 glass-card rounded-xl cursor-pointer border-transparent hover:border-primary/50 transition-all">
-<input class="hidden peer" name="service" type="radio"/>
-<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
-<img class="w-full h-full object-cover" data-alt="Luxury car interior leather detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwJ1BkRbPg8zzmE0ZQfIgkmTc44BANzyK8wART0YjsXroUbgsik41CL7yxB9mk-1GOEep3BETUaZue6MODjjCagGndv8PTqMQKTM-4dWITAwRykNIlBHGUM7ZpFQNHMGH-1TPcDi59i4rz4HtTcupES91KqW1SxT5I17kaJh_GONrwGoZSp5Wb55oOcrDojuKzWtPVx_aAulNdOSOO3nJST9s_K-tbCJCK3SB63f-j-kz2E5FNuIk8MCVVcrECTNW9KNcOmMo5wOk"/>
-</div>
-<div class="flex-1">
-<div class="flex justify-between items-start mb-1">
-<h4 class="font-bold text-lg group-hover:text-primary transition-colors">Interior Detail</h4>
-<span class="text-accent-gold font-bold text-lg">$150+</span>
-</div>
-<p class="text-sm text-slate-400 leading-relaxed">Steam cleaning, leather conditioning, and UV protection treatment.</p>
+<div class="flex justify-between items-start mb-1"><h4 class="font-bold text-lg group-hover:text-primary transition-colors">Paint Correction</h4><span class="text-accent-gold font-bold text-lg">$299+</span></div>
+<p class="text-sm text-slate-400 leading-relaxed">Multi-stage polish to eliminate swirls.</p>
 </div>
 <div class="absolute inset-0 border-2 border-transparent peer-checked:border-primary rounded-xl -z-10"></div>
 </label>
@@ -372,86 +186,28 @@ transition-all duration-500">
 <h3 class="font-sora text-xl font-bold">Step 2: Choose Date &amp; Time</h3>
 </div>
 <div class="grid md:grid-cols-2 gap-8">
-            <!-- Calendar -->
-            <div class="bg-white dark:bg-slate-900/50 rounded-xl p-4 border border-slate-200 dark:border-white/5">
-                <div class="flex justify-between items-center mb-4 text-slate-900 dark:text-white">
-                    <span class="font-bold">June 2025</span>
-                    <div class="flex gap-2">
-                        <button class="p-1 hover:bg-slate-100 dark:hover:bg-white/10 rounded"><span class="material-symbols-outlined">chevron_left</span></button>
-                        <button class="p-1 hover:bg-slate-100 dark:hover:bg-white/10 rounded"><span class="material-symbols-outlined">chevron_right</span></button>
-                    </div>
-                </div>
-                <div class="grid grid-cols-7 gap-1 text-center text-xs mb-2 text-slate-500">
-                    <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
-                </div>
-                <div class="grid grid-cols-7 gap-1 text-center text-slate-900 dark:text-white">
-                    <!-- Week 1: May 26 - June 1 -->
-                    <button class="aspect-square flex items-center justify-center text-slate-400 dark:text-slate-600 cursor-not-allowed">26</button>
-                    <button class="aspect-square flex items-center justify-center text-slate-400 dark:text-slate-600 cursor-not-allowed">27</button>
-                    <button class="aspect-square flex items-center justify-center text-slate-400 dark:text-slate-600 cursor-not-allowed">28</button>
-                    <button class="aspect-square flex items-center justify-center text-slate-400 dark:text-slate-600 cursor-not-allowed">29</button>
-                    <button class="aspect-square flex items-center justify-center text-slate-400 dark:text-slate-600 cursor-not-allowed">30</button>
-                    <button class="aspect-square flex items-center justify-center text-slate-400 dark:text-slate-600 cursor-not-allowed">31</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">1</button>
-                    
-                    <!-- Week 2: June 2-8 -->
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">2</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">3</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">4</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">5</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">6</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">7</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">8</button>
-
-                    <!-- Week 3: June 9-15 -->
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">9</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">10</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">11</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">12</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">13</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">14</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">15</button>
-
-                    <!-- Week 4: June 16-22 -->
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">16</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">17</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">18</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">19</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">20</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">21</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">22</button>
-
-                    <!-- Week 5: June 23-29 (27 selected) -->
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">23</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">24</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">25</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">26</button>
-                    <button class="aspect-square flex items-center justify-center bg-primary text-white rounded font-bold">27</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">28</button>
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">29</button>
-
-                    <!-- Last row -->
-                    <button class="aspect-square flex items-center justify-center hover:bg-slate-100 dark:hover:bg-white/10 rounded">30</button>
-                </div>
-            </div>
-            <!-- Time Selection -->
-            <div class="space-y-4">
-                <label class="block text-sm font-semibold text-slate-500 dark:text-slate-400">Available Slots</label>
-                <div class="grid grid-cols-2 gap-3">
-                    <button class="py-3 px-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-primary hover:bg-primary/10 transition-all text-sm font-medium text-slate-700 dark:text-slate-300">09:00 AM</button>
-                    <button class="py-3 px-4 rounded-xl border border-primary bg-primary/20 text-primary dark:text-white text-sm font-bold">11:30 AM</button>
-                    <button class="py-3 px-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-primary hover:bg-primary/10 transition-all text-sm font-medium text-slate-700 dark:text-slate-300">02:00 PM</button>
-                    <button class="py-3 px-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-primary hover:bg-primary/10 transition-all text-sm font-medium text-slate-700 dark:text-slate-300">04:30 PM</button>
-                </div>
-                <div class="p-4 bg-accent-cyan/5 border border-accent-cyan/20 rounded-xl">
-                    <p class="text-xs text-accent-cyan flex items-center gap-2">
-                        <span class="material-symbols-outlined text-sm">info</span>
-                        Estimated duration: 6-8 hours
-                    </p>
-                </div>
-            </div>
+    <div class="bg-black/20 rounded-xl p-4 border border-white/5">
+        <div class="flex justify-between items-center mb-4 text-xs font-bold"><span>June 2025</span></div>
+        <div class="grid grid-cols-7 gap-1 text-center text-xs mb-2 text-slate-500"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+        <div class="grid grid-cols-7 gap-1 text-sm">
+            <span class="aspect-square flex items-center justify-center opacity-20">26</span><span class="aspect-square flex items-center justify-center opacity-20">27</span><span class="aspect-square flex items-center justify-center opacity-20">28</span><span class="aspect-square flex items-center justify-center opacity-20">29</span><span class="aspect-square flex items-center justify-center opacity-20">30</span><span class="aspect-square flex items-center justify-center opacity-20">31</span><span class="aspect-square flex items-center justify-center">1</span>
+            <span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">2</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">3</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">4</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">5</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">6</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">7</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">8</span>
+            <span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">9</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">10</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">11</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">12</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">13</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">14</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">15</span>
+            <span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">16</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">17</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">18</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">19</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">20</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">21</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">22</span>
+            <span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">23</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">24</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">25</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">26</span><span class="aspect-square flex items-center justify-center bg-primary text-white rounded font-bold">27</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">28</span><span class="aspect-square flex items-center justify-center hover:bg-white/5 rounded">29</span>
         </div>
     </div>
+    <div class="space-y-4">
+        <label class="block text-sm font-semibold text-slate-500 dark:text-slate-400">Available Slots</label>
+        <div class="grid grid-cols-2 gap-3">
+            <button class="py-3 px-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-primary hover:bg-primary/10 transition-all text-sm font-medium">09:00 AM</button>
+            <button class="py-3 px-4 rounded-xl border border-primary bg-primary/20 text-primary dark:text-white text-sm font-bold">11:30 AM</button>
+            <button class="py-3 px-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-primary hover:bg-primary/10 transition-all text-sm font-medium">02:00 PM</button>
+            <button class="py-3 px-4 rounded-xl border border-slate-200 dark:border-white/10 hover:border-primary hover:bg-primary/10 transition-all text-sm font-medium">04:30 PM</button>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 <!-- Summary Sidebar -->
 <div class="lg:col-span-1 sticky top-24 h-[calc(100vh-6rem)] self-start">
@@ -476,7 +232,7 @@ transition-all duration-500">
 <span class="text-slate-400 text-xs">Estimated Cost</span>
 <span class="text-accent-gold font-sora font-bold text-lg">$499.00</span>
 </div>
-<p class="text-[10px] text-slate-500">*Final price depends on vehicle size and condition inspection.</p>
+<p class="text-xs text-slate-500">*Final price depends on vehicle size and condition inspection.</p>
 </div>
 <button class="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-bold tracking-wide transition-all mb-4">
                             Next Step: Vehicle Info
@@ -487,59 +243,35 @@ transition-all duration-500">
 </div>
 </div>
 </main>
-<!-- Footer -->
 <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
-<div class="max-w-7xl mx-auto px-6 lg:px-20 py-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<div class="max-w-7xl mx-auto px-6 lg:px-20 py-12 flex flex-col items-center">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 w-full text-left">
+        <div class="col-span-1 flex flex-col gap-6">
                 <div class="flex items-center gap-2 mb-6">
                     <h4 class="text-slate-900 dark:text-white font-black text-xl tracking-tighter uppercase italic relative">
                         Precision Detail
                         <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
                     </h4>
                 </div>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence through meticulous craftsmanship and premium protection services.</p>
-<div class="flex gap-4">
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">public</span>
-</a>
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">share</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
-<li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
-<div class="flex gap-2">
-<input class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50" placeholder="Email" type="email"/>
-<button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
-<span class="material-symbols-outlined text-[20px]">send</span>
-</button>
-</div>
-</div>
-</div>
-<div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
-                    © 2024 Precision Detail. All rights reserved.
-                </div>
+            <p class="text-slate-500 text-sm">Defining automotive excellence.</p>
+        </div>
+        <div>
+            <h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
+            <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
+            <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </div>
+<div class="max-w-7xl mx-auto px-6 py-8 text-center text-sm text-slate-500 dark:text-slate-400 uppercase tracking-widest">© 2026 Precision Detail Automotive Group</div>
 </div>
 </footer>
 <script src="../assets/js/main.js"></script>

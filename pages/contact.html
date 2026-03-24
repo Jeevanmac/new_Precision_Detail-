@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact - Precision Detail</title>
+<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -21,55 +22,64 @@
         .glow-purple {
             box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
         }
+        select option {
+            background-color: white;
+            color: #1e293b;
+        }
+        .dark select option {
+            background-color: #0f172a;
+            color: #f1f5f9;
+        }
     </style>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30">
 <header id="navbar" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-transparent px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 <div class="flex items-center gap-3">
     <div class="flex items-center gap-2">
         <div class="relative group flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-1">
-                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform" />
+                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
                     Precision Detail
-                    <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
                 </h2>
             </a>
         </div>
     </div>
     <div class="h-4 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
-    <a href="login.html" class="flex items-center justify-center size-8 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
-        <span class="material-symbols-outlined text-[20px]">account_circle</span>
+    <a href="login.html" class="flex items-center justify-center size-5 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
+        <span class="material-symbols-outlined text-[14px]">account_circle</span>
     </a>
 </div>
 <div class="flex flex-1 justify-end gap-3 lg:gap-4 items-center">
 <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
 <div class="relative">
-<a class="nav-home dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<a class="nav-home dropdown-trigger text-slate-600 dark:text-slate-200 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
 <div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
 <a href="index.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 1</a>
 <a href="home2.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 2</a>
 </div>
 </div>
-<a class="nav-services text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="services.html">Services</a>
-<a class="nav-pricing text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="pricing.html">Pricing</a>
-<a class="nav-gallery text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="gallery.html">Gallery</a>
-<a class="nav-blog text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="blog.html">Blog</a>
-<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-primary font-black scale-105" href="contact.html">Contact</a>
-<a class="nav-about text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="about.html">About</a>
+<a class="nav-services text-slate-600 dark:text-slate-200 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="services.html">Services</a>
+<a class="nav-pricing text-slate-600 dark:text-slate-200 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="pricing.html">Pricing</a>
+<a class="nav-gallery text-slate-600 dark:text-slate-200 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="gallery.html">Gallery</a>
+<a class="nav-blog text-slate-600 dark:text-slate-200 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="blog.html">Blog</a>
+<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-medium uppercase tracking-wider transition-colors text-primary scale-105" href="contact.html">Contact</a>
+<a class="nav-about text-slate-600 dark:text-slate-200 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="about.html">About</a>
 <div class="relative">
-<a class="nav-dashboard dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<a class="nav-dashboard dropdown-trigger text-slate-600 dark:text-slate-200 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
 <div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
 <a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
-<a href="user-profile.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
+<a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
 </div>
 </div>
 </nav>
 <div class="flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 pl-4 ml-2">
-<button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">LTR</button>
-<button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+<button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-200 hover:text-primary text-[10px] font-bold tracking-widest bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">LTR</button>
+<button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-200 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
 <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
 <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
 </button>
@@ -77,8 +87,8 @@
     Book Services
 </a>
 <!-- Mobile Menu Trigger -->
-<button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center rounded-lg h-8 w-8 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
-    <span class="material-symbols-outlined text-[20px]">menu</span>
+<button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center rounded-lg h-8 w-8 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
+    <span class="material-symbols-outlined text-[18px]">menu</span>
 </button>
 </div>
 </div>
@@ -92,12 +102,13 @@
     <!-- Header -->
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
-            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
+            <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
+            <h2 class="hidden md:block text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
                 Precision Detail
                 <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
             </h2>
         </div>
-        <button id="mobile-menu-close" class="text-slate-500 dark:text-slate-600 dark:text-white/60 hover:text-primary dark:hover:text-white transition-colors">
+        <button id="mobile-menu-close" class="text-slate-500 dark:text-slate-400 dark:text-white/60 hover:text-primary dark:hover:text-white transition-colors">
             <span class="material-symbols-outlined text-2xl">close</span>
         </button>
     </div>
@@ -112,11 +123,11 @@
                     <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
                 </div>
                 <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
-                    <a href="index.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
+                    <a href="index.html" class="text-slate-900 dark:text-slate-400 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
                         Version 1
                         <span class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
                     </a>
-                    <a href="home2.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors">Version 2</a>
+                    <a href="home2.html" class="text-slate-900 dark:text-slate-400 dark:text-white/70 hover:text-primary text-sm transition-colors">Version 2</a>
                 </div>
             </div>
 
@@ -147,7 +158,7 @@
                     Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
-                <a href="user-profile.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                <a href="user-dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
                     User Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
@@ -164,7 +175,7 @@
         </a>
 
         <!-- Social Icons -->
-        <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-slate-600 dark:text-white/40 pt-2">
+        <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-slate-400 dark:text-white/40 pt-2">
             <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">public</span>
             <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">share</span>
             <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">alternate_email</span>
@@ -180,13 +191,13 @@
 <main class="relative overflow-hidden">
 <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]"></div>
 <div class="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-accent-cyan/10 rounded-full blur-[100px]"></div>
-<section class="max-w-7xl mx-auto px-6 pt-20 pb-32">
+<section class="max-w-7xl mx-auto px-6 pt-24 md:pt-20 pb-32">
 <div class="mb-16">
 <span class="text-primary dark:text-primary dark:text-accent-gold font-sora font-semibold tracking-widest uppercase text-xs">Excellence Awaits</span>
 <h1 class="text-5xl md:text-7xl font-sora font-extrabold mt-4 text-slate-900 dark:text-white">
                     Get in Touch
                 </h1>
-<p class="mt-6 text-lg text-slate-600 dark:text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+<p class="mt-6 text-lg text-slate-600 dark:text-slate-100 max-w-2xl leading-relaxed">
                     Experience the pinnacle of automotive care. Our concierge team is ready to assist you with your elite detailing needs and custom inquiries.
                 </p>
 </div>
@@ -198,8 +209,8 @@
 <span class="material-symbols-outlined text-primary">location_on</span>
 </div>
 <div>
-<h3 class="text-slate-900 dark:text-slate-900 dark:text-white font-sora font-bold text-lg mb-1">Address</h3>
-<p class="text-slate-600 dark:text-slate-600 dark:text-slate-400 leading-relaxed">100 Elite Way, Silicon Valley<br/>California, CA 94025</p>
+<h3 class="text-slate-900 dark:text-white font-sora font-bold text-lg mb-1">Address</h3>
+<p class="text-slate-600 dark:text-slate-100 leading-relaxed">100 Elite Way, Silicon Valley<br/>California, CA 94025</p>
 </div>
 </div>
 <div class="flex items-start gap-6 group">
@@ -207,8 +218,8 @@
 <span class="material-symbols-outlined text-accent-cyan">call</span>
 </div>
 <div>
-<h3 class="text-slate-900 dark:text-slate-900 dark:text-white font-sora font-bold text-lg mb-1">Phone</h3>
-<p class="text-slate-600 dark:text-slate-600 dark:text-slate-400">+1 (800) PRECISION</p>
+<h3 class="text-slate-900 dark:text-white font-sora font-bold text-lg mb-1">Phone</h3>
+<p class="text-slate-600 dark:text-slate-100">+1 (800) PRECISION</p>
 <p class="text-slate-500 text-sm mt-1">Available Mon - Sat, 9am - 6pm</p>
 </div>
 </div>
@@ -217,8 +228,8 @@
 <span class="material-symbols-outlined text-primary dark:text-primary dark:text-accent-gold">mail</span>
 </div>
 <div>
-<h3 class="text-slate-900 dark:text-slate-900 dark:text-white font-sora font-bold text-lg mb-1">Email</h3>
-<p class="text-slate-600 dark:text-slate-600 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer">concierge@precision.detail</p>
+<h3 class="text-slate-900 dark:text-white font-sora font-bold text-lg mb-1">Email</h3>
+<p class="text-slate-600 dark:text-slate-200 hover:text-primary transition-colors cursor-pointer">concierge@precision.detail</p>
 </div>
 </div>
 </div>
@@ -226,44 +237,50 @@
 <h4 class="text-slate-500 font-sora font-bold text-xs uppercase tracking-[0.2em] mb-6">Follow the Journey</h4>
 <div class="flex gap-4">
 <a class="size-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all group glow-purple" href="#">
-<span class="material-symbols-outlined text-lg text-slate-600 dark:text-slate-600 dark:text-slate-400 group-hover:text-primary">camera</span>
+<span class="material-symbols-outlined text-lg text-slate-600 dark:text-slate-100 group-hover:text-primary">camera</span>
 </a>
 <a class="size-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent-cyan/20 hover:border-accent-cyan/50 transition-all group glow-cyan" href="#">
-<span class="material-symbols-outlined text-lg text-slate-600 dark:text-slate-600 dark:text-slate-400 group-hover:text-accent-cyan">brand_family</span>
+<span class="material-symbols-outlined text-lg text-slate-600 dark:text-slate-100 group-hover:text-accent-cyan">brand_family</span>
 </a>
 <a class="size-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent-gold/20 hover:border-accent-gold/50 transition-all group" href="#">
-<span class="material-symbols-outlined text-lg text-slate-600 dark:text-slate-600 dark:text-slate-400 group-hover:text-primary dark:text-primary dark:text-accent-gold">share</span>
+<span class="material-symbols-outlined text-lg text-slate-600 dark:text-slate-100 group-hover:text-primary dark:text-primary dark:text-accent-gold">share</span>
 </a>
 </div>
 </div>
 </div>
-<div class="glass-panel p-8 md:p-12 rounded-2xl shadow-2xl relative overflow-hidden text-slate-900 dark:text-white">
+<div class="glass-panel p-8 md:p-12 lg:ml-auto rounded-3xl shadow-2xl relative overflow-hidden text-slate-900 dark:text-white max-w-xl md:max-w-none">
 <div class="absolute top-0 right-0 p-8 opacity-20">
-<span class="material-symbols-outlined text-6xl text-primary">edit_note</span>
+<span class="material-symbols-outlined text-2xl text-primary">edit_note</span>
 </div>
 <form class="space-y-6 relative z-10">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="text-xs font-bold text-slate-600 dark:text-slate-600 dark:text-slate-400 uppercase tracking-wider ml-1">Full Name</label>
+<label class="text-xs font-bold text-slate-600 dark:text-slate-100 uppercase tracking-wider ml-1">Full Name</label>
                             <input class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="John Doe" type="text"/>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider ml-1">Email Address</label>
+                            <label class="text-xs font-bold text-slate-600 dark:text-slate-100 uppercase tracking-wider ml-1">Email Address</label>
                             <input class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="john@example.com" type="email"/>
                         </div>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider ml-1">Service Interest</label>
-                        <select class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all appearance-none">
-                            <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Ceramic Coating</option>
-                            <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Full Interior Restoration</option>
-                            <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Paint Protection Film (PPF)</option>
-                            <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">The Ultimate Detail</option>
-                            <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Concierge Maintenance</option>
-                        </select>
+                        <label class="text-xs font-bold text-slate-600 dark:text-slate-200 uppercase tracking-wider ml-1">Service Interest</label>
+                        <div class="relative group">
+                            <div class="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-orange-600/20 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <select class="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/50 rounded-xl px-2 py-2 md:px-4 md:py-3 text-[10px] md:text-sm text-slate-900 dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all appearance-none cursor-pointer hover:shadow-[0_0_20px_rgba(236,91,19,0.15)] relative z-10">
+                                <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Ceramic Coating</option>
+                                <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Full Interior Restoration</option>
+                                <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Paint Protection Film (PPF)</option>
+                                <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">The Ultimate Detail</option>
+                                <option class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">Concierge Maintenance</option>
+                            </select>
+                            <div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 z-20">
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="space-y-2">
-                        <label class="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider ml-1">Your Message</label>
+                        <label class="text-xs font-bold text-slate-600 dark:text-slate-100 uppercase tracking-wider ml-1">Your Message</label>
                         <textarea class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="How can we help you?" rows="4"></textarea>
 </div>
 <button class="w-full bg-primary hover:bg-primary/90 text-white font-sora font-bold py-4 rounded-xl transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2 group" type="submit">
@@ -284,7 +301,7 @@
 </div>
 <div>
 <p class="text-white font-bold text-sm">Our Studio</p>
-<p class="text-slate-600 dark:text-slate-600 dark:text-slate-400 text-xs">Open for consultations</p>
+<p class="text-slate-600 dark:text-slate-400 dark:text-slate-200 text-xs">Open for consultations</p>
 </div>
 </div>
 </div>
@@ -301,19 +318,19 @@
                         <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
                     </h4>
                 </div>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence through meticulous craftsmanship and premium protection services.</p>
+<p class="text-slate-500 dark:text-slate-200 text-sm leading-relaxed">Defining automotive excellence through meticulous craftsmanship and premium protection services.</p>
 <div class="flex gap-4">
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-200 hover:text-primary transition-colors" href="#">
 <span class="material-symbols-outlined text-[18px]">public</span>
 </a>
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-200 hover:text-primary transition-colors" href="#">
 <span class="material-symbols-outlined text-[18px]">share</span>
 </a>
 </div>
 </div>
 <div>
 <h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-200">
 <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
 <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
@@ -322,7 +339,7 @@
 </div>
 <div>
 <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-200">
 <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
@@ -331,7 +348,7 @@
 </div>
 <div>
 <h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
+<p class="text-slate-500 dark:text-slate-200 text-sm mb-4">Get the latest tips and offers.</p>
 <div class="flex gap-2">
 <input class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-white" placeholder="Email" type="email"/>
 <button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
@@ -340,10 +357,11 @@
 </div>
 </div>
 </div>
-<div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-200">
                     © 2024 Precision Detail. All rights reserved.
                 </div>
 </div>
 </footer>
 <script src="../assets/js/main.js"></script>
 </body></html>
+
