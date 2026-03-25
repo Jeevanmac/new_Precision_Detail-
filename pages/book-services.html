@@ -42,20 +42,20 @@ window.addEventListener("scroll", function () {
 });
 </script>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<header id="navbar" class="always-scrolled scrolled !transition-none fixed top-0 left-0 w-full z-50 flex items-center justify-between px-5 lg:px-8 py-3 min-h-[72px] border-b">
-  <div class="flex items-center gap-4">
+<header id="navbar" class="always-scrolled scrolled !transition-none fixed top-0 left-0 w-full z-50 flex items-center justify-between px-5 lg:px-8 py-3 min-h-[60px] border-b">
+
+  <!-- LEFT (LOGO) -->
+  <div class="flex items-center gap-2">
     <a href="index.html" class="flex items-center gap-2">
+      <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover">
       <h2 class="hidden md:block text-slate-900 dark:text-slate-100 text-[15px] font-black tracking-tighter uppercase italic">
-        Precision Detail <span class="text-orange-500 text-[10px]">●</span>
+        Precision Detail
       </h2>
     </a>
-    <div class="h-5 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
-    <a href="login.html" class="flex items-center justify-center size-9 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:text-primary transition">
-      <span class="material-symbols-outlined text-[22px]">account_circle</span>
-    </a>
   </div>
-  <div class="flex flex-1 justify-end items-center gap-5">
-    <nav class="hidden nav-mobile:flex items-center gap-5">
+
+  <!-- CENTER (MENU) -->
+  <nav class="hidden nav-mobile:flex items-center gap-5">
       <a href="index.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Home</a>
       <a href="services.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Services</a>
       <a href="pricing.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Pricing</a>
@@ -64,17 +64,22 @@ window.addEventListener("scroll", function () {
       <a href="contact.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Contact</a>
       <a href="about.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">About</a>
       <a href="dashboard.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-primary transition">Dashboard</a>
-    </nav>
-    <div class="flex items-center gap-3 border-l border-slate-200 dark:border-slate-800 pl-4">
-      <button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-[11px] font-bold rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-primary transition">LTR</button>
-      <button id="theme-toggle-nav" class="flex items-center justify-center size-9 rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 transition">
-        <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-        <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-      </button>
-      <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center h-9 px-5 rounded-lg bg-primary text-white text-[11px] font-black uppercase tracking-wider shadow-md hover:brightness-110 transition">Book Services</a>
-      <button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center h-9 w-9 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"><span class="material-symbols-outlined text-[22px]">menu</span></button>
-    </div>
+  </nav>
+
+  <!-- RIGHT (ACTIONS) -->
+  <div class="flex items-center gap-3 z-10">
+    <button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-[11px] font-bold rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-primary transition">LTR</button>
+    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 transition">
+      <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+      <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+    </button>
+    <a href="login.html" class="hidden nav-mobile:flex items-center justify-center size-7 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
+      <span class="material-symbols-outlined text-[14px]">account_circle</span>
+    </a>
+    <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center h-9 px-5 rounded-lg bg-primary text-white text-[11px] font-black uppercase tracking-wider shadow-md hover:brightness-110 transition">Book Services</a>
+    <button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center h-9 w-9 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"><span class="material-symbols-outlined text-[22px]">menu</span></button>
   </div>
+
 </header>
 
 <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>

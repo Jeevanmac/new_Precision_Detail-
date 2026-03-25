@@ -16,25 +16,22 @@
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<header id="navbar" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-transparent px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
-<div class="flex items-center gap-3">
-    <div class="flex items-center gap-2">
-        <div class="relative group flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-1">
-                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
-                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
-                    Precision Detail
-                </h2>
-            </a>
-        </div>
+<header id="navbar" class="flex items-center justify-between px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+
+  <!-- LEFT (LOGO) -->
+  <div class="flex items-center gap-2">
+    <div class="relative group flex items-center gap-2">
+      <a href="index.html" class="flex items-center gap-1">
+        <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+        <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
+          Precision Detail
+        </h2>
+      </a>
     </div>
-    <div class="h-4 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
-    <a href="login.html" class="flex items-center justify-center size-8 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
-        <span class="material-symbols-outlined text-[20px]">account_circle</span>
-    </a>
-</div>
-<div class="flex flex-1 justify-end gap-3 lg:gap-4 items-center">
-<nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
+  </div>
+
+  <!-- CENTER (MENU) -->
+  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
 <div class="relative">
 <a class="nav-home dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
 <div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
@@ -55,22 +52,26 @@
 <a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
 </div>
 </div>
-</nav>
-<div class="flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 pl-4 ml-2">
-<button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">LTR</button>
-<button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
-<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-</button>
-<a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-    Book Services
-</a>
-<!-- Mobile Menu Trigger -->
-<button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center rounded-lg h-8 w-8 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
-    <span class="material-symbols-outlined text-[20px]">menu</span>
-</button>
-</div>
-</div>
+  </nav>
+
+  <!-- RIGHT (ACTIONS) -->
+  <div class="flex items-center gap-2 z-10">
+    <button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">LTR</button>
+    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+      <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+      <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+    </button>
+    <a href="login.html" class="hidden nav-mobile:flex items-center justify-center size-7 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
+      <span class="material-symbols-outlined text-[14px]">account_circle</span>
+    </a>
+    <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
+      Book Services
+    </a>
+    <button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center rounded-lg h-8 w-8 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
+      <span class="material-symbols-outlined text-[20px]">menu</span>
+    </button>
+  </div>
+
 </header>
 
 <!-- Mobile Drawer Overlay -->
