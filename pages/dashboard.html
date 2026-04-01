@@ -1,101 +1,121 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Apex Detail | Client Dashboard</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script src="../assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
-<div class="flex min-h-screen">
-    <!-- Sidebar Navigation -->
-    <aside class="w-60 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-accent-dark flex flex-col fixed h-full z-50 transition-all duration-300">
-        <div class="px-6 py-4">
-            <div class="flex items-center justify-between gap-3 mb-6">
-                <div class="relative group flex items-center gap-2">
-                    <a href="index.html" class="flex items-center gap-1">
-                        <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
-                        <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
-                            Precision Detail
-                        </h2>
-                    </a>
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside
+            class="w-60 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-accent-dark flex flex-col fixed h-full z-50 transition-all duration-300">
+            <div class="px-6 py-4">
+                <div class="flex items-center justify-between gap-3 mb-6">
+                    <div class="relative group flex items-center gap-2">
+                        <a href="index.html" class="flex items-center gap-1">
+                            <img src="../assets/images/logo.png" alt="Logo"
+                                class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+                            <h2
+                                class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
+                                Precision Detail
+                            </h2>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Sidebar Toggles -->
-            <div class="flex items-center gap-2 mb-4 p-1 bg-slate-50 dark:bg-accent-dark/30 rounded-lg border border-slate-100 dark:border-accent-dark/50">
-                <button id="dir-toggle-nav" class="flex-1 h-9 flex items-center justify-center text-[10px] font-black tracking-widest bg-white dark:bg-slate-800 rounded-md shadow-sm border border-slate-200 dark:border-accent-dark transition-all active:scale-95">LTR</button>
-                <button id="theme-toggle-nav" class="flex-1 h-9 flex items-center justify-center text-slate-500 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-md border border-slate-200 dark:border-accent-dark transition-all active:scale-95">
-                    <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-                    <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-                </button>
-            </div>
-        </div>
-        <nav class="flex-1 px-3 space-y-1 mt-2" id="sidebar-nav">
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary text-white font-bold text-sm transition-all shadow-md shadow-primary/20" href="javascript:void(0)" onclick="switchSection('overview')" id="nav-overview">
-                <span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
-                <span>Dashboard</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('vehicles')" id="nav-vehicles">
-                <span class="material-symbols-outlined text-[20px]" data-icon="directions_car">directions_car</span>
-                <span>My Vehicles</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('appointments')" id="nav-appointments">
-                <span class="material-symbols-outlined text-[20px]" data-icon="calendar_month">calendar_month</span>
-                <span>Appointments</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('history')" id="nav-history">
-                <span class="material-symbols-outlined text-[20px]" data-icon="history">history</span>
-                <span>Service History</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('invoices')" id="nav-invoices">
-                <span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
-                <span>Invoices</span>
-            </a>
-        </nav>
-        <!-- Bottom User Profile -->
-        <div class="p-4 mt-auto border-t border-slate-200 dark:border-accent-dark">
-            <div class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-accent-dark transition-all cursor-pointer group" onclick="switchSection('profile')" id="nav-profile-bottom">
-                <div class="size-11 rounded-full border-2 border-primary/30 p-0.5 group-hover:scale-105 transition-transform shrink-0">
-                    <div class="h-full w-full rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcz4QFyoBE-Elx3nDGSSkpo5qisjI1i-now-Ar-jGBoEn8fTNStz8YIsDfHKGrlidd5BjEwBYQur8ONXukzlJJJeJ43ACX4R0XgBe_VwSeOchK-cQsLAAp8srujcrYg6GfoTqqFcljJOjWD0MEnR7fU4EJBMuJDta1GjFbwHt7gMrFc_wqgoaKpS4noFC9ryL1TSwdsWpNdpKAVpIr7ehv1sQbzT_JIENvh3Mees5PuKTZymoGsb-QJLGq1OlA8hLA92-8aQTeTK4')"></div>
-                </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-sm font-bold truncate text-slate-900 dark:text-slate-100">Alex Johnson</p>
-                    <p class="text-[10px] font-bold text-primary uppercase tracking-tighter truncate">Premium Member</p>
-                </div>
-                <button class="size-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-primary hover:bg-primary/10 transition-colors">
-                    <span class="material-symbols-outlined text-[20px]">settings</span>
-                </button>
-            </div>
-            <a href="index.html" class="mt-4 w-full flex items-center justify-center gap-2 py-2 text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-lg transition-colors">
-                <span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
-                Sign Out
-            </a>
-        </div>
-    </aside>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 ml-60 p-8 min-h-screen transition-all duration-300" id="dashboard-content">
-        <!-- Content loaded via JavaScript -->
-    </main>
-</div>
+                <!-- Sidebar Toggles -->
+                <div
+                    class="flex items-center gap-2 mb-4 p-1 bg-slate-50 dark:bg-accent-dark/30 rounded-lg border border-slate-100 dark:border-accent-dark/50">
+                    <button id="dir-toggle-nav"
+                        class="flex-1 h-9 flex items-center justify-center text-[10px] font-black tracking-widest bg-white dark:bg-slate-800 rounded-md shadow-sm border border-slate-200 dark:border-accent-dark transition-all active:scale-95">LTR</button>
+                    <button id="theme-toggle-nav"
+                        class="flex-1 h-9 flex items-center justify-center text-slate-500 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-md border border-slate-200 dark:border-accent-dark transition-all active:scale-95">
+                        <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+                        <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+                    </button>
+                </div>
+            </div>
+            <nav class="flex-1 px-3 space-y-1 mt-2" id="sidebar-nav">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary text-white font-bold text-sm transition-all shadow-md shadow-primary/20"
+                    href="javascript:void(0)" onclick="switchSection('overview')" id="nav-overview">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+                    <span>Dashboard</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('vehicles')" id="nav-vehicles">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="directions_car">directions_car</span>
+                    <span>My Vehicles</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('appointments')" id="nav-appointments">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="calendar_month">calendar_month</span>
+                    <span>Appointments</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('history')" id="nav-history">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="history">history</span>
+                    <span>Service History</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('invoices')" id="nav-invoices">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
+                    <span>Invoices</span>
+                </a>
+            </nav>
+            <!-- Bottom User Profile -->
+            <div class="p-4 mt-auto border-t border-slate-200 dark:border-accent-dark">
+                <div class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-accent-dark transition-all cursor-pointer group"
+                    onclick="switchSection('profile')" id="nav-profile-bottom">
+                    <div
+                        class="size-11 rounded-full border-2 border-primary/30 p-0.5 group-hover:scale-105 transition-transform shrink-0">
+                        <div class="h-full w-full rounded-full bg-cover bg-center"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcz4QFyoBE-Elx3nDGSSkpo5qisjI1i-now-Ar-jGBoEn8fTNStz8YIsDfHKGrlidd5BjEwBYQur8ONXukzlJJJeJ43ACX4R0XgBe_VwSeOchK-cQsLAAp8srujcrYg6GfoTqqFcljJOjWD0MEnR7fU4EJBMuJDta1GjFbwHt7gMrFc_wqgoaKpS4noFC9ryL1TSwdsWpNdpKAVpIr7ehv1sQbzT_JIENvh3Mees5PuKTZymoGsb-QJLGq1OlA8hLA92-8aQTeTK4')">
+                        </div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold truncate text-slate-900 dark:text-slate-100">Alex Johnson</p>
+                        <p class="text-[10px] font-bold text-primary uppercase tracking-tighter truncate">Premium Member
+                        </p>
+                    </div>
+                    <button
+                        class="size-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-primary hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-[20px]">settings</span>
+                    </button>
+                </div>
+                <a href="index.html"
+                    class="mt-4 w-full flex items-center justify-center gap-2 py-2 text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+                    Sign Out
+                </a>
+            </div>
+        </aside>
 
-<!-- Section Templates -->
+        <!-- Main Content Area -->
+        <main class="flex-1 ml-60 p-8 min-h-screen transition-all duration-300" id="dashboard-content">
+            <!-- Content loaded via JavaScript -->
+        </main>
+    </div>
+
+    <!-- Section Templates -->
     <script type="text/template" id="tmpl-overview">
         <div class="space-y-8 animate-in fade-in duration-500">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
                 <div>
-                    <a href="index.html" class="inline-flex items-center gap-1 text-slate-400 hover:text-primary transition-colors mb-4 text-[10px] font-black uppercase tracking-[0.2em] group">
-                        <span class="material-symbols-outlined text-sm group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
-                        back
-                    </a>
                     <h1 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Dashboard Overview</h1>
                     <p class="text-slate-500 dark:text-slate-400 mt-1 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                         Welcome back Alex Johnson <span class="size-1 rounded-full bg-slate-300"></span> Platinum Member <span class="size-1 rounded-full bg-slate-300"></span> Los Angeles, CA
@@ -115,7 +135,9 @@
 
             <!-- Enhanced Stats Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                             <span class="material-symbols-outlined">payments</span>
@@ -129,7 +151,9 @@
                         </span>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="size-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-500">
                             <span class="material-symbols-outlined">verified</span>
@@ -141,7 +165,9 @@
                         <span class="text-xs text-slate-400 font-medium mt-1">All maintenance up to date</span>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="size-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-500">
                             <span class="material-symbols-outlined">stars</span>
@@ -153,7 +179,9 @@
                         <span class="text-xs text-primary font-bold mt-1">Platinum Tier Access</span>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="size-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500">
                             <span class="material-symbols-outlined">history</span>
@@ -168,54 +196,134 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Most Popular Services -->
                 <div class="lg:col-span-2 space-y-6">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Most Popular Services</h3>
-                        <a href="#" class="text-primary text-sm font-bold hover:underline">View All Packages</a>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary/50 transition-all">
-                            <div class="h-32 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyD46mS4W3K7mB_SloX1vO0R1DMBXf_9uWvU3Y5Hj6xL6B4M8S_jR1D5L3vA')"></div>
-                            <div class="p-4">
-                                <h4 class="font-bold text-sm mb-1">Gold Detail</h4>
-                                <p class="text-xs text-slate-500 mb-3">Full exterior & interior restore</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm font-black text-primary">$250</span>
-                                    <button class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-[10px] font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Quick Book</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary/50 transition-all">
-                            <div class="h-32 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_vC7L_X3M5N_D6R_L8V4Y_B3P5L_S8V4T_Y3X5C_L_vC7M_S8V4B6')"></div>
-                            <div class="p-4">
-                                <h4 class="font-bold text-sm mb-1">Ceramic Ultra</h4>
-                                <p class="text-xs text-slate-500 mb-3">5-year liquid glass protection</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm font-black text-primary">From $850</span>
-                                    <button class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-[10px] font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Quick Book</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary/50 transition-all">
-                            <div class="h-32 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_W49z6N8F3R5L_P4M8S_jR1D5L3vA_W49z6N8F3R5L')"></div>
-                            <div class="p-4">
-                                <h4 class="font-bold text-sm mb-1">Interior Revival</h4>
-                                <p class="text-xs text-slate-500 mb-3">Deep deep restoration</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm font-black text-primary">$150</span>
-                                    <button class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-[10px] font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Quick Book</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+    <div class="flex items-center justify-between">
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Most Popular Services</h3>
+        <a href="#" class="text-primary text-sm font-bold hover:underline">View All Packages</a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- CARD 1 -->
+<div class="bg-gradient-to-br from-[#0f172a] to-[#020617] 
+rounded-2xl border border-slate-800 
+min-h-[300px] flex flex-col">
+            <div class="relative h-36 overflow-hidden">
+                <img src="../assets/images/2022 Ferrari F8 Tributo.png" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                <div class="absolute top-3 left-3 bg-primary text-white text-[10px] px-2 py-1 rounded uppercase font-bold">
+                    Most Booked
                 </div>
+            </div>
+
+            <!-- CONTENT -->
+    <div class="p-5 flex flex-col flex-1">
+
+        <h4 class="font-bold text-sm text-white mb-1">Gold Detail</h4>
+        <p class="text-xs text-slate-400 mb-4">Full exterior & interior restore</p>
+
+        <div class="space-y-1 mb-4 text-[11px] text-slate-400">
+            <p>✔ Paint Protection</p>
+            <p>✔ Interior Deep Clean</p>
+            <p>✔ Tire & Rim Finish</p>
+        </div>
+
+        <!-- 🔥 LOCKED BOTTOM -->
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-lg font-black text-primary">$250</span>
+            <button class="px-4 py-2 bg-slate-800 text-white text-[11px] font-bold rounded-lg hover:bg-primary transition-all">
+                Accept
+            </button>
+        </div>
+
+    </div>
+        </div>
+
+
+        <!-- CARD 2 -->
+<div class="bg-gradient-to-br from-[#0f172a] to-[#020617] 
+rounded-2xl border border-slate-800 
+min-h-[300px] flex flex-col">
+            <div class="relative h-36 overflow-hidden">
+                <img src="../assets/images/2025 Aston Martin DB12.png" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                <div class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] px-2 py-1 rounded uppercase font-bold">
+                    Premium
+                </div>
+            </div>
+            <!-- CONTENT -->
+    <div class="p-5 flex flex-col flex-1">
+
+        <h4 class="font-bold text-sm text-white mb-1">Ceramic Ultra</h4>
+        <p class="text-xs text-slate-400 mb-4">5-year liquid glass protection</p>
+
+        <div class="space-y-1 mb-4 text-[11px] text-slate-400">
+            <p>✔ 10H Ceramic Coat</p>
+            <p>✔ UV Protection</p>
+            <p>✔ Hydrophobic Finish</p>
+        </div>
+
+        <!-- 🔥 LOCKED BOTTOM -->
+        <div class="flex justify-between items-center mt-auto">
+            <span class="text-lg font-black text-primary">$850</span>
+            <button class="px-4 py-2 bg-slate-800 text-white text-[11px] font-bold rounded-lg hover:bg-primary transition-all">
+                Accept
+            </button>
+        </div>
+
+    </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="bg-gradient-to-br from-[#0f172a] to-[#020617] rounded-2xl border border-slate-800 min-h-[300px] flex flex-col">
+            <div class="relative h-36 overflow-hidden">
+                <img src="../assets/images/2021 McLaren 720S.png" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                <div class="absolute top-3 left-3 bg-indigo-500 text-white text-[10px] px-2 py-1 rounded uppercase font-bold">
+                    Trending
+                </div>
+            </div>
+            <!-- CONTENT -->
+            <div class="p-5 flex flex-col flex-1">
+
+                <h4 class="font-bold text-sm text-white mb-1">Interior Revival</h4>
+                <p class="text-xs text-slate-400 mb-4">Deep interior restoration</p>
+
+                <div class="space-y-1 mb-4 text-[11px] text-slate-400">
+                    <p>✔ Leather Conditioning</p>
+                    <p>✔ Odor Removal</p>
+                    <p>✔ Dashboard Polish</p>
+                </div>
+
+                <!-- 🔥 LOCKED BOTTOM -->
+                <div class="flex justify-between items-center mt-auto">
+                    <span class="text-lg font-black text-primary">$150</span>
+                    <button class="px-4 py-2 bg-slate-800 text-white text-[11px] font-bold rounded-lg hover:bg-primary transition-all">
+                        Accept
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
 
                 <!-- Recent Activity -->
                 <div class="space-y-6">
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white">Recent Activity</h3>
                     <div class="space-y-4">
-                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                             <div class="size-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0">
                                 <span class="material-symbols-outlined text-[20px]">check_circle</span>
                             </div>
@@ -224,7 +332,9 @@
                                 <p class="text-xs text-slate-500">Completed 2 days ago</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                             <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                                 <span class="material-symbols-outlined text-[20px]">receipt_long</span>
                             </div>
@@ -233,7 +343,9 @@
                                 <p class="text-xs text-slate-500">Processed yesterday</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm opacity-60">
+                        <div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm opacity-60 hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                             <div class="size-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 shrink-0">
                                 <span class="material-symbols-outlined text-[20px]">schedule</span>
                             </div>
@@ -245,6 +357,128 @@
                     </div>
                 </div>
             </div>
+               
+            
+            <!-- 🔥 ADMIN INSIGHT CARDS -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- 1. LIVE SERVICE STATUS -->
+    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark p-5 shadow-sm hover:shadow-xl transition-all hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+
+        <div class="flex items-center justify-between mb-4">
+            <h4 class="font-bold text-sm">Live Service Status</h4>
+            <span class="text-[10px] bg-emerald-500/10 text-emerald-500 px-2 py-1 rounded uppercase font-bold">
+                Active
+            </span>
+        </div>
+
+        <div class="space-y-4">
+
+            <div class="flex items-center gap-3">
+                <div class="size-8 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                </div>
+                <p class="text-xs font-medium">BMW M4 - Completed</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="size-8 bg-amber-500/10 text-amber-500 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[16px]">autorenew</span>
+                </div>
+                <p class="text-xs font-medium">Range Rover SV - In Progress</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="size-8 bg-blue-500/10 text-blue-500 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[16px]">schedule</span>
+                </div>
+                <p class="text-xs font-medium">Audi R8 - Scheduled</p>
+            </div>
+
+        </div>
+
+        <button class="mt-4 w-full text-xs font-bold text-primary hover:underline">
+            View All Services →
+        </button>
+    </div>
+
+
+    <!-- 2. FEATURED VEHICLE -->
+    <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+
+        <div class="relative h-44">
+            <img src="../assets/images/2024 Mercedes-Benz G63.png" class="w-full h-full object-cover"/>
+
+            <div class="absolute top-3 left-3 bg-primary text-white text-[10px] px-2 py-1 rounded uppercase font-bold">
+                Today’s Highlight
+            </div>
+
+            <div class="absolute bottom-3 left-3 bg-black/50 text-white text-[10px] px-2 py-1 rounded">
+                Ceramic Coating Completed
+            </div>
+        </div>
+
+        <div class="p-4">
+            <h4 class="font-bold text-sm">Mercedes-Benz G63 AMG</h4>
+            <p class="text-xs text-slate-500 mt-1">Luxury SUV detailing</p>
+        </div>
+    </div>
+
+
+    <!-- 3. BUSINESS PERFORMANCE -->
+    <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-accent-dark p-5 shadow-sm hover:shadow-xl transition-all hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+
+        <h4 class="font-bold text-sm mb-4">Today’s Performance</h4>
+
+        <div class="space-y-4">
+
+            <!-- Revenue -->
+            <div>
+                <div class="flex justify-between text-xs mb-1">
+                    <span class="text-slate-500">Revenue</span>
+                    <span class="font-bold">$3,240</span>
+                </div>
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full">
+                    <div class="h-2 bg-primary rounded-full" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <div class="flex justify-between text-xs mb-1">
+                    <span class="text-slate-500">Services Completed</span>
+                    <span class="font-bold">18</span>
+                </div>
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full">
+                    <div class="h-2 bg-emerald-500 rounded-full" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <!-- Customer Satisfaction -->
+            <div>
+                <div class="flex justify-between text-xs mb-1">
+                    <span class="text-slate-500">Satisfaction</span>
+                    <span class="font-bold">98%</span>
+                </div>
+                <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full">
+                    <div class="h-2 bg-indigo-500 rounded-full" style="width: 98%"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="text-[10px] text-slate-400 mt-4 italic">
+            *Static demo metrics for presentation
+        </p>
+    </div>
+
+</div>
+
+</div>
         </div>
     </script>
 
@@ -263,7 +497,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Vehicle Card 1 -->
-                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary/50 transition-all">
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
                     <div class="h-56 relative overflow-hidden">
                         <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-UWKAZY8nNbEXbdK0Miol0SHnnUVN3f09EFM-fDtIV3Zo9wEoBEc3GNPa2-3X9U0S9k0Akic_PVdHxZlXb_qQyM5cHhElioGc7cr2KxWzalFS7yqYoXFOE-d7YWq88nTdvCQT_7UWUewX-NpYBxix0g8h3PXbc7drSef0TA0yROtyzi3JzS3s0soUK6mzUxemKPZgaODUy9IJJLIZ1DeI4YhCiaBnZTOuFENHli_pYBAakB052EBjAA-XkOFdK9vLyssQTBn8fHI" alt="Porsche 911 GT3"/>
                         <div class="absolute top-4 left-4">
@@ -298,7 +532,7 @@
                 </div>
 
                 <!-- Vehicle Card 2 -->
-                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-amber-500/50 transition-all">
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
                     <div class="h-56 relative overflow-hidden">
                         <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaGua8JZAxpWkGjfMe6CQRn6_6fZMrwToB-wtuAznAFCu_zjwHDfkyb5ez-WyIAynK2BbQT3kmASJfcY3A2NjfMT19foooMgsnxGMFKVBAhHAmZqYjpTjmmbaE07dcA2Qd0_DtgYtjeVYvMFdOhhf38BO9FWk7jTdFiAb7y9TCu6sus6bPf3ef-B4ZyRFWFZJaAFo0chwTybyvkphvE68s1nhyhYE7jy_fySQPYo6Jkl_mSqgvDdzRYOlU-iEtP4MM4trqb_kJ1rM" alt="Lamborghini Huracán"/>
                         <div class="absolute top-4 left-4">
@@ -331,6 +565,286 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Vehicle Card 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2024 Mercedes-Benz G63.png" alt="Mercedes-Benz G63 AMG"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-emerald-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Coating Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2024 Mercedes-Benz G63</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">MB-889 • Obsidian Black</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Aug 10, 2025</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Next Recommended</span>
+                                <span class="font-bold">Feb 2026</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">Service History</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 4 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2022 Ferrari F8 Tributo.png" alt="Ferrari F8 Tributo"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-amber-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Maintenance Due</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2022 Ferrari F8 Tributo</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">F8-RED • Rosso Corsa</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Nov 05, 2024</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500 text-amber-500 font-bold">Recommended Service</span>
+                                <span class="font-bold text-amber-500 italic">Due in 5 days</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-amber-500 text-white text-xs font-bold rounded-xl hover:bg-amber-600 transition-all">Book Service Now</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 5 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2025 Aston Martin DB12.png" alt="Aston Martin DB12"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-emerald-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Coating Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2025 Aston Martin DB12</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">AM-007 • Silver Birch</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Sep 15, 2025</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Next Recommended</span>
+                                <span class="font-bold">Mar 2026</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">Service History</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 6 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2021 McLaren 720S.png" alt="McLaren 720S"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-emerald-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Coating Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2021 McLaren 720S</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">MC-720 • Papaya Spark</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Jul 20, 2025</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Next Recommended</span>
+                                <span class="font-bold">Jan 2026</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">Service History</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 7 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2023 Rolls-Royce Ghost.png" alt="Rolls-Royce Ghost"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-emerald-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Coating Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2023 Rolls-Royce Ghost</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">RR-001 • Diamond Black</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Oct 12, 2025</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Next Recommended</span>
+                                <span class="font-bold">Apr 2026</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">Service History</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 8 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2020 Audi R8 V10.png" alt="Audi R8 V10"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-emerald-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Coating Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2020 Audi R8 V10</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">R8-PERF • Nardo Grey</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Sep 01, 2025</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Next Recommended</span>
+                                <span class="font-bold">Mar 2026</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">Service History</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 9 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/Mercedes-Benz G-Class.png" alt="Mercedes-Benz G-Class"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-emerald-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Coating Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2024 Mercedes-Benz G-Class</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">G-CLASS-88 • Polar White</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Oct 15, 2025</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Next Recommended</span>
+                                <span class="font-bold">Apr 2026</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">Service History</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 10 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-accent-dark group hover:border-blue-500/50 transition-all">
+                    <div class="h-56 relative overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2024 Range Rover SV.png" alt="Range Rover SV"/>
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Project Active</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 dark:text-white">2024 Range Rover SV</h4>
+                                <p class="text-xs text-slate-500 mt-1 uppercase font-bold tracking-tighter">RR-SV-01 • Satin Sunset Gold</p>
+                            </div>
+                            <span class="p-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">directions_car</span>
+                            </span>
+                        </div>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Last Service</span>
+                                <span class="font-bold">Initial Inspection</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Project Status</span>
+                                <span class="font-bold">Full PPF Wrap In-Progress</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all">Track Progress</button>
+                            <button class="flex-1 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold rounded-xl hover:bg-slate-200 dark:hover:bg-accent-dark transition-all">View Specs</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </script>
@@ -343,12 +857,12 @@
                     <p class="text-slate-500 dark:text-slate-400 mt-1">Manage your luxury fleet maintenance and detailing schedule.</p>
                 </div>
                 <div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
-                    <button class="px-6 py-2 text-xs font-bold bg-white dark:bg-slate-700 shadow-sm rounded-lg text-primary">Upcoming</button>
-                    <button class="px-6 py-2 text-xs font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Calendar View</button>
+                    <button id="btn-upcoming" onclick="switchAppointmentView('upcoming')" class="px-6 py-2 text-xs font-bold bg-white dark:bg-slate-700 shadow-sm rounded-lg text-primary transition-all">Upcoming</button>
+                    <button id="btn-calendar" onclick="switchAppointmentView('calendar')" class="px-6 py-2 text-xs font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-all">Calendar View</button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div id="appointments-upcoming" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Upcoming Services List -->
                 <div class="lg:col-span-2 space-y-6">
                     <h3 class="text-lg font-bold flex items-center gap-2">
@@ -356,51 +870,8 @@
                         Scheduled Detailings
                     </h3>
                     
-                    <!-- Appointment Card 1 -->
-                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark rounded-2xl overflow-hidden group hover:border-primary/50 transition-all">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="w-full md:w-48 h-48 md:h-auto bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0_c78x_8Z-A2vbRe74GNK8_lFb36B9UoHrK-CIYmuZnxoIxq9z4RzI-b_WJhXbSbTmTkmdjFMRKVhdQAhz-WhecsEuevf-U3Kk57FNtJsqpfAt4NyPOOLByCcvPpo-BOgE7tJQmvpe7lA9d7gbAe9tA3zofh-SHI7xC0eGBmj_GRpb3DM_oQPcdGm0hk1NkoIWN9ETBwRA_PD9dMBuLoZdJfNI4DYjmJw1NDckngrSotg-T6azn3JsTfJUCITO6-kwArsnQtDT80')"></div>
-                            <div class="flex-1 p-6 flex flex-col justify-between">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h4 class="text-lg font-bold text-slate-900 dark:text-white">Lamborghini Huracán EVO</h4>
-                                        <p class="text-primary font-bold text-xs mt-1">Full Ceramic Coating & Interior Detail</p>
-                                    </div>
-                                    <span class="bg-emerald-500/10 text-emerald-500 text-[10px] uppercase font-black px-2 py-1 rounded-full border border-emerald-500/20 tracking-widest">Confirmed</span>
-                                </div>
-                                <div class="grid grid-cols-2 gap-4 mt-6">
-                                    <div class="flex items-center gap-3">
-                                        <div class="size-9 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center text-slate-500">
-                                            <span class="material-symbols-outlined text-[20px]">calendar_month</span>
-                                        </div>
-                                        <div>
-                                            <p class="text-[10px] text-slate-500 uppercase font-black tracking-tighter">Date</p>
-                                            <p class="text-xs font-bold">Jun 27, 2025</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <div class="size-9 bg-slate-100 dark:bg-slate-800 rounded-lg flex items-center justify-center text-slate-500">
-                                            <span class="material-symbols-outlined text-[20px]">schedule</span>
-                                        </div>
-                                        <div>
-                                            <p class="text-[10px] text-slate-500 uppercase font-black tracking-tighter">Time Slot</p>
-                                            <p class="text-xs font-bold">09:00 AM - 02:00 PM</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex items-center justify-between mt-6 pt-4 border-t border-slate-100 dark:border-accent-dark">
-                                    <div class="flex items-center gap-2">
-                                        <div class="size-7 rounded-full border-2 border-primary overflow-hidden">
-                                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEu3xxAA7BnkahmTz8C6mshB0qO4AV6dTXRebqJZRI3ux5ts368PTXHS_ttWyh-Rg_YPnDMvKeoXTDsAGKWBx0xdFdurU9lIS6lMKFFLNJmohxpUvuK6XlW-4vWuWCPBhEipGYk3nbgpdnN0Nk-J5Az7uHm4u9vOw41smkdAhWj6Nybns4nE-1Y-gUuxNWAAETCOg5qlJ368udM6MCtk1I7sQ-nqE14uRdVO7PCec-iYvf5qzalCk_5PpzSBpjOXJpVx0TEwDgj0s" alt="Detailer"/>
-                                        </div>
-                                        <span class="text-[11px] text-slate-500 italic">Lead Detailer: Marcus Pierre</span>
-                                    </div>
-                                    <button class="text-slate-400 hover:text-primary transition-colors">
-                                        <span class="material-symbols-outlined">more_horiz</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="upcoming-appointments-list" class="space-y-6">
+                        <!-- Dynamic cards will be injected here by main.js -->
                     </div>
                 </div>
 
@@ -439,6 +910,86 @@
                             <h4 class="font-bold text-xs mb-1 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">verified</span> Elite Guarantee</h4>
                             <p class="text-[10px] text-slate-500 leading-tight">Priority slots are available for Platinum members with same-day confirmation.</p>
                         </div>
+                        <div class="mt-4 bg-indigo-500/5 border border-indigo-500/20 rounded-xl p-4">
+                            <h4 class="font-bold text-xs mb-1 flex items-center gap-2"><span class="material-symbols-outlined text-indigo-500 text-sm">stars</span> Membership Perks</h4>
+                            <ul class="space-y-2 mt-2">
+                                <li class="flex items-center gap-2 text-[10px] text-slate-500">
+                                    <span class="size-1 rounded-full bg-indigo-500"></span>
+                                    Complimentary valet for pickups
+                                </li>
+                                <li class="flex items-center gap-2 text-[10px] text-slate-500">
+                                    <span class="size-1 rounded-full bg-indigo-500"></span>
+                                    10% discount on ceramic maintenance
+                                </li>
+                                <li class="flex items-center gap-2 text-[10px] text-slate-500">
+                                    <span class="size-1 rounded-full bg-indigo-500"></span>
+                                    Access to private Detailing Lounge
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4">
+                            <h4 class="font-bold text-xs mb-1 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">license</span> Our Specialties</h4>
+                            <div class="grid grid-cols-2 gap-2 mt-3">
+                                <div class="p-2 bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-accent-dark flex flex-col items-center text-center">
+                                    <span class="material-symbols-outlined text-primary text-lg mb-1">shield</span>
+                                    <span class="text-[8px] font-black uppercase tracking-widest text-slate-500">Stealth PPF</span>
+                                </div>
+                                <div class="p-2 bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-accent-dark flex flex-col items-center text-center">
+                                    <span class="material-symbols-outlined text-primary text-lg mb-1">water_drop</span>
+                                    <span class="text-[8px] font-black uppercase tracking-widest text-slate-500">Ceramic 10H</span>
+                                </div>
+                                <div class="p-2 bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-accent-dark flex flex-col items-center text-center">
+                                    <span class="material-symbols-outlined text-primary text-lg mb-1">auto_fix</span>
+                                    <span class="text-[8px] font-black uppercase tracking-widest text-slate-500">Paint Correction</span>
+                                </div>
+                                <div class="p-2 bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-accent-dark flex flex-col items-center text-center">
+                                    <span class="material-symbols-outlined text-primary text-lg mb-1">airline_seat_recline_extra</span>
+                                    <span class="text-[8px] font-black uppercase tracking-widest text-slate-500">Leather Recon</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="appointments-calendar" class="hidden animate-in fade-in duration-500 pb-12">
+                <div class="max-w-[1000px] mx-auto scale-[0.9] origin-top transition-all duration-500">
+
+                    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark rounded-2xl overflow-hidden shadow-sm">
+                        <!-- Calendar Header -->
+                        <div class="p-5 border-b border-slate-100 dark:border-accent-dark flex items-center justify-between bg-white dark:bg-slate-900">
+                            <div class="flex items-center gap-6">
+                                <h2 class="text-lg font-black text-slate-900 dark:text-white tracking-tight min-w-[140px]" id="calendar-title">July 2025</h2>
+                                <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg">
+                                    <button class="p-1 hover:bg-white dark:hover:bg-slate-700 rounded-md transition-all shadow-sm active:scale-95 flex items-center justify-center text-slate-500 hover:text-primary" onclick="prevMonth()">
+                                        <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                                    </button>
+                                    <button class="p-1 hover:bg-white dark:hover:bg-slate-700 rounded-md transition-all shadow-sm active:scale-95 flex items-center justify-center text-slate-500 hover:text-primary" onclick="nextMonth()">
+                                        <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="px-4 py-2 bg-primary text-white text-[11px] font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95" onclick="openAppointmentModal()">Add Appointment</button>
+                        </div>
+
+                        <!-- Weekday Header -->
+                        <div class="grid grid-cols-7 border-b border-slate-100 dark:border-accent-dark bg-slate-50/50 dark:bg-slate-800/30">
+                            <div class="py-3 text-center text-[10px] font-black uppercase text-slate-400 tracking-widest border-r border-slate-100 dark:border-accent-dark last:border-r-0">Sun</div>
+                            <div class="py-3 text-center text-[10px] font-black uppercase text-slate-400 tracking-widest border-r border-slate-100 dark:border-accent-dark last:border-r-0">Mon</div>
+                            <div class="py-3 text-center text-[10px] font-black uppercase text-slate-400 tracking-widest border-r border-slate-100 dark:border-accent-dark last:border-r-0">Tue</div>
+                            <div class="py-3 text-center text-[10px] font-black uppercase text-slate-400 tracking-widest border-r border-slate-100 dark:border-accent-dark last:border-r-0">Wed</div>
+                            <div class="py-3 text-center text-[10px] font-black uppercase text-slate-400 tracking-widest border-r border-slate-100 dark:border-accent-dark last:border-r-0">Thu</div>
+                            <div class="py-3 text-center text-[10px] font-black uppercase text-slate-400 tracking-widest border-r border-slate-100 dark:border-accent-dark last:border-r-0">Fri</div>
+                            <div class="py-3 text-center text-[10px] font-black uppercase text-slate-400 tracking-widest border-r border-slate-100 dark:border-accent-dark last:border-r-0">Sat</div>
+                        </div>
+
+                        <!-- Calendar Grid -->
+                        <div id="calendar-days" class="grid grid-cols-7 auto-rows-[minmax(90px,auto)] bg-slate-100 dark:bg-accent-dark/50 gap-px transition-all duration-300">
+                            <!-- Injected via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
             </div>
@@ -542,12 +1093,108 @@
                                 </td>
                                 <td class="px-6 py-5 text-right font-black text-sm">$820.00</td>
                             </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-5">
+                                    <div class="flex flex-col">
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">May 18, 2023</span>
+                                        <span class="text-[10px] text-slate-400 font-bold uppercase">SRV-81045</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-10 rounded bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-accent-dark" style="background-image: url('../assets/images/2024 Mercedes-Benz G63.png')"></div>
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">Mercedes-Benz G63</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-lg text-[10px] font-black bg-blue-500/10 text-blue-500 uppercase tracking-tighter">Paint Correction</span>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="size-2 rounded-full bg-emerald-500"></span>
+                                        <span class="text-xs font-bold text-emerald-600">Completed</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-right font-black text-sm">$1,450.00</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-5">
+                                    <div class="flex flex-col">
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">Feb 09, 2023</span>
+                                        <span class="text-[10px] text-slate-400 font-bold uppercase">SRV-80221</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-10 rounded bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-accent-dark" style="background-image: url('../assets/images/2022 Ferrari F8 Tributo.png')"></div>
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">Ferrari F8 Tributo</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-lg text-[10px] font-black bg-slate-500/10 text-slate-500 uppercase tracking-tighter">Maintenance Wash</span>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="size-2 rounded-full bg-emerald-500"></span>
+                                        <span class="text-xs font-bold text-emerald-600">Completed</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-right font-black text-sm">$250.00</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-5">
+                                    <div class="flex flex-col">
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">Nov 30, 2022</span>
+                                        <span class="text-[10px] text-slate-400 font-bold uppercase">SRV-79540</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-10 rounded bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-accent-dark" style="background-image: url('../assets/images/2025 Aston Martin DB12.png')"></div>
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">Aston Martin DB12</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-lg text-[10px] font-black bg-amber-500/10 text-amber-500 uppercase tracking-tighter">Ceramic Coating</span>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="size-2 rounded-full bg-emerald-500"></span>
+                                        <span class="text-xs font-bold text-emerald-600">Completed</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-right font-black text-sm">$850.00</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-5">
+                                    <div class="flex flex-col">
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">Sep 12, 2022</span>
+                                        <span class="text-[10px] text-slate-400 font-bold uppercase">SRV-78105</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="size-10 rounded bg-slate-100 dark:bg-slate-800 bg-cover bg-center border border-slate-200 dark:border-accent-dark" style="background-image: url('../assets/images/2021 McLaren 720S.png')"></div>
+                                        <span class="text-sm font-bold text-slate-900 dark:text-white">McLaren 720S</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-lg text-[10px] font-black bg-rose-500/10 text-rose-500 uppercase tracking-tighter">Interior Detail</span>
+                                </td>
+                                <td class="px-6 py-5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="size-2 rounded-full bg-emerald-500"></span>
+                                        <span class="text-xs font-bold text-emerald-600">Completed</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-5 text-right font-black text-sm">$450.00</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <!-- Pagination -->
                 <div class="px-6 py-4 bg-slate-50 dark:bg-accent-dark/30 border-t border-slate-100 dark:border-accent-dark flex justify-between items-center">
-                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Showing 2 of 14 records</span>
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Showing 6 of 14 records</span>
                     <div class="flex gap-2">
                         <button class="px-3 py-1 rounded-lg border border-slate-200 dark:border-accent-dark text-xs font-bold disabled:opacity-50">Prev</button>
                         <button class="px-3 py-1 rounded-lg bg-primary text-white text-xs font-bold">1</button>
@@ -576,7 +1223,9 @@
 
             <!-- Enhanced Summary Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                     <div class="flex justify-between items-start mb-4">
                         <p class="text-slate-500 text-xs font-black uppercase tracking-widest">Total Paid (YTD)</p>
                         <span class="p-2 bg-emerald-500/10 text-emerald-500 rounded-lg"><span class="material-symbols-outlined text-lg">check_circle</span></span>
@@ -586,7 +1235,9 @@
                         <span class="text-emerald-500 text-[10px] font-black">+12.5%</span>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                     <div class="flex justify-between items-start mb-4">
                         <p class="text-slate-500 text-xs font-black uppercase tracking-widest">Pending Payment</p>
                         <span class="p-2 bg-amber-500/10 text-amber-500 rounded-lg"><span class="material-symbols-outlined text-lg">schedule</span></span>
@@ -596,7 +1247,9 @@
                         <span class="text-amber-500 text-[10px] font-black">+5.2%</span>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
                     <div class="flex justify-between items-start mb-4">
                         <p class="text-slate-500 text-xs font-black uppercase tracking-widest">Avg. Service Cost</p>
                         <span class="p-2 bg-indigo-500/10 text-indigo-500 rounded-lg"><span class="material-symbols-outlined text-lg">bar_chart</span></span>
@@ -629,6 +1282,70 @@
                                     <p class="text-[10px] text-slate-400 font-bold uppercase">Porsche 911 GT3</p>
                                 </td>
                                 <td class="px-6 py-4 font-bold">Oct 24, 2023</td>
+                                <td class="px-6 py-4">
+                                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-500 uppercase tracking-widest">Paid</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="p-2 bg-primary/10 text-primary rounded-lg hover:bg-primary transition-all hover:text-white transition-all">
+                                        <span class="material-symbols-outlined text-[18px]">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-4 font-bold">#INV-9388</td>
+                                <td class="px-6 py-4">
+                                    <p class="font-bold">Maintenance Wash</p>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Lamborghini Huracán</p>
+                                </td>
+                                <td class="px-6 py-4 font-bold">Aug 15, 2023</td>
+                                <td class="px-6 py-4">
+                                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-500 uppercase tracking-widest">Paid</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="p-2 bg-primary/10 text-primary rounded-lg hover:bg-primary transition-all hover:text-white transition-all">
+                                        <span class="material-symbols-outlined text-[18px]">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-4 font-bold">#INV-9350</td>
+                                <td class="px-6 py-4">
+                                    <p class="font-bold">Paint Correction</p>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Mercedes-Benz G63</p>
+                                </td>
+                                <td class="px-6 py-4 font-bold">May 18, 2023</td>
+                                <td class="px-6 py-4">
+                                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-500 uppercase tracking-widest">Paid</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="p-2 bg-primary/10 text-primary rounded-lg hover:bg-primary transition-all hover:text-white transition-all">
+                                        <span class="material-symbols-outlined text-[18px]">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-4 font-bold">#INV-9312</td>
+                                <td class="px-6 py-4">
+                                    <p class="font-bold">Maintenance Wash</p>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Ferrari F8 Tributo</p>
+                                </td>
+                                <td class="px-6 py-4 font-bold">Feb 09, 2023</td>
+                                <td class="px-6 py-4">
+                                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-500 uppercase tracking-widest">Paid</span>
+                                </td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="p-2 bg-primary/10 text-primary rounded-lg hover:bg-primary transition-all hover:text-white transition-all">
+                                        <span class="material-symbols-outlined text-[18px]">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 dark:hover:bg-accent-dark/20 transition-colors">
+                                <td class="px-6 py-4 font-bold">#INV-9280</td>
+                                <td class="px-6 py-4">
+                                    <p class="font-bold">Ceramic Coating</p>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">Aston Martin DB12</p>
+                                </td>
+                                <td class="px-6 py-4 font-bold">Nov 30, 2022</td>
                                 <td class="px-6 py-4">
                                      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-500 uppercase tracking-widest">Paid</span>
                                 </td>
@@ -674,7 +1391,7 @@
 
             <!-- Stats Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
                     <div class="flex items-center gap-4">
                         <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                             <span class="material-symbols-outlined">car_repair</span>
@@ -685,7 +1402,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
                     <div class="flex items-center gap-4">
                         <div class="size-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-500">
                             <span class="material-symbols-outlined">calendar_today</span>
@@ -696,7 +1413,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
                     <div class="flex items-center gap-4">
                         <div class="size-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500">
                             <span class="material-symbols-outlined">monetization_on</span>
@@ -711,7 +1428,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Personal Info -->
-                <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-accent-dark">
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-accent-dark hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary">person</span> Personal Information
                     </h3>
@@ -734,7 +1451,7 @@
 
                 <!-- Account Settings -->
                 <div class="space-y-8">
-                    <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-accent-dark">
+                    <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-accent-dark hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
                         <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
                             <span class="material-symbols-outlined text-purple-500">settings</span> Account Settings
                         </h3>
@@ -760,51 +1477,170 @@
         </div>
     </script>
 
-<script>
-    function switchSection(sectionId) {
-        const contentArea = document.getElementById('dashboard-content');
-        const template = document.getElementById('tmpl-' + sectionId);
-        if (template) {
-            // Reset all regular nav links
-            document.querySelectorAll('#sidebar-nav a').forEach(link => {
-                link.classList.remove('bg-primary', 'text-white', 'font-medium');
-                link.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-            });
-            
-            // Reset bottom profile section
-            const profileBottom = document.getElementById('nav-profile-bottom');
-            if (profileBottom) {
-                profileBottom.classList.remove('bg-primary/10', 'border-primary/20');
-                profileBottom.classList.add('hover:bg-slate-100', 'dark:hover:bg-accent-dark');
+    <script>
+        function switchAppointmentView(viewType) {
+            const btnUpcoming = document.getElementById('btn-upcoming');
+            const btnCalendar = document.getElementById('btn-calendar');
+            const viewUpcoming = document.getElementById('appointments-upcoming');
+            const viewCalendar = document.getElementById('appointments-calendar');
+
+            if (viewType === 'upcoming') {
+                btnUpcoming.className = 'px-6 py-2 text-xs font-bold bg-white dark:bg-slate-700 shadow-sm rounded-lg text-primary transition-all';
+                btnCalendar.className = 'px-6 py-2 text-xs font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-all';
+                viewUpcoming.classList.remove('hidden');
+                viewCalendar.classList.add('hidden');
+                
+                // Trigger dynamic cards render
+                if (window.renderUpcomingAppointments) window.renderUpcomingAppointments();
+            } else {
+                btnCalendar.className = 'px-6 py-2 text-xs font-bold bg-white dark:bg-slate-700 shadow-sm rounded-lg text-primary transition-all';
+                btnUpcoming.className = 'px-6 py-2 text-xs font-bold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-all';
+                viewCalendar.classList.remove('hidden');
+                viewUpcoming.classList.add('hidden');
+                
+                // Trigger dynamic calendar render
+                if (window.renderCalendar) window.renderCalendar(window.currentDate || new Date());
             }
-
-            const activeLink = document.getElementById('nav-' + sectionId);
-            const activeProfileBottom = (sectionId === 'profile') ? profileBottom : null;
-
-            if (activeLink) {
-                activeLink.classList.remove('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-                activeLink.classList.add('bg-primary', 'text-white', 'font-medium');
-            }
-
-            if (activeProfileBottom) {
-                activeProfileBottom.classList.remove('hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-                activeProfileBottom.classList.add('bg-primary/10', 'border', 'border-primary/20');
-            }
-
-            contentArea.innerHTML = template.innerHTML;
-            window.location.hash = sectionId;
-            window.scrollTo(0, 0);
         }
-    }
-    window.addEventListener('DOMContentLoaded', () => {
-        const hash = window.location.hash.replace('#', '');
-        switchSection(hash && document.getElementById('tmpl-' + hash) ? hash : 'overview');
-    });
-    window.addEventListener('hashchange', () => {
-        const hash = window.location.hash.replace('#', '');
-        if (hash && document.getElementById('tmpl-' + hash)) switchSection(hash);
-    });
-</script>
-<script src="../assets/js/main.js"></script>
+
+    </script>
+    <!-- Appointment Modal -->
+    <div id="appointment-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300 items-center justify-center">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeAppointmentModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-[600px] p-6 lg:p-0 scale-95 transition-transform duration-300" id="modal-container">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark rounded-3xl shadow-2xl overflow-hidden">
+                <!-- Header -->
+                <div class="p-6 border-b border-slate-100 dark:border-accent-dark flex items-center justify-between">
+                    <div>
+                        <h3 class="text-xl font-black text-slate-900 dark:text-white tracking-tight italic uppercase">Schedule Appointment</h3>
+                        <p class="text-xs text-slate-500 mt-1 uppercase tracking-widest font-bold opacity-70">Step into the excellence</p>
+                    </div>
+                    <button class="size-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-all active:scale-90" onclick="closeAppointmentModal()">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+
+                <!-- Form -->
+                <form id="appointment-form" class="p-6 space-y-5 overflow-y-auto max-h-[70vh] no-scrollbar">
+                    <!-- Vehicle Info -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Vehicle Make</label>
+                            <input type="text" name="make" placeholder="e.g. Porsche" class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary dark:text-white transition-all" required>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Model</label>
+                            <input type="text" name="model" placeholder="e.g. 911 GT3" class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary dark:text-white transition-all" required>
+                        </div>
+                    </div>
+
+                    <!-- Service & Date -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Service Type</label>
+                            <!-- Custom Premium Dropdown -->
+                            <div class="relative premium-select" id="service-dropdown">
+                                <button type="button" class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary dark:text-white transition-all flex items-center justify-between group premium-select-trigger" id="dropdown-trigger">
+                                    <span class="selected-value" id="selected-service">Select Service</span>
+                                    <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-transform duration-300 dropdown-arrow">expand_more</span>
+                                </button>
+                                
+                                <!-- Hidden Menu -->
+                                <div class="absolute left-0 right-0 top-[calc(100%+8px)] bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl shadow-2xl z-50 opacity-0 invisible translate-y-2 transition-all duration-300 overflow-hidden premium-select-menu" id="dropdown-menu">
+                                    <div class="max-h-[280px] overflow-y-auto premium-scrollbar py-2">
+                                        <div class="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-slate-400 opacity-60">Premier Services</div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="premium">
+                                            <span class="material-symbols-outlined text-sm text-primary">auto_fix</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Paint Correction</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="maintenance">
+                                            <span class="material-symbols-outlined text-sm text-primary">water_drop</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Ceramic Coating</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="interior">
+                                            <span class="material-symbols-outlined text-sm text-primary">airline_seat_recline_extra</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Interior Restoration</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="ppf">
+                                            <span class="material-symbols-outlined text-sm text-primary">shield</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">PPF</span>
+                                        </div>
+                                        
+                                        <div class="px-3 py-1.5 mt-2 text-[9px] font-black uppercase tracking-widest text-slate-400 opacity-60">Detailing & Recon</div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="recon">
+                                            <span class="material-symbols-outlined text-sm text-primary">cleaning_services</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Iron Fallout Removal</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="recon">
+                                            <span class="material-symbols-outlined text-sm text-primary">wb_incandescent</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Headlight Restoration</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="recon">
+                                            <span class="material-symbols-outlined text-sm text-primary">propeller</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Engine Bay Detailing</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="recon">
+                                            <span class="material-symbols-outlined text-sm text-primary">potted_plant</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Wheel & Tire Detailing</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="tint">
+                                            <span class="material-symbols-outlined text-sm text-primary">window</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Window Tinting</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="protection">
+                                            <span class="material-symbols-outlined text-sm text-primary">verified</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Paint Protection</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="protection">
+                                            <span class="material-symbols-outlined text-sm text-primary">chair</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Interior Protection</span>
+                                        </div>
+                                        <div class="dropdown-item flex items-center gap-3 px-4 py-3 hover:bg-primary/10 cursor-pointer transition-colors group" data-value="protection">
+                                            <span class="material-symbols-outlined text-sm text-primary">car_repair</span>
+                                            <span class="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-primary transition-colors">Exterior Protection</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="type" id="selected-type-input" value="premium" class="premium-select-input">
+                            </div>
+                        </div>
+                        <div class="space-y-1.5">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Preferred Date</label>
+                            <input type="date" name="date" class="w-full bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-primary dark:text-white transition-all" required>
+                        </div>
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Vehicle Images</label>
+                        <div class="relative group">
+                            <input type="file" multiple accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer z-10" id="car-image-input" onchange="handleImageUpload(this)">
+                            <div class="border-2 border-dashed border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center gap-2 group-hover:border-primary/50 transition-colors bg-slate-50/50 dark:bg-slate-800/20">
+                                <span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary group-hover:scale-110 transition-all">add_photo_alternate</span>
+                                <p class="text-[11px] font-bold text-slate-500 uppercase tracking-tighter">Drag or click to upload</p>
+                            </div>
+                        </div>
+                        <!-- Preview Grid -->
+                        <div id="image-preview-grid" class="grid grid-cols-4 gap-2 mt-2">
+                            <!-- Previews injected here -->
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-widest py-4 rounded-2xl shadow-xl shadow-primary/20 transition-all active:scale-[0.98] mt-4 flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-[20px]">calendar_add_on</span>
+                        Schedule Now
+                    </button>
+                    <p class="text-center text-[10px] text-slate-500 uppercase tracking-widest opacity-60 italic">* Our team will contact you for confirmation</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

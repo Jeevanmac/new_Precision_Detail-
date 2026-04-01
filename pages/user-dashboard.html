@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Apex Detail | Client Dashboard</title>
-<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
+    <meta name="description"
+        content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script src="../assets/js/tailwind-config.js"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -30,822 +36,1118 @@
             },
         }
     </script>
-    <style>
-        /* CUSTOM SCROLLBARS */
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ec5b13;
-            border-radius: 10px;
-        }
-    </style>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
-<div class="flex min-h-screen">
-    <!-- Sidebar Navigation -->
-    <aside class="w-72 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-accent-dark hidden md:flex flex-col fixed h-full z-50 transition-all duration-300">
-        <div class="px-6 py-4">
-            <div class="flex items-center justify-between gap-3 mb-6">
-                <div class="relative group flex items-center gap-2">
-                    <a href="index.html" class="flex items-center gap-2 group">
-                        <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
-                        <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative font-display">
-                            Precision Detail
-                        </h2>
-                        
-                    </a>
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside
+            class="w-72 bg-white dark:bg-surface-dark border-r border-slate-200 dark:border-accent-dark hidden md:flex flex-col fixed h-full z-50 transition-all duration-300">
+            <div class="px-6 py-4">
+                <div class="flex items-center justify-between gap-3 mb-6">
+                    <div class="relative group flex items-center gap-2">
+                        <a href="index.html" class="flex items-center gap-2 group">
+                            <img src="../assets/images/logo.png" alt="Logo"
+                                class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+                            <h2
+                                class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative font-display">
+                                Precision Detail
+                            </h2>
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Toggles -->
+                <div
+                    class="flex items-center gap-2 mb-4 p-1 bg-slate-50 dark:bg-accent-dark/30 rounded-lg border border-slate-100 dark:border-accent-dark/50">
+                    <button id="dir-toggle-nav"
+                        class="flex-1 h-9 flex items-center justify-center text-[10px] font-black tracking-widest bg-white dark:bg-slate-800 rounded-md shadow-sm border border-slate-200 dark:border-accent-dark transition-all active:scale-95">LTR</button>
+                    <button id="theme-toggle-nav"
+                        class="flex-1 h-9 flex items-center justify-center text-slate-500 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-md border border-slate-200 dark:border-accent-dark transition-all active:scale-95">
+                        <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+                        <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+                    </button>
                 </div>
             </div>
-            
-            <!-- Sidebar Toggles -->
-            <div class="flex items-center gap-2 mb-4 p-1 bg-slate-50 dark:bg-accent-dark/30 rounded-lg border border-slate-100 dark:border-accent-dark/50">
-                <button id="dir-toggle-nav" class="flex-1 h-9 flex items-center justify-center text-[10px] font-black tracking-widest bg-white dark:bg-slate-800 rounded-md shadow-sm border border-slate-200 dark:border-accent-dark transition-all active:scale-95">LTR</button>
-                <button id="theme-toggle-nav" class="flex-1 h-9 flex items-center justify-center text-slate-500 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-md border border-slate-200 dark:border-accent-dark transition-all active:scale-95">
-                    <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-                    <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-                </button>
-            </div>
-        </div>
-        <nav class="flex-1 px-3 space-y-1 mt-2" id="sidebar-nav">
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary text-white font-bold text-sm transition-all shadow-md shadow-primary/20" href="javascript:void(0)" onclick="switchSection('overview')" id="nav-overview">
-                <span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
-                <span>Dashboard</span>
-            </a>
+            <nav class="flex-1 px-3 space-y-1 mt-2" id="sidebar-nav">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary text-white font-bold text-sm transition-all shadow-md shadow-primary/20"
+                    href="javascript:void(0)" onclick="switchSection('overview')" id="nav-overview">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+                    <span>Dashboard</span>
+                </a>
 
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('orders')" id="nav-orders">
-                <span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
-                <span>Orders</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('saved')" id="nav-saved">
-                <span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
-                <span>Saved</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('messages')" id="nav-messages">
-                <span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
-                <span>Messages</span>
-            </a>
-            <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium" href="javascript:void(0)" onclick="switchSection('settings')" id="nav-settings">
-                <span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
-                <span>Settings</span>
-            </a>
-        </nav>
-        <!-- Bottom User Profile -->
-        <div class="p-4 mt-auto border-t border-slate-200 dark:border-accent-dark">
-            <div class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-accent-dark transition-all cursor-pointer group" onclick="switchSection('profile')" id="nav-profile-bottom">
-                <div class="size-11 rounded-full border-2 border-primary/30 p-0.5 group-hover:scale-105 transition-transform shrink-0">
-                    <div class="h-full w-full rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcz4QFyoBE-Elx3nDGSSkpo5qisjI1i-now-Ar-jGBoEn8fTNStz8YIsDfHKGrlidd5BjEwBYQur8ONXukzlJJJeJ43ACX4R0XgBe_VwSeOchK-cQsLAAp8srujcrYg6GfoTqqFcljJOjWD0MEnR7fU4EJBMuJDta1GjFbwHt7gMrFc_wqgoaKpS4noFC9ryL1TSwdsWpNdpKAVpIr7ehv1sQbzT_JIENvh3Mees5PuKTZymoGsb-QJLGq1OlA8hLA92-8aQTeTK4')"></div>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('orders')" id="nav-orders">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+                    <span>Orders</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('saved')" id="nav-saved">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+                    <span>Saved</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('messages')" id="nav-messages">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+                    <span>Messages</span>
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-accent-dark transition-all text-sm font-medium"
+                    href="javascript:void(0)" onclick="switchSection('settings')" id="nav-settings">
+                    <span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <!-- Bottom User Profile -->
+            <div class="p-4 mt-auto border-t border-slate-200 dark:border-accent-dark">
+                <div class="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-accent-dark transition-all cursor-pointer group"
+                    onclick="switchSection('profile')" id="nav-profile-bottom">
+                    <div
+                        class="size-11 rounded-full border-2 border-primary/30 p-0.5 group-hover:scale-105 transition-transform shrink-0">
+                        <div class="h-full w-full rounded-full bg-cover bg-center"
+                            style="background-image: url('../assets/images/Jacob.jpg')"></div>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-bold truncate text-slate-900 dark:text-slate-100">Jacob Bethel</p>
+                        <p class="text-[10px] font-bold text-primary uppercase tracking-tighter truncate">Premium Member
+                        </p>
+                    </div>
+                    <button
+                        class="size-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-primary hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-[20px]">settings</span>
+                    </button>
                 </div>
-                <div class="flex-1 min-w-0">
-                    <p class="text-sm font-bold truncate text-slate-900 dark:text-slate-100">Jacob Bethel</p>
-                    <p class="text-[10px] font-bold text-primary uppercase tracking-tighter truncate">Premium Member</p>
-                </div>
-                <button class="size-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-primary hover:bg-primary/10 transition-colors">
-                    <span class="material-symbols-outlined text-[20px]">settings</span>
-                </button>
+                <a href="index.html"
+                    class="mt-4 w-full flex items-center justify-center gap-2 py-2 text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+                    Sign Out
+                </a>
             </div>
-            <a href="index.html" class="mt-4 w-full flex items-center justify-center gap-2 py-2 text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-lg transition-colors">
-                <span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
-                Sign Out
-            </a>
-        </div>
-    </aside>
+        </aside>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 ml-0 md:ml-72 pt-24 md:pt-4 p-4 md:p-8 pb-32 md:pb-8 min-h-screen transition-all duration-300" id="dashboard-content">
-        <!-- Content loaded via JavaScript -->
-    </main>
-</div>
+        <!-- Main Content Area -->
+        <main
+            class="flex-1 ml-0 md:ml-72 pt-24 md:pt-4 p-4 md:p-8 pb-32 md:pb-8 min-h-screen transition-all duration-300"
+            id="dashboard-content">
+            <!-- Content loaded via JavaScript -->
+        </main>
+    </div>
 
-<!-- Section Templates -->
-<script type="text/template" id="tmpl-overview">
+    <!-- Section Templates -->
+    <script type="text/template" id="tmpl-overview">
 <!-- HEADER -->
-<div class="flex items-center gap-4 mb-4">
-    <button onclick="window.location.href='index.html'" 
-        class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 transition">
-        <span class="material-symbols-outlined text-xl">arrow_back</span>
-    </button>
     <div>
         <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Dashboard Overview</h1>
         <p class="text-xs text-slate-500 dark:text-slate-400">
-            Welcome back, Alex! Your detailing studio at a glance.
+            Welcome back, Jacob! Your detailing studio at a glance.
         </p>
     </div>
-</div>
-<div class="pt-10 md:pt-4 px-6 pb-32 md:pb-12 space-y-8 max-w-7xl mx-auto w-full">
-<!-- Welcome Section -->
-<section>
-<p class="text-slate-500 dark:text-slate-400 mt-1 font-display">Your vehicle detailing status is updated in real-time.</p>
-</section>
-<!-- Stats Bento Grid -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Orders Card -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm p-6 rounded-2xl shadow-xl relative overflow-hidden group">
-<div class="relative z-10">
-<div class="flex justify-between items-start mb-4">
-<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">shopping_bag</span>
-</div>
-<span class="text-[#ec5b13] text-xs font-bold px-2 py-1 bg-[#ec5b13]/10 rounded-lg">+12.5%</span>
-</div>
-<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Bookings</h3>
-<p class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">1,284</p>
-<div class="mt-4 h-12 flex items-end gap-1">
-<div class="flex-1 bg-primary/20 rounded-t-sm h-1/2"></div>
-<div class="flex-1 bg-primary/20 rounded-t-sm h-2/3"></div>
-<div class="flex-1 bg-primary/20 rounded-t-sm h-1/2"></div>
-<div class="flex-1 bg-primary/20 rounded-t-sm h-3/4"></div>
-<div class="flex-1 bg-primary/40 rounded-t-sm h-full"></div>
-<div class="flex-1 bg-primary/20 rounded-t-sm h-1/2"></div>
-<div class="flex-1 bg-primary/20 rounded-t-sm h-2/3"></div>
-</div>
-</div>
-<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all"></div>
-</div>
-<!-- Activity Card -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm p-6 rounded-2xl shadow-xl relative overflow-hidden group">
-<div class="relative z-10">
-<div class="flex justify-between items-start mb-4">
-<div class="w-10 h-10 rounded-xl bg-[#ec5b13]/10 flex items-center justify-center text-[#ec5b13]">
-<span class="material-symbols-outlined">analytics</span>
-</div>
-<span class="text-primary text-xs font-bold px-2 py-1 bg-primary/10 rounded-lg">Real-time</span>
-</div>
-<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Vehicle Shine Level</h3>
-<p class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">94.2%</p>
-<div class="mt-4 h-12 flex items-center justify-center">
-<div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
-<div class="h-full bg-gradient-to-r from-secondary to-primary-container w-[94%]"></div>
-</div>
-</div>
-</div>
-<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-[#ec5b13]/5 rounded-full blur-3xl group-hover:bg-[#ec5b13]/10 transition-all"></div>
-</div>
-<!-- Saved Items Card -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm p-6 rounded-2xl shadow-xl relative overflow-hidden group">
-<div class="relative z-10">
-<div class="flex justify-between items-start mb-4">
-<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">favorite</span>
-</div>
-<span class="text-slate-500 dark:text-slate-400 text-xs font-medium px-2 py-1 bg-slate-400/10 rounded-lg">New</span>
-</div>
-<h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Wishlist Services</h3>
-<p class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">42</p>
-<div class="mt-4 flex -space-x-2">
-<img class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container" data-alt="Project 1 preview thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUPDepyjQ1w40ZX1GS_ZHWLFTy1-dWYdW229Q7HmLL7LO61PGuyzURwR6gn8ugbTMO_IZ-YrBai_Eucz19vHtKOh0v3k_JjXKzznPweeyg6BQH5gWLQlo6PvpJ1Z0T4in2o6OEba1Ycx5_MJmF-qSN3pH3MleWYBvfAHf_Q88dO3qFCe-vsi_v2lb73_K49qskuM4Nyk6Qp5nLNLFpQk9B9Ai2xANKB7l3p2xvm2GSH35X-zbjYn9z0u1i4y7t8EAB4EUcLeDOBBc"/>
-<img class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container" data-alt="Project 2 preview thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfAT3zMZ7CvmtntILmJaeRV8Z3s9pooHqBPnKkWWU9AscNrQDiTBShdPmFgnUrOpreeKsU7bfw8xFpHR_V6qh4ufRhI2CHAEEHzFK0-qEcbZTXNicb6t84LyT0gKo231dte3hZJXe1SW9rxfcCruOpkCUP4sKQP1sjGKoNMKYAv8moMx40n8TAVL1eOhJQoiePWuSXHcLosYi3zhScyQg5dQKCAlu2E-ZsO7XFkDfy6cdwuNiI8mh1mQDg_1yCx6XQv7AFiekcTpQ"/>
-<img class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container" data-alt="Project 3 preview thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChICQn-QvBDfNf2ROAdIYk9ZxfQtom7Hk-ozE4z1JRdI_dni2s-AI4BXPLA084vIXasNppVICtRu8UXI-9Z-bvypR3bhil0VQyzIqd86IQC099j9vh59aZQlIwj1-UkEVht7jQqJ_cbgQSzryHpCnq_rQcIMv_n5S7HQRk8UMyMt1mLzmeHBz9TymFq-b9fcbIFGC8VhS7d0GmfCifo-iEUYuVSv0I0w-dgXv5tsEa7QJgaY9EQ_w5KqkH7TZjp6yb4uJMuM1dFFM"/>
-<div class="w-8 h-8 rounded-full border-2 border-surface bg-white dark:bg-slate-900 flex items-center justify-center text-[10px] text-primary">+39</div>
-</div>
-</div>
-<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all"></div>
-</div>
-</section>
-<!-- Main View Area (Bento Layout) -->
-<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-<!-- Main Analytics Card -->
-<div class="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-3xl overflow-hidden flex flex-col min-h-[400px]">
-<div class="p-8 flex justify-between items-center border-b border-slate-200 dark:border-accent-dark">
-<div>
-<h3 class="text-xl font-display font-bold text-primary">Analytics Overview</h3>
-<p class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Performance metrics across all regions</p>
-</div>
-<div class="flex gap-2">
-<button class="px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-xs font-semibold text-black hover:text-red/80 transition-colors">Daily</button>
-<button class="px-4 py-2 rounded-xl bg-primary text-on-primary text-xs font-semibold shadow-[0_0_20px_rgba(192,193,255,0.4)]">Weekly</button>
-</div>
-</div>
-<div class="flex-grow p-8 flex items-center justify-center relative">
-<!-- SVG Placeholder for Chart -->
-<svg class="w-full h-full opacity-60" viewbox="0 0 800 300">
-<path d="M0,250 Q100,200 200,220 T400,100 T600,150 T800,50" fill="none" stroke="url(#paint0_linear)" stroke-linecap="round" stroke-width="4"></path>
-<path d="M0,250 Q100,200 200,220 T400,100 T600,150 T800,50 L800,300 L0,300 Z" fill="url(#paint1_linear)" opacity="0.2"></path>
-<defs>
-<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear" x1="0" x2="800" y1="0" y2="0">
-<stop stop-color="#c0c1ff"></stop>
-<stop offset="1" stop-color="#5de6ff"></stop>
-</lineargradient>
-<lineargradient gradientunits="userSpaceOnUse" id="paint1_linear" x1="0" x2="0" y1="0" y2="300">
-<stop stop-color="#8083ff"></stop>
-<stop offset="1" stop-color="#0c1324" stop-opacity="0"></stop>
-</lineargradient>
-</defs>
-</svg>
-<!-- Overlay markers -->
-<div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_15px_rgba(192,193,255,0.8)] border-2 border-white"></div>
-<div class="absolute top-1/2 left-1/4 ml-6 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-accent-dark text-[10px] backdrop-blur-md">
-<span class="text-slate-500 dark:text-slate-400">Peak Sat:</span> 8.4k Units
-                            </div>
-</div>
-</div>
-<!-- Activity Timeline -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-3xl p-8 space-y-6">
-<div class="flex justify-between items-center">
-<h3 class="text-lg font-display font-bold text-slate-900 dark:text-white">Recent Activity</h3>
-<button class="text-primary text-xs font-medium hover:underline">View All</button>
-</div>
-<div class="space-y-6 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container">
-<!-- Timeline Items -->
-<div class="flex gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
-<div class="w-2 h-2 rounded-full bg-amber-500"></div>
-</div>
-<div>
-<p class="text-sm font-medium text-slate-900 dark:text-white">Order #8420 Completed</p>
-<p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">2 minutes ago</p>
-</div>
-</div>
-<div class="flex gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
-<div class="w-2 h-2 rounded-full bg-primary"></div>
-</div>
-<div>
-<p class="text-sm font-medium text-slate-900 dark:text-white">New user registered: Sara T.</p>
-<p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">45 minutes ago</p>
-</div>
-</div>
-<div class="flex gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
-<div class="w-2 h-2 rounded-full bg-indigo-500"></div>
-</div>
-<div>
-<p class="text-sm font-medium text-slate-900 dark:text-white">System update successful</p>
-<p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">2 hours ago</p>
-</div>
-</div>
-<div class="flex gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
-<div class="w-2 h-2 rounded-full bg-slate-500"></div>
-</div>
-<div>
-<p class="text-sm font-medium text-slate-900 dark:text-white">Saved item "Cloud Engine" updated</p>
-<p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">4 hours ago</p>
-</div>
-</div>
-<div class="flex gap-4 relative">
-<div class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
-<div class="w-2 h-2 rounded-full bg-red-500"></div>
-</div>
-<div>
-<p class="text-sm font-medium text-slate-900 dark:text-white">Failed login attempt detected</p>
-<p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">Yesterday</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-
-</div>
-</script>
-
-<script type="text/template" id="tmpl-profile">
-<!-- HEADER -->
-<div class="flex items-center gap-4 mb-8">
-    <button onclick="switchSection('overview')" 
-        class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 transition">
-        <span class="material-symbols-outlined text-xl">arrow_back</span>
-    </button>
-    <div>
-        <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Profile Management</h1>
-        <p class="text-xs text-slate-500 dark:text-slate-400">
-            Manage your detailing profile and preferences.
-        </p>
-    </div>
-</div>
-
-<!-- Header Section content moved to header -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<!-- Left Column: Avatar & Account Status (Bento Style) -->
-<div class="lg:col-span-4 space-y-6">
-<!-- Avatar Card -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-xl p-8 flex flex-col items-center text-center border border-slate-200 dark:border-accent-dark relative overflow-hidden group">
-<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
-<div class="relative mb-6">
-<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-br from-primary to-amber-500">
-<div class="w-full h-full rounded-full overflow-hidden border-4 border-surface-container-highest">
-<img alt="Avatar Preview" class="w-full h-full object-cover" data-alt="User avatar with soft studio lighting and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh4D0ToW4S6PMd8msa5QMWk7KnfNLgnvyOSP1o3pXYHcxPur0HNzVTlrJ33EnLsztzI3r67kD5s8RZDNiBRQP9mpuzN7oV4Iey6S1qzxz-DdsQhhiJiewrvlNl4A0ukb1S0slAoVsh4P8CerYHm9jtFqRk75Fn9a_PO3P5lyclRwYkCh2naKQSAuEY0lMuMn8D8giYBfxgZYxzxVkU8lJpIeQpGsYtxSFgb4AbK47a-vg3_zAjlCowFk2ZMhXRI6hVAJv0vQJYf-E"/>
-</div>
-</div>
-<button class="absolute bottom-1 right-1 bg-primary text-white p-2 rounded-full shadow-lg hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-sm">photo_camera</span>
-</button>
-</div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white font-serif">Jacob Bethel</h3>
-<p class="text-primary text-sm font-medium mb-4">Master Detailer</p>
-<div class="flex gap-2 w-full">
-<button class="flex-1 text-xs font-semibold py-2 bg-slate-50 dark:bg-slate-800 hover:bg-white dark:bg-slate-900 transition-colors rounded-lg border border-slate-200 dark:border-accent-dark">Change Photo</button>
-<button class="p-2 text-red-500/80 hover:bg-red-500/10 transition-colors rounded-lg">
-<span class="material-symbols-outlined text-sm">delete</span>
-</button>
-</div>
-</div>
-<!-- Account Details Card -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-xl p-6 border border-slate-200 dark:border-accent-dark">
-<h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Account Status</h4>
-<div class="space-y-4">
-<div class="flex justify-between items-center">
-<span class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Tier</span>
-<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider border border-primary/20">Premium</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Member Since</span>
-<span class="text-sm font-semibold">Jan 2024</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Two-Factor</span>
-<span class="flex items-center gap-1 text-[#ec5b13] text-sm font-semibold">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span> Active
-                                    </span>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Column: Profile Form -->
-<div class="lg:col-span-8">
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-xl p-8 border border-slate-200 dark:border-accent-dark">
-<form class="space-y-8">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Name Field -->
-<div class="space-y-2">
-<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Full Name</label>
-<div class="relative">
-<input class="w-full bg-slate-50 dark:bg-slate-800est border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:ring-primary/20 focus:border-primary/40 transition-all outline-none" type="text" value="Jacob Bethel"/>
-</div>
-</div>
-<!-- Email Field -->
-<div class="space-y-2">
-<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Email Address</label>
-<input class="w-full bg-slate-50 dark:bg-slate-800est border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:ring-primary/20 focus:border-primary/40 transition-all outline-none" type="email" value="julian@obsidian.io"/>
-</div>
-<!-- Phone Field -->
-<div class="space-y-2">
-<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Phone Number</label>
-<input class="w-full bg-slate-50 dark:bg-slate-800est border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:ring-primary/20 focus:border-primary/40 transition-all outline-none" type="tel" value="+1 (555) 000-1234"/>
-</div>
-<!-- Occupation -->
-<div class="space-y-2">
-<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Occupation</label>
-<input class="w-full bg-slate-50 dark:bg-slate-800est border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:ring-primary/20 focus:border-primary/40 transition-all outline-none" type="text" value="Product Designer"/>
-</div>
-</div>
-<div class="space-y-2">
-<label class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-1">Biography</label>
-<textarea class="w-full bg-slate-50 dark:bg-slate-800est border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white focus:ring-primary/20 focus:border-primary/40 transition-all outline-none resize-none" rows="4">Delivering uncompromising automotive perfection through precision vehicle restoration and ceramic protection.</textarea>
-</div>
-<!-- Action Buttons -->
-<div class="flex flex-col sm:flex-row items-center justify-end gap-4 pt-6 border-t border-slate-200 dark:border-accent-dark">
-<button class="w-full sm:w-auto px-8 py-3 text-sm font-semibold text-slate-500 dark:text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-white transition-colors" type="button">Discard Changes</button>
-<button class="w-full sm:w-auto px-10 py-3 bg-gradient-to-br from-primary to-orange-600 text-white font-bold rounded-xl hover:shadow-[0_0_30px_rgba(192,193,255,0.3)] transition-all active:scale-95" type="submit">Save Profile</button>
-</div>
-</form>
-</div>
-<!-- Secondary Task: Security Notice -->
-<div class="mt-8 flex items-start gap-4 p-6 bg-[#ec5b13]/5 rounded-xl border border-[#ec5b13]/20">
-<span class="material-symbols-outlined text-[#ec5b13] mt-1">info</span>
-<div>
-<h5 class="text-sm font-bold text-[#ec5b13] mb-1">Privacy &amp; Security</h5>
-<p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400 leading-relaxed">Your data is encrypted with enterprise-grade standards. We never share your personal information with third parties. Last login detected from New York, US on Oct 24, 2024.</p>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</script>
-
-<script type="text/template" id="tmpl-saved">
-<!-- HEADER -->
-<div class="flex items-center gap-4 mb-8">
-    <button onclick="switchSection('overview')" 
-        class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 transition">
-        <span class="material-symbols-outlined text-xl">arrow_back</span>
-    </button>
-    <div>
-        <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Saved Services</h1>
-        <p class="text-xs text-slate-500 dark:text-slate-400">
-            Curate your collection of premium detailing services.
-        </p>
-    </div>
-</div>
-
-<!-- Editorial Header Section content moved to header -->
-<div class="flex items-center gap-3">
-<span class="text-xs font-display uppercase tracking-widest text-slate-400">Sorted by</span>
-<button class="bg-white dark:bg-slate-900 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200 dark:border-accent-dark flex items-center gap-2 hover:bg-slate-100 dark:bg-slate-800 transition-colors">
-              Recently Added
-              <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Bento-style Grid of Saved Items -->
-<!-- GRID -->
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 mt-6 items-stretch">
-    <!-- Card 1: Ceramic Coating -->
-    <div class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:shadow-xl transition-all flex flex-col h-full">
-        <!-- DELETE BUTTON -->
-        <button class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
-            <span class="material-symbols-outlined text-sm">delete</span>
-        </button>
-        <!-- IMAGE -->
-        <div class="h-44 overflow-hidden flex-shrink-0">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlrQwq8YVKhX_DDu_vmu6PBMw7ybYTNPma7O-vGSh9Nh45vvOrxmFZ_AC5hLVhPQijiK3M8on_7bGh93qUXg9jJxZyDWvWde6jblr5R-ipd7WdQZZ0_XhrMVz_rmaP2IVEY6nQK3JjaDfbJfViri899wPRwqyfMNEaG6yOW-4vFVkvO-JBVAS2Y64wjCg7PFOSphSKuYBVONC_z9Xxhxz3w-1BRWgSEGxo-oRQzxToYk-GHKA4N1x7UsicW0mUONhPvbK_VY0cRjs"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
-        </div>
-        <!-- CONTENT -->
-        <div class="p-5 flex flex-col flex-grow">
-            <div class="flex justify-between items-start mb-1">
-                <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Ceramic Coating Pro</h3>
-                <span class="text-primary font-bold text-sm ml-2">$1,299</span>
-            </div>
-            <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Paint Protection</p>
-            
-            <!-- BUTTON (ALIGNED TO BOTTOM) -->
-            <button class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
-                <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-
-    <!-- Card 2: Paint Correction -->
-    <div class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:shadow-xl transition-all flex flex-col h-full">
-        <button class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
-            <span class="material-symbols-outlined text-sm">delete</span>
-        </button>
-        <div class="h-44 overflow-hidden flex-shrink-0">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_4QFWB4gGt9qxDqidJGo6NB5DSjT5CkgWCNbjSNOH70Y2_lCyTYVvRMFF7GA_wBuZFZ6iVuMsGMiql8f-k9AjP_5hoZ1JQ1qii50JBXpQC6X2XbpQD0dJsBiF-p2VnIJa6pp9XizjpER0KFX5Ize0Ux6mnO3o_dWaUlVDDzbDRrJjbYQTl2BRMKVG0xkEVyN5ptG3Iv6DvZThsUEUQ1SOveJn1p-BD7mbeBuqo_Xqd1pK5cvRgsv7z8w5zciZTVAGtQVci8ZZDdE"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
-        </div>
-        <div class="p-5 flex flex-col flex-grow">
-            <div class="flex justify-between items-start mb-1">
-                <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Paint Correction v3</h3>
-                <span class="text-primary font-bold text-sm ml-2">$850</span>
-            </div>
-            <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Surface Restoration</p>
-            <button class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
-                <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-
-    <!-- Card 3: Interior Detail -->
-    <div class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:shadow-xl transition-all flex flex-col h-full">
-        <button class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
-            <span class="material-symbols-outlined text-sm">delete</span>
-        </button>
-        <div class="h-44 overflow-hidden flex-shrink-0">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0XP8jTvxXTccsB2nFAlKi0ixwjIPdbrIOa934Y9w69FqJM0It6tftAI7YzWlU_NELwtsvaH3JBFaW4oJj1CgGvPs3uvrA_1_i-hDI5YrCSld_-lQ2LiL3RCd48_8crTCjuzdQrwDnrgnL3HmVGwTkSLEddF9EVXdCQQ6ul_Oj_7BnHhhfhYJERZD1CswQm252RWSsgk1NgsinT2tufpmx8oHyhDAnsD9DI5u4bzRWy3OcPtzCu5ENEIdgNUY2p9MsAaqRGByGT0o"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
-        </div>
-        <div class="p-5 flex flex-col flex-grow">
-            <div class="flex justify-between items-start mb-1">
-                <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Bespoke Interior Care</h3>
-                <span class="text-primary font-bold text-sm ml-2">$450</span>
-            </div>
-            <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Luxury Rejuvenation</p>
-            <button class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
-                <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-
-    <!-- Card 4: Wheel Shield -->
-    <div class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:shadow-xl transition-all flex flex-col h-full">
-        <button class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
-            <span class="material-symbols-outlined text-sm">delete</span>
-        </button>
-        <div class="h-44 overflow-hidden flex-shrink-0">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ1t3zvtqRwk3LA3xR8OnWMoZwZEqwW6IS7F4sU1Wf37FXydSmD0tdCMc_tlJekdLWeUgmjP8zhZz8W2wKOLqKsKoVfB9MOg2JfE6lvCkudh3qA1y01gPvZ3Vk7pl-72szPP5Z0siEyR9nvGgnxvQ3IHSSNM9Qa45hIM2tYCWSScs-z9lWKI2aW1ov_aIB2ETAAMIoEAJE128oIwQFLGVY40X20qXAHg7wXTRjNfhqh4pa2xzOxmrmn9IHycvMzpko09Bg4-R8m3Y"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"/>
-        </div>
-        <div class="p-5 flex flex-col flex-grow">
-            <div class="flex justify-between items-start mb-1">
-                <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Wheel & Brake Shield</h3>
-                <span class="text-primary font-bold text-sm ml-2">$399</span>
-            </div>
-            <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Alloy Protection</p>
-            <button class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
-                <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                Add to Cart
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- RECOMMENDATION SECTION -->
-<div class="mt-12">
-    <h2 class="text-lg font-bold mb-4 text-slate-900 dark:text-white">Recommended for You</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <!-- Item 1 -->
-        <div class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEqRjGhXaP6HFq1yVJ0CRxifKrXoM00GtX4CQIy2f6HgY1yIIf8ca3xOdVRJ3BF3ZZDmo_HtYfmUHLP5ne4Fk3JAYJFouHz6GRO5VVOtfe3h6KAwOe5_jMm84fHLul3gOAdBmSAAa7gFx1VMBXORjQsDmA1PWKovPIZ5u2tqcgPOCaHW4gNO_grhu5bBlur13dNtLzTRig0RMEjL5d6S2YZDe_S9jq5skvcPQu98_H5EKaUzco1rchaDxiGnspXTzkYcfHOg0Eyr8" class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform"/>
-            <p class="text-xs font-semibold text-slate-900 dark:text-white">Interior Deep Clean</p>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3GclUAqBKRCiDV8Fvbu4V2ZlKMyyF3ygAicck1cQR6I87A3xbhlHAcLoo_LqWG5sr4o4_qvW8HWyZEdgqUatvRC0C1kabgG7FeoqWphkTVICDMkR9q6jJSaqcgwji3NYCOh1itDXiv_DhijWCgqAvdB5c_x83-wLOJ0WIBSujNJeTrBH4JX3I77_Isr4dArj-60fZ75l0utudDwVtOeYZsM7WgDWMoHpRKGn0eEbTXsuxRr9OFFHy9D5YoVV9uuDo45lSolsEYsY" class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform"/>
-            <p class="text-xs font-semibold text-slate-900 dark:text-white">Premium Wax Finish</p>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-1OrTmS5SphEk9KtrNSNk11qeopoW4G8Bt5lnr-XoxtIsmvYCIEtkcbyhaS_CYMOOgKvdPWnPMtfkJQUhEg09Saad9f79ry8_zMaKmRMjpfF-HVBu-NUIyVZoHv3hTdGpyz9Pd8hCC5-OWJm_pwF0nFd6ufQ8HkoVV60o86EATau8IsGIlrZDv0-eu8zOB0MYIwbQzi_v2mJ7o4O4SLQVv-DgsCJ6i5cKmxHvvtZCTAORG2a9t576G_8RySmaQ2RqLm2tT0iiy6I" class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform"/>
-            <p class="text-xs font-semibold text-slate-900 dark:text-white">Nano Ceramic Shield</p>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpYxjYiyZ7WWtiFtpt4m2wNwTpexwEpPS4dB1-QUoKhg0EBN3bG9Dga0ku5rE27fnv2d4EIOhyNwyXsYDseXRjkHZSBUTC1gF6FO71oDlbMGhP4-BFFXuGk1-QhN9YTXwJIyZ0I_jXiauEkcgqc_OZkcd_OM1aT_MVAHJ2QatH94c73KiQiQ_pkP4Q2tDRW1sqzcSHOhvyDd-7eytjs75TsyGYhaF-DR0OHYza6LCJiznnyLglZMw7ADrZaUK_rJXR9icdLlpfk0" class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform"/>
-            <p class="text-xs font-semibold text-slate-900 dark:text-white">Express Wash</p>
-        </div>
-    </div>
-</div>
-<!-- Empty State Example (Hidden by default, used when list is empty) -->
-<div class="hidden flex-col items-center justify-center py-32 text-center">
-<div class="w-24 h-24 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center mb-6 relative">
-<span class="material-symbols-outlined text-5xl text-slate-400" data-icon="bookmark_border">bookmark_border</span>
-<div class="absolute -top-2 -right-2 w-6 h-6 bg-indigo-500 rounded-full animate-pulse shadow-[0_0_15px_rgba(255,185,95,0.4)]"></div>
-</div>
-<h3 class="text-2xl font-serif font-bold text-slate-900 dark:text-white mb-2">No services saved yet.</h3>
-<p class="text-slate-500 dark:text-slate-400 max-w-xs mx-auto mb-8 font-display">Explore our premium detailing packages and save your favorites to compare.</p>
-<button class="px-8 py-3 bg-primary text-on-primary font-bold rounded-xl hover:shadow-[0_0_30px_rgba(236,91,19,0.4)] transition-shadow">
-          Browse Services
-        </button>
-</div>
-
-</div>
-</script>
-
-<script type="text/template" id="tmpl-orders">
-<!-- HEADER -->
-<div class="flex items-center gap-4 mb-8">
-    <button onclick="switchSection('overview')" 
-        class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 transition">
-        <span class="material-symbols-outlined text-xl">arrow_back</span>
-    </button>
-    <div>
-        <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Booking History</h1>
-        <p class="text-xs text-slate-500 dark:text-slate-400">
-            Track your detailing appointments and service histories.
-        </p>
-    </div>
-</div>
-<div class="pt-10 px-6 md:px-12 max-w-7xl mx-auto space-y-10">
-<!-- Page Header Section content moved to header -->
-<div class="flex items-center gap-3">
-<div class="flex -space-x-3 overflow-hidden">
-<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-2 ring-surface" data-alt="Female team member portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqgz2AerCYrZGkAkEdPb5SIVplbAAphtl8K5MzhRKHUF6dvN1W54p4XNPBVvPRM8q-GeN7NtErpS2_jYTCOFIKakmJfuHkInb5qY_m28NWjZdr9UP0uuqwDFO8tAXNC9vZteG4iUJbuFEHmXS6OCNiHkcvI_r2PV-HIlmOXprJRbkUY5EEekkrLwTCF-ko_mUPgK25raT2FqwT7IJut32-Y7M-ZdTogUQGU2nn6e2aGFOgMK2TfXN1DlvEm59Yk8sQKljS2-1m7xY"/>
-<img alt="Team member" class="inline-block h-8 w-8 rounded-full ring-2 ring-surface" data-alt="Male team member portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiPA1-peb1zF0QDkYH4PGk1-n8UeI51iflz76ctaB3dWKuDAS7UaOGd3dLwRvnXlH6LunJJt61OOn0kjVEy4o9-QzFf42-ci9gSijDB7tKEKyIV0VIiYqq1uW6pJNLHSFOgY9YVl50rAnhy8OcHZVuM25qPR-y4rPiWAIX4Gc7ANwihf9P03AoHoIf02xHvpoXvi8qRt1fKGypI9tpsiF88-hhaRZJorOthmZpctbxpaMz4-nW_9aGx3BcrKApcCxjWRjZm5h6LzU"/>
-<div class="flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-slate-900 text-[10px] font-bold ring-2 ring-surface text-primary">+12</div>
-</div>
-<button class="bg-gradient-to-br from-primary to-orange-600 text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-primary/10 active:scale-95 transition-all">
-                        New Purchase
-                    </button>
-</div>
-</section>
-<!-- Quick Stats Bento -->
-<section class="grid grid-cols-1 md:grid-cols-4 gap-4">
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all p-6 rounded-3xl col-span-1 md:col-span-2 relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">package_2</span>
-</div>
-<p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Total Spent</p>
-<h3 class="font-display text-4xl font-bold text-slate-900 dark:text-white">$248,930.00</h3>
-<div class="mt-4 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#ec5b13]/20 text-[#ec5b13]">
-<span class="material-symbols-outlined text-sm mr-1">trending_up</span> +14.2% from last month
+    <div class="pt-10 md:pt-4 px-6 pb-32 md:pb-12 space-y-8 max-w-7xl mx-auto w-full">
+        <!-- Welcome Section -->
+        <section>
+            <p class="text-slate-500 dark:text-slate-400 mt-1 font-display">Your vehicle detailing status is updated in
+                real-time.</p>
+        </section>
+        <!-- Stats Bento Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Orders Card -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm p-6 rounded-2xl shadow-xl relative overflow-hidden group hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                <div class="relative z-10 ">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">shopping_bag</span>
+                        </div>
+                        <span
+                            class="text-[#ec5b13] text-xs font-bold px-2 py-1 bg-[#ec5b13]/10 rounded-lg">+12.5%</span>
                     </div>
-</div>
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all p-6 rounded-3xl col-span-1">
-<p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Active</p>
-<h3 class="font-display text-3xl font-bold text-slate-900 dark:text-white">12</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Vehicles in shop</p>
-</div>
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all p-6 rounded-3xl col-span-1">
-<p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Pending</p>
-<h3 class="font-display text-3xl font-bold text-primary">04</h3>
-<p class="text-slate-500 dark:text-slate-500 dark:text-slate-400 text-sm mt-2">Awaiting approval</p>
-</div>
-</section>
-<!-- Order Activity List -->
-<section class="space-y-4">
-<div class="flex items-center justify-between mb-2">
-<h3 class="text-lg font-bold font-display">Recent Activity</h3>
-<div class="flex gap-2">
-<button class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-sm">filter_list</span>
-</button>
-<button class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-sm">sort</span>
-</button>
-</div>
-</div>
-<!-- Order Cards -->
-<div class="space-y-4">
-<!-- Card 1: Shipped -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group">
-<div class="flex flex-col md:flex-row md:items-center gap-6">
-<div class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800est flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
-<span class="material-symbols-outlined text-primary text-3xl">memory</span>
-</div>
-<div class="flex-1">
-<div class="flex flex-wrap items-center gap-x-4 gap-y-1">
-<h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">Lamborghini Huracan - Full PPF</h4>
-<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#ec5b13]/10 text-[#ec5b13] border border-[#ec5b13]/20">Shipped</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Order ID</p>
-<p class="font-medium text-slate-900 dark:text-white">#APX-9210-LH</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
-<p class="font-medium">Oct 12, 2024</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
-<p class="font-medium text-slate-900 dark:text-white">$4,200.00</p>
-</div>
-<div class="hidden md:block">
-<p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
-<p class="font-medium">Main Studio</p>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-end">
-<button class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 group-hover:text-primary transition-all">
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-</div>
-</div>
-<!-- Detailed View (Hidden by default, shown on expansion) -->
-<div class="mt-6 pt-6 border-t border-slate-200 dark:border-accent-dark hidden">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="space-y-4">
-<h5 class="text-xs font-bold uppercase text-slate-500 tracking-widest">Tracking Info</h5>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">local_shipping</span>
-<div class="text-sm">
-<p class="text-slate-900 dark:text-white font-medium">FedEx Priority International</p>
-<p class="text-slate-500">TRK: 928374615522</p>
-</div>
-</div>
-</div>
-<div class="col-span-2">
-<h5 class="text-xs font-bold uppercase text-slate-500 tracking-widest mb-4">Milestones</h5>
-<div class="relative pl-8 space-y-4 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-px before:bg-outline-variant/30">
-<div class="relative">
-<div class="absolute -left-[21px] w-[22px] h-[22px] bg-amber-500 rounded-full flex items-center justify-center ring-4 ring-background">
-<span class="material-symbols-outlined text-[12px] text-white" style="font-variation-settings: 'FILL' 1;">check</span>
-</div>
-<p class="text-xs text-[#ec5b13] font-bold">Arrived at Destination Facility</p>
-<p class="text-[10px] text-slate-500">London, UK - 09:42 AM</p>
-</div>
-<div class="relative">
-<div class="absolute -left-[21px] w-[22px] h-[22px] bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center ring-4 ring-background border border-slate-200 dark:border-accent-dark"></div>
-<p class="text-xs text-slate-900 dark:text-white font-medium">Out for Delivery</p>
-<p class="text-[10px] text-slate-500">Scheduled for today</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Card 2: Pending -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group">
-<div class="flex flex-col md:flex-row md:items-center gap-6">
-<div class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800est flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
-<span class="material-symbols-outlined text-primary text-3xl">storage</span>
-</div>
-<div class="flex-1">
-<div class="flex flex-wrap items-center gap-x-4 gap-y-1">
-<h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">Tesla Model S - Ceramic Pro</h4>
-<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20">Pending</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Order ID</p>
-<p class="font-medium text-slate-900 dark:text-white">#APX-8842-TS</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
-<p class="font-medium">Oct 14, 2024</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
-<p class="font-medium text-slate-900 dark:text-white">$1,450.00</p>
-</div>
-<div class="hidden md:block">
-<p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
-<p class="font-medium">Detail Bay 3</p>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-end">
-<button class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 group-hover:text-primary transition-all">
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Card 3: Cancelled -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group opacity-70 grayscale-[0.5]">
-<div class="flex flex-col md:flex-row md:items-center gap-6">
-<div class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800est flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
-<span class="material-symbols-outlined text-red-500 text-3xl">router</span>
-</div>
-<div class="flex-1">
-<div class="flex flex-wrap items-center gap-x-4 gap-y-1">
-<h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">Full Interior Rejuvenation</h4>
-<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-500 border border-red-500/20">Cancelled</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Booking ID</p>
-<p class="font-medium text-slate-900 dark:text-white">#APX-7701-IR</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
-<p class="font-medium">Oct 09, 2024</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
-<p class="font-medium text-slate-900 dark:text-white">$350.00</p>
-</div>
-<div class="hidden md:block">
-<p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
-<p class="font-medium">Mobile Service</p>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-end">
-<button class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 transition-all">
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Card 4: Shipped -->
-<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group">
-<div class="flex flex-col md:flex-row md:items-center gap-6">
-<div class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800est flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
-<span class="material-symbols-outlined text-primary text-3xl">developer_board</span>
-</div>
-<div class="flex-1">
-<div class="flex flex-wrap items-center gap-x-4 gap-y-1">
-<h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">Porsche 911 - Paint Prep</h4>
-<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#ec5b13]/10 text-[#ec5b13] border border-[#ec5b13]/20">Completed</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Booking ID</p>
-<p class="font-medium text-slate-900 dark:text-white">#APX-4412-PP</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
-<p class="font-medium">Sep 28, 2024</p>
-</div>
-<div>
-<p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
-<p class="font-medium text-slate-900 dark:text-white">$850.00</p>
-</div>
-<div class="hidden md:block">
-<p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
-<p class="font-medium">Detail Bay 1</p>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-end">
-<button class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 group-hover:text-primary transition-all">
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
+                    <h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Bookings</h3>
+                    <p class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">1,284</p>
+                    <div class="mt-4 h-12 flex items-end gap-1">
+                        <div class="flex-1 bg-primary/20 rounded-t-sm h-1/2"></div>
+                        <div class="flex-1 bg-primary/20 rounded-t-sm h-2/3"></div>
+                        <div class="flex-1 bg-primary/20 rounded-t-sm h-1/2"></div>
+                        <div class="flex-1 bg-primary/20 rounded-t-sm h-3/4"></div>
+                        <div class="flex-1 bg-primary/40 rounded-t-sm h-full"></div>
+                        <div class="flex-1 bg-primary/20 rounded-t-sm h-1/2"></div>
+                        <div class="flex-1 bg-primary/20 rounded-t-sm h-2/3"></div>
+                    </div>
+                </div>
+                <div
+                    class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all">
+                </div>
+            </div>
+            <!-- Activity Card -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm p-6 rounded-2xl shadow-xl relative overflow-hidden group hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-[#ec5b13]/10 flex items-center justify-center text-[#ec5b13]">
+                            <span class="material-symbols-outlined">analytics</span>
+                        </div>
+                        <span class="text-primary text-xs font-bold px-2 py-1 bg-primary/10 rounded-lg">Real-time</span>
+                    </div>
+                    <h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Vehicle Shine Level</h3>
+                    <p class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">94.2%</p>
+                    <div class="mt-4 h-12 flex items-center justify-center">
+                        <div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-secondary to-primary-container w-[94%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute -right-4 -bottom-4 w-24 h-24 bg-[#ec5b13]/5 rounded-full blur-3xl group-hover:bg-[#ec5b13]/10 transition-all">
+                </div>
+            </div>
+            <!-- Saved Items Card -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm p-6 rounded-2xl shadow-xl relative overflow-hidden group hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                <div class="relative z-10">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </div>
+                        <span
+                            class="text-slate-500 dark:text-slate-400 text-xs font-medium px-2 py-1 bg-slate-400/10 rounded-lg">New</span>
+                    </div>
+                    <h3 class="text-slate-500 dark:text-slate-400 text-sm font-medium">Wishlist Services</h3>
+                    <p class="text-3xl font-display font-extrabold text-slate-900 dark:text-white mt-1">42</p>
+                    <div class="mt-4 flex -space-x-2">
+                        <img class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container"
+                            data-alt="Project 1 preview thumbnail"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUPDepyjQ1w40ZX1GS_ZHWLFTy1-dWYdW229Q7HmLL7LO61PGuyzURwR6gn8ugbTMO_IZ-YrBai_Eucz19vHtKOh0v3k_JjXKzznPweeyg6BQH5gWLQlo6PvpJ1Z0T4in2o6OEba1Ycx5_MJmF-qSN3pH3MleWYBvfAHf_Q88dO3qFCe-vsi_v2lb73_K49qskuM4Nyk6Qp5nLNLFpQk9B9Ai2xANKB7l3p2xvm2GSH35X-zbjYn9z0u1i4y7t8EAB4EUcLeDOBBc" />
+                        <img class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container"
+                            data-alt="Project 2 preview thumbnail"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfAT3zMZ7CvmtntILmJaeRV8Z3s9pooHqBPnKkWWU9AscNrQDiTBShdPmFgnUrOpreeKsU7bfw8xFpHR_V6qh4ufRhI2CHAEEHzFK0-qEcbZTXNicb6t84LyT0gKo231dte3hZJXe1SW9rxfcCruOpkCUP4sKQP1sjGKoNMKYAv8moMx40n8TAVL1eOhJQoiePWuSXHcLosYi3zhScyQg5dQKCAlu2E-ZsO7XFkDfy6cdwuNiI8mh1mQDg_1yCx6XQv7AFiekcTpQ" />
+                        <img class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container"
+                            data-alt="Project 3 preview thumbnail"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuChICQn-QvBDfNf2ROAdIYk9ZxfQtom7Hk-ozE4z1JRdI_dni2s-AI4BXPLA084vIXasNppVICtRu8UXI-9Z-bvypR3bhil0VQyzIqd86IQC099j9vh59aZQlIwj1-UkEVht7jQqJ_cbgQSzryHpCnq_rQcIMv_n5S7HQRk8UMyMt1mLzmeHBz9TymFq-b9fcbIFGC8VhS7d0GmfCifo-iEUYuVSv0I0w-dgXv5tsEa7QJgaY9EQ_w5KqkH7TZjp6yb4uJMuM1dFFM" />
+                        <div
+                            class="w-8 h-8 rounded-full border-2 border-surface bg-white dark:bg-slate-900 flex items-center justify-center text-[10px] text-primary">
+                            +39</div>
+                    </div>
+                </div>
+                <div
+                    class="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all">
+                </div>
+            </div>
+        </section>
+        <!-- Main View Area (Bento Layout) -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Main Analytics Card -->
+            <div
+                class="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-3xl overflow-hidden flex flex-col min-h-[400px]">
+                <div class="p-8 flex justify-between items-center border-b border-slate-200 dark:border-accent-dark">
+                    <div>
+                        <h3 class="text-xl font-display font-bold text-primary">Analytics Overview</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Performance metrics
+                            across all regions</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-white text-xs font-semibold hover:bg-primary/10 hover:text-primary transition-all duration-300">Daily</button>
+                        <button
+                            class="px-4 py-2 rounded-xl bg-primary text-white text-xs font-semibold shadow-[0_0_20px_rgba(236,91,19,0.4)]">Weekly</button>
+                    </div>
+                </div>
+                <div class="flex-grow p-8 flex items-center justify-center relative">
+                    <!-- SVG Placeholder for Chart -->
+                    <svg class="w-full h-full opacity-60" viewbox="0 0 800 300">
+                        <path d="M0,250 Q100,200 200,220 T400,100 T600,150 T800,50" fill="none"
+                            stroke="url(#paint0_linear)" stroke-linecap="round" stroke-width="4"></path>
+                        <path d="M0,250 Q100,200 200,220 T400,100 T600,150 T800,50 L800,300 L0,300 Z"
+                            fill="url(#paint1_linear)" opacity="0.2"></path>
+                        <defs>
+                            <lineargradient gradientunits="userSpaceOnUse" id="paint0_linear" x1="0" x2="800" y1="0"
+                                y2="0">
+                                <stop stop-color="#c0c1ff"></stop>
+                                <stop offset="1" stop-color="#5de6ff"></stop>
+                            </lineargradient>
+                            <lineargradient gradientunits="userSpaceOnUse" id="paint1_linear" x1="0" x2="0" y1="0"
+                                y2="300">
+                                <stop stop-color="#8083ff"></stop>
+                                <stop offset="1" stop-color="#0c1324" stop-opacity="0"></stop>
+                            </lineargradient>
+                        </defs>
+                    </svg>
+                    <!-- Overlay markers -->
+                    <div
+                        class="absolute top-1/2 left-1/4 -translate-y-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_15px_rgba(192,193,255,0.8)] border-2 border-white">
+                    </div>
+                    <div
+                        class="absolute top-1/2 left-1/4 ml-6 p-2 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-accent-dark text-[10px] backdrop-blur-md">
+                        <span class="text-slate-500 dark:text-slate-400">Peak Sat:</span> 8.4k Units
+                    </div>
+                </div>
+            </div>
+            <!-- Activity Timeline -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-3xl p-8 space-y-6">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-display font-bold text-slate-900 dark:text-white">Recent Activity</h3>
+                    <button class="text-primary text-xs font-medium hover:underline">View All</button>
+                </div>
+                <div
+                    class="space-y-6 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container">
+                    <!-- Timeline Items -->
+                    <div class="flex gap-4 relative">
+                        <div
+                            class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
+                            <div class="w-2 h-2 rounded-full bg-amber-500"></div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900 dark:text-white">Order #8420 Completed</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">2 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 relative">
+                        <div
+                            class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
+                            <div class="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900 dark:text-white">New user registered: Sara T.
+                            </p>
+                            <p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">45 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 relative">
+                        <div
+                            class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
+                            <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900 dark:text-white">System update successful</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">2 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 relative">
+                        <div
+                            class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
+                            <div class="w-2 h-2 rounded-full bg-slate-500"></div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900 dark:text-white">Saved item "Cloud Engine"
+                                updated</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">4 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 relative">
+                        <div
+                            class="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center z-10">
+                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900 dark:text-white">Failed login attempt detected
+                            </p>
+                            <p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400">Yesterday</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</div>
-</script>
 
-<script type="text/template" id="tmpl-messages">
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+
+            <!-- 💎 PREMIUM (ONLY GLASS) -->
+            <div
+                class="glass-premium rounded-2xl p-6 shadow-md hover:scale-[1.02] transition-all duration-300 flex flex-col h-full hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+
+                <!-- TOP CONTENT -->
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-semibold text-sm text-slate-900 dark:text-white">Platinum Benefits</h4>
+                        <span class="text-[10px] bg-white/60 dark:bg-white/10 px-2 py-1 rounded uppercase">
+                            Premium
+                        </span>
+                    </div>
+
+                    <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                        <li>✔ Priority Booking</li>
+                        <li>✔ Free Pickup & Drop</li>
+                        <li>✔ Exclusive Discounts</li>
+                    </ul>
+                </div>
+
+                <!-- BUTTON (PUSHED TO BOTTOM) -->
+                <button
+                    class="mt-auto w-full py-2 text-xs font-semibold rounded-lg bg-primary text-white hover:opacity-90 transition">
+                    Upgrade Plan
+                </button>
+
+            </div>
+
+
+            <!-- ⚡ QUICK ACTIONS (ULTRA) -->
+            <div class="glass-card rounded-2xl p-5 hover:scale-[1.02] transition-all duration-300 hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+
+                <h4 class="font-bold text-sm mb-4">Quick Actions</h4>
+
+                <div class="grid grid-cols-2 gap-3 text-xs">
+
+                    <button
+                        class="p-3 rounded-xl bg-white/5 hover:bg-primary hover:text-white transition-all flex flex-col items-center gap-1">
+                        <span class="material-symbols-outlined text-lg">directions_car</span>
+                        Book
+                    </button>
+
+                    <button
+                        class="p-3 rounded-xl bg-white/5 hover:bg-primary hover:text-white transition-all flex flex-col items-center gap-1">
+                        <span class="material-symbols-outlined text-lg">event</span>
+                        Schedule
+                    </button>
+
+                    <button
+                        class="p-3 rounded-xl bg-white/5 hover:bg-primary hover:text-white transition-all flex flex-col items-center gap-1">
+                        <span class="material-symbols-outlined text-lg">payments</span>
+                        Payments
+                    </button>
+
+                    <button
+                        class="p-3 rounded-xl bg-white/5 hover:bg-primary hover:text-white transition-all flex flex-col items-center gap-1">
+                        <span class="material-symbols-outlined text-lg">support_agent</span>
+                        Support
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- 🚘 VEHICLE STATUS (ULTRA) -->
+            <div class="glass-card rounded-2xl p-5 hover:scale-[1.02] transition-all duration-300 hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+
+                <h4 class="font-bold text-sm mb-4">Vehicle Status</h4>
+
+                <div class="space-y-3 text-xs">
+
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Model</span>
+                        <span class="font-bold">G63 AMG</span>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Last Service</span>
+                        <span class="font-bold">12 Mar</span>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <span class="text-slate-400">Next Service</span>
+                        <span class="font-bold text-primary">05 Apr</span>
+                    </div>
+
+                </div>
+
+                <!-- progress -->
+                <div class="mt-5">
+                    <div class="flex justify-between text-[10px] mb-1">
+                        <span>Health</span>
+                        <span>85%</span>
+                    </div>
+
+                    <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-2 bg-gradient-to-r from-primary to-orange-400 rounded-full animate-pulse"
+                            style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- glow -->
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-indigo-500/20 blur-2xl rounded-full"></div>
+            </div>
+        </section>
+
+    </div>
+
+    </div>
+    </script>
+
+    <script type="text/template" id="tmpl-profile">
+<!-- HEADER -->
+    <div class="flex items-center gap-4 mb-8">
+        <div>
+            <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Profile Management</h1>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+                Manage your detailing profile and preferences.
+            </p>
+        </div>
+    </div>
+
+    <!-- Header Section content moved to header -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left Column: Avatar & Account Status (Bento Style) -->
+        <div class="lg:col-span-4 space-y-6">
+            <!-- Avatar Card -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-xl p-8 flex flex-col items-center text-center relative overflow-hidden group hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+                <div class="relative mb-6">
+                    <div class="w-32 h-32 rounded-full p-1 bg-gradient-to-br from-primary to-amber-500">
+                        <div
+                            class="w-full h-full rounded-full overflow-hidden border-4 border-surface-container-highest">
+                            <img alt="Avatar Preview" class="w-full h-full object-cover"
+                                data-alt="User avatar with soft studio lighting and dark background"
+                                src="../assets/images/Jacob.jpg" />
+                        </div>
+                    </div>
+                    <button
+                        class="absolute bottom-1 right-1 bg-primary text-white p-2 rounded-full shadow-lg hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-sm">photo_camera</span>
+                    </button>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white font-serif">Jacob Bethel</h3>
+                <p class="text-primary text-sm font-medium mb-4">Master Detailer</p>
+                <div class="flex gap-2 w-full">
+                    <button
+                        class="px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-white text-xs font-semibold hover:bg-primary/10 hover:text-primary transition-all duration-300 flex-1">Change
+                        Photo</button>
+                    <button class="p-2 text-red-500/80 hover:bg-red-500/10 transition-colors rounded-lg">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Account Details Card -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-xl p-6 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Account Status</h4>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Tier</span>
+                        <span
+                            class="bg-primary/20 text-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider border border-primary/20">Premium</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Member Since</span>
+                        <span class="text-sm font-semibold">Jan 2024</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-slate-500 dark:text-slate-500 dark:text-slate-400">Two-Factor</span>
+                        <span class="flex items-center gap-1 text-[#ec5b13] text-sm font-semibold">
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">verified</span> Active
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Column: Profile Form -->
+        <div class="lg:col-span-8">
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm rounded-xl p-8 border border-slate-200 dark:border-accent-dark">
+                <form class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Name Field -->
+                        <div class="space-y-2">
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Full
+                                Name</label>
+                            <div class="relative">
+                                <input
+                                    class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-primary/20 focus:border-primary/40 transition-all outline-none"
+                                    type="text" value="Jacob Bethel" />
+                            </div>
+                        </div>
+                        <!-- Email Field -->
+                        <div class="space-y-2">
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Email
+                                Address</label>
+                            <input
+                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-primary/20 focus:border-primary/40 transition-all outline-none"
+                                type="email" value="jacobBethel@obsidian.io" />
+                        </div>
+                        <!-- Phone Field -->
+                        <div class="space-y-2">
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Phone
+                                Number</label>
+                            <input
+                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-primary/20 focus:border-primary/40 transition-all outline-none"
+                                type="tel" value="+1 (555) 000-1234" />
+                        </div>
+                        <!-- Occupation -->
+                        <div class="space-y-2">
+                            <label
+                                class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-500 dark:text-slate-400 ml-1">Occupation</label>
+                            <input
+                                class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-primary/20 focus:border-primary/40 transition-all outline-none"
+                                type="text" value="Product Designer" />
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label
+                            class="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 ml-1">Biography</label>
+                        <textarea
+                            class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-accent-dark rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-primary/20 focus:border-primary/40 transition-all outline-none resize-none"
+                            rows="4">Delivering uncompromising automotive perfection through precision vehicle restoration and ceramic protection.</textarea>
+                    </div>
+                    <!-- Action Buttons -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-end gap-4 pt-6 border-t border-slate-200 dark:border-accent-dark">
+                        <button
+                            class="w-full sm:w-auto px-8 py-3 text-sm font-semibold text-slate-700 dark:text-white hover:text-primary transition-colors"
+                            type="button">Discard Changes</button>
+                        <button
+                            class="w-full sm:w-auto px-10 py-3 bg-gradient-to-br from-primary to-orange-600 text-white font-bold rounded-xl hover:shadow-[0_0_30px_rgba(236,91,19,0.3)] transition-all active:scale-95"
+                            type="submit">Save Profile</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Secondary Task: Security Notice -->
+            <div class="mt-8 flex items-start gap-4 p-6 bg-[#ec5b13]/5 rounded-xl border border-[#ec5b13]/20">
+                <span class="material-symbols-outlined text-[#ec5b13] mt-1">info</span>
+                <div>
+                    <h5 class="text-sm font-bold text-[#ec5b13] mb-1">Privacy &amp; Security</h5>
+                    <p class="text-xs text-slate-500 dark:text-slate-500 dark:text-slate-400 leading-relaxed">Your data
+                        is encrypted with enterprise-grade standards. We never share your personal information with
+                        third parties. Last login detected from New York, US on Oct 24, 2024.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </script>
+
+    <script type="text/template" id="tmpl-saved">
+<!-- HEADER -->
+    <div class="flex items-center gap-4 mb-8">
+        <div>
+            <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Saved Services</h1>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+                Curate your collection of premium detailing services.
+            </p>
+        </div>
+    </div>
+
+    <!-- Editorial Header Section content moved to header -->
+    <div class="flex items-center gap-3">
+        <span class="text-xs font-display uppercase tracking-widest text-slate-400">Sorted by</span>
+        <button
+            class="bg-white dark:bg-slate-900 px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-white text-sm font-medium border border-slate-200 dark:border-accent-dark flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            Recently Added
+            <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+        </button>
+    </div>
+    </div>
+    </section>
+    <!-- Bento-style Grid of Saved Items -->
+    <!-- GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 mt-6 items-stretch">
+        <!-- Card 1: Ceramic Coating -->
+        <div
+            class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300 flex flex-col h-full">
+            <!-- DELETE BUTTON -->
+            <button
+                class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
+                <span class="material-symbols-outlined text-sm">delete</span>
+            </button>
+            <!-- IMAGE -->
+            <div class="h-44 overflow-hidden flex-shrink-0">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlrQwq8YVKhX_DDu_vmu6PBMw7ybYTNPma7O-vGSh9Nh45vvOrxmFZ_AC5hLVhPQijiK3M8on_7bGh93qUXg9jJxZyDWvWde6jblr5R-ipd7WdQZZ0_XhrMVz_rmaP2IVEY6nQK3JjaDfbJfViri899wPRwqyfMNEaG6yOW-4vFVkvO-JBVAS2Y64wjCg7PFOSphSKuYBVONC_z9Xxhxz3w-1BRWgSEGxo-oRQzxToYk-GHKA4N1x7UsicW0mUONhPvbK_VY0cRjs"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <!-- CONTENT -->
+            <div class="p-5 flex flex-col flex-grow">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Ceramic Coating Pro</h3>
+                    <span class="text-primary font-bold text-sm ml-2">$1,299</span>
+                </div>
+                <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Paint Protection</p>
+
+                <!-- BUTTON (ALIGNED TO BOTTOM) -->
+                <button
+                    class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
+                    <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 2: Paint Correction -->
+        <div
+            class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300 flex flex-col h-full">
+            <button
+                class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
+                <span class="material-symbols-outlined text-sm">delete</span>
+            </button>
+            <div class="h-44 overflow-hidden flex-shrink-0">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_4QFWB4gGt9qxDqidJGo6NB5DSjT5CkgWCNbjSNOH70Y2_lCyTYVvRMFF7GA_wBuZFZ6iVuMsGMiql8f-k9AjP_5hoZ1JQ1qii50JBXpQC6X2XbpQD0dJsBiF-p2VnIJa6pp9XizjpER0KFX5Ize0Ux6mnO3o_dWaUlVDDzbDRrJjbYQTl2BRMKVG0xkEVyN5ptG3Iv6DvZThsUEUQ1SOveJn1p-BD7mbeBuqo_Xqd1pK5cvRgsv7z8w5zciZTVAGtQVci8ZZDdE"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Paint Correction v3</h3>
+                    <span class="text-primary font-bold text-sm ml-2">$850</span>
+                </div>
+                <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Surface Restoration</p>
+                <button
+                    class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
+                    <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 3: Interior Detail -->
+        <div
+            class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300 flex flex-col h-full">
+            <button
+                class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
+                <span class="material-symbols-outlined text-sm">delete</span>
+            </button>
+            <div class="h-44 overflow-hidden flex-shrink-0">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0XP8jTvxXTccsB2nFAlKi0ixwjIPdbrIOa934Y9w69FqJM0It6tftAI7YzWlU_NELwtsvaH3JBFaW4oJj1CgGvPs3uvrA_1_i-hDI5YrCSld_-lQ2LiL3RCd48_8crTCjuzdQrwDnrgnL3HmVGwTkSLEddF9EVXdCQQ6ul_Oj_7BnHhhfhYJERZD1CswQm252RWSsgk1NgsinT2tufpmx8oHyhDAnsD9DI5u4bzRWy3OcPtzCu5ENEIdgNUY2p9MsAaqRGByGT0o"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Bespoke Interior Care
+                    </h3>
+                    <span class="text-primary font-bold text-sm ml-2">$450</span>
+                </div>
+                <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Luxury Rejuvenation</p>
+                <button
+                    class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
+                    <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 4: Wheel Shield -->
+        <div
+            class="relative group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] transition-all duration-300 flex flex-col h-full">
+            <button
+                class="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur text-white p-2 rounded-full hover:bg-red-500 transition">
+                <span class="material-symbols-outlined text-sm">delete</span>
+            </button>
+            <div class="h-44 overflow-hidden flex-shrink-0">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ1t3zvtqRwk3LA3xR8OnWMoZwZEqwW6IS7F4sU1Wf37FXydSmD0tdCMc_tlJekdLWeUgmjP8zhZz8W2wKOLqKsKoVfB9MOg2JfE6lvCkudh3qA1y01gPvZ3Vk7pl-72szPP5Z0siEyR9nvGgnxvQ3IHSSNM9Qa45hIM2tYCWSScs-z9lWKI2aW1ov_aIB2ETAAMIoEAJE128oIwQFLGVY40X20qXAHg7wXTRjNfhqh4pa2xzOxmrmn9IHycvMzpko09Bg4-R8m3Y"
+                    class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+                <div class="flex justify-between items-start mb-1">
+                    <h3 class="font-bold text-sm text-slate-900 dark:text-white leading-tight">Wheel & Brake Shield</h3>
+                    <span class="text-primary font-bold text-sm ml-2">$399</span>
+                </div>
+                <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-4">Alloy Protection</p>
+                <button
+                    class="w-full py-2.5 text-xs font-semibold bg-primary text-white rounded-xl hover:opacity-90 transition flex items-center justify-center gap-2 mt-auto">
+                    <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RECOMMENDATION SECTION -->
+    <div class="mt-12">
+        <h2 class="text-lg font-bold mb-4 text-slate-900 dark:text-white">Recommended for You</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Item 1 -->
+            <div
+                class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEqRjGhXaP6HFq1yVJ0CRxifKrXoM00GtX4CQIy2f6HgY1yIIf8ca3xOdVRJ3BF3ZZDmo_HtYfmUHLP5ne4Fk3JAYJFouHz6GRO5VVOtfe3h6KAwOe5_jMm84fHLul3gOAdBmSAAa7gFx1VMBXORjQsDmA1PWKovPIZ5u2tqcgPOCaHW4gNO_grhu5bBlur13dNtLzTRig0RMEjL5d6S2YZDe_S9jq5skvcPQu98_H5EKaUzco1rchaDxiGnspXTzkYcfHOg0Eyr8"
+                    class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform" />
+                <p class="text-xs font-semibold text-slate-900 dark:text-white">Interior Deep Clean</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div
+                class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3GclUAqBKRCiDV8Fvbu4V2ZlKMyyF3ygAicck1cQR6I87A3xbhlHAcLoo_LqWG5sr4o4_qvW8HWyZEdgqUatvRC0C1kabgG7FeoqWphkTVICDMkR9q6jJSaqcgwji3NYCOh1itDXiv_DhijWCgqAvdB5c_x83-wLOJ0WIBSujNJeTrBH4JX3I77_Isr4dArj-60fZ75l0utudDwVtOeYZsM7WgDWMoHpRKGn0eEbTXsuxRr9OFFHy9D5YoVV9uuDo45lSolsEYsY"
+                    class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform" />
+                <p class="text-xs font-semibold text-slate-900 dark:text-white">Premium Wax Finish</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div
+                class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-1OrTmS5SphEk9KtrNSNk11qeopoW4G8Bt5lnr-XoxtIsmvYCIEtkcbyhaS_CYMOOgKvdPWnPMtfkJQUhEg09Saad9f79ry8_zMaKmRMjpfF-HVBu-NUIyVZoHv3hTdGpyz9Pd8hCC5-OWJm_pwF0nFd6ufQ8HkoVV60o86EATau8IsGIlrZDv0-eu8zOB0MYIwbQzi_v2mJ7o4O4SLQVv-DgsCJ6i5cKmxHvvtZCTAORG2a9t576G_8RySmaQ2RqLm2tT0iiy6I"
+                    class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform" />
+                <p class="text-xs font-semibold text-slate-900 dark:text-white">Nano Ceramic Shield</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div
+                class="bg-slate-100 dark:bg-slate-800 rounded-2xl p-3 group cursor-pointer hover:bg-primary/10 transition-colors h-full">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpYxjYiyZ7WWtiFtpt4m2wNwTpexwEpPS4dB1-QUoKhg0EBN3bG9Dga0ku5rE27fnv2d4EIOhyNwyXsYDseXRjkHZSBUTC1gF6FO71oDlbMGhP4-BFFXuGk1-QhN9YTXwJIyZ0I_jXiauEkcgqc_OZkcd_OM1aT_MVAHJ2QatH94c73KiQiQ_pkP4Q2tDRW1sqzcSHOhvyDd-7eytjs75TsyGYhaF-DR0OHYza6LCJiznnyLglZMw7ADrZaUK_rJXR9icdLlpfk0"
+                    class="w-full h-24 object-cover rounded-xl mb-2 group-hover:scale-105 transition-transform" />
+                <p class="text-xs font-semibold text-slate-900 dark:text-white">Express Wash</p>
+            </div>
+        </div>
+    </div>
+    <!-- Empty State Example (Hidden by default, used when list is empty) -->
+    <div class="hidden flex-col items-center justify-center py-32 text-center">
+        <div
+            class="w-24 h-24 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center mb-6 relative">
+            <span class="material-symbols-outlined text-5xl text-slate-400"
+                data-icon="bookmark_border">bookmark_border</span>
+            <div
+                class="absolute -top-2 -right-2 w-6 h-6 bg-indigo-500 rounded-full animate-pulse shadow-[0_0_15px_rgba(255,185,95,0.4)]">
+            </div>
+        </div>
+        <h3 class="text-2xl font-serif font-bold text-slate-900 dark:text-white mb-2">No services saved yet.</h3>
+        <p class="text-slate-500 dark:text-slate-400 max-w-xs mx-auto mb-8 font-display">Explore our premium detailing
+            packages and save your favorites to compare.</p>
+        <button
+            class="px-8 py-3 bg-primary text-on-primary font-bold rounded-xl hover:shadow-[0_0_30px_rgba(236,91,19,0.4)] transition-shadow">
+            Browse Services
+        </button>
+    </div>
+
+    </div>
+    </script>
+
+    <script type="text/template" id="tmpl-orders">
+<!-- HEADER -->
+    <div class="flex items-center gap-4 mb-8">
+        <div>
+            <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Booking History</h1>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+                Track your detailing appointments and service histories.
+            </p>
+        </div>
+    </div>
+    <div class="pt-10 px-6 md:px-12 max-w-7xl mx-auto space-y-10">
+        <!-- Page Header Section content moved to header -->
+        <div class="w-full max-w-none px-4 md:px-6 lg:px-8 space-y-10">
+
+            <!-- HEADER ACTION BAR -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+                <!-- AVATARS -->
+                <div class="flex items-center gap-3">
+                    <div class="flex -space-x-3">
+                        <img class="h-8 w-8 rounded-full ring-2 ring-white dark:ring-slate-900 object-cover"
+                            src="../assets/images/Elena Rodriguez_animated.png" />
+
+                        <img class="h-8 w-8 rounded-full ring-2 ring-white dark:ring-slate-900 object-cover"
+                            src="../assets/images/Rahul Sharma_animated.png" />
+
+                        <div
+                            class="h-8 w-8 flex items-center justify-center rounded-full bg-white dark:bg-slate-900 text-[10px] font-bold ring-2 ring-white dark:ring-slate-900 text-primary">
+                            +12
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BUTTON -->
+                <button
+                    class="w-full sm:w-auto bg-gradient-to-br from-primary to-orange-600 text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-md hover:shadow-lg active:scale-95 transition-all">
+                    New Purchase
+                </button>
+
+            </div>
+            </section>
+            <!-- Quick Stats Bento -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                <div
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all p-6 rounded-3xl col-span-1 md:col-span-2 relative overflow-hidden group hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <span class="material-symbols-outlined text-8xl"
+                            style="font-variation-settings: 'FILL' 1;">package_2</span>
+                    </div>
+                    <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Total Spent</p>
+                    <h3 class="font-display text-4xl font-bold text-slate-900 dark:text-white">$248,930.00</h3>
+                    <div
+                        class="mt-4 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#ec5b13]/20 text-[#ec5b13]">
+                        <span class="material-symbols-outlined text-sm mr-1">trending_up</span> +14.2% from last month
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all p-6 rounded-3xl col-span-1 hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Active</p>
+                    <h3 class="font-display text-3xl font-bold text-slate-900 dark:text-white">12</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Vehicles in shop</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all p-6 rounded-3xl col-span-1 hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <p class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Pending</p>
+                    <h3 class="font-display text-3xl font-bold text-primary">04</h3>
+                    <p class="text-slate-500 dark:text-slate-500 dark:text-slate-400 text-sm mt-2">Awaiting approval</p>
+                </div>
+            </section>
+            <!-- Order Activity List -->
+            <section class="space-y-4">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-lg font-bold font-display">Recent Activity</h3>
+                    <div class="flex gap-2">
+                        <button
+                            class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-white hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-sm">filter_list</span>
+                        </button>
+                        <button
+                            class="p-2 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-white hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-sm">sort</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Order Cards -->
+                <div class="space-y-4">
+                    <!-- Card 1: Shipped -->
+                    <div
+                        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
+                                <span class="material-symbols-outlined text-primary text-3xl">memory</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+                                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">
+                                        Lamborghini
+                                        Huracan - Full PPF</h4>
+                                    <span
+                                        class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#ec5b13]/10 text-[#ec5b13] border border-[#ec5b13]/20">Shipped</span>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Order ID</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">#APX-9210-LH</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
+                                        <p class="font-medium">Oct 12, 2024</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">$4,200.00</p>
+                                    </div>
+                                    <div class="hidden md:block">
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
+                                        <p class="font-medium">Main Studio</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <button
+                                    class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 group-hover:text-primary transition-all">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Detailed View (Hidden by default, shown on expansion) -->
+                        <div class="mt-6 pt-6 border-t border-slate-200 dark:border-accent-dark hidden">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="space-y-4">
+                                    <h5 class="text-xs font-bold uppercase text-slate-500 tracking-widest">Tracking Info
+                                    </h5>
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-primary">local_shipping</span>
+                                        <div class="text-sm">
+                                            <p class="text-slate-900 dark:text-white font-medium">FedEx Priority
+                                                International</p>
+                                            <p class="text-slate-500">TRK: 928374615522</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-2">
+                                    <h5 class="text-xs font-bold uppercase text-slate-500 tracking-widest mb-4">
+                                        Milestones
+                                    </h5>
+                                    <div
+                                        class="relative pl-8 space-y-4 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-px before:bg-outline-variant/30">
+                                        <div class="relative">
+                                            <div
+                                                class="absolute -left-[21px] w-[22px] h-[22px] bg-amber-500 rounded-full flex items-center justify-center ring-4 ring-background">
+                                                <span class="material-symbols-outlined text-[12px] text-white"
+                                                    style="font-variation-settings: 'FILL' 1;">check</span>
+                                            </div>
+                                            <p class="text-xs text-[#ec5b13] font-bold">Arrived at Destination Facility
+                                            </p>
+                                            <p class="text-[10px] text-slate-500">London, UK - 09:42 AM</p>
+                                        </div>
+                                        <div class="relative">
+                                            <div
+                                                class="absolute -left-[21px] w-[22px] h-[22px] bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center ring-4 ring-background border border-slate-200 dark:border-accent-dark">
+                                            </div>
+                                            <p class="text-xs text-slate-900 dark:text-white font-medium">Out for
+                                                Delivery
+                                            </p>
+                                            <p class="text-[10px] text-slate-500">Scheduled for today</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2: Pending -->
+                    <div
+                        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
+                                <span class="material-symbols-outlined text-primary text-3xl">storage</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+                                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">Tesla
+                                        Model S
+                                        - Ceramic Pro</h4>
+                                    <span
+                                        class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20">Pending</span>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Order ID</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">#APX-8842-TS</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
+                                        <p class="font-medium">Oct 14, 2024</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">$1,450.00</p>
+                                    </div>
+                                    <div class="hidden md:block">
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
+                                        <p class="font-medium">Detail Bay 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <button
+                                    class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 group-hover:text-primary transition-all">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3: Cancelled -->
+                    <div
+                        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group opacity-70 grayscale-[0.5] hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
+                                <span class="material-symbols-outlined text-red-500 text-3xl">router</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+                                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">Full
+                                        Interior
+                                        Rejuvenation</h4>
+                                    <span
+                                        class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-500 border border-red-500/20">Cancelled</span>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Booking ID</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">#APX-7701-IR</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
+                                        <p class="font-medium">Oct 09, 2024</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">$350.00</p>
+                                    </div>
+                                    <div class="hidden md:block">
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
+                                        <p class="font-medium">Mobile Service</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <button
+                                    class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 transition-all">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4: Shipped -->
+                    <div
+                        class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-accent-dark shadow-sm hover:border-primary/50 transition-all rounded-3xl p-5 md:p-6 transition-all duration-300 hover:bg-white/60 dark:bg-slate-900/60 cursor-pointer group hover:border-primary 
+dark:hover:border-primary 
+dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-slate-50 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-accent-dark shadow-inner">
+                                <span class="material-symbols-outlined text-primary text-3xl">developer_board</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+                                    <h4 class="font-display font-bold text-lg text-slate-900 dark:text-white">Porsche
+                                        911 -
+                                        Paint Prep</h4>
+                                    <span
+                                        class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#ec5b13]/10 text-[#ec5b13] border border-[#ec5b13]/20">Completed</span>
+                                </div>
+                                <div
+                                    class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3 text-sm text-slate-500 dark:text-slate-400">
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Booking ID</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">#APX-4412-PP</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Date</p>
+                                        <p class="font-medium">Sep 28, 2024</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Amount</p>
+                                        <p class="font-medium text-slate-900 dark:text-white">$850.00</p>
+                                    </div>
+                                    <div class="hidden md:block">
+                                        <p class="text-[10px] uppercase text-slate-500 font-bold">Location</p>
+                                        <p class="font-medium">Detail Bay 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end">
+                                <button
+                                    class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-500 group-hover:text-primary transition-all">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    </script>
+
+    <script type="text/template" id="tmpl-messages">
 <div class="h-[calc(100vh-140px)] md:h-[calc(100vh-80px)] flex flex-col animate-in fade-in duration-500">
     <!-- HEADER -->
     <div class="flex items-center gap-4 mb-4 shrink-0">
-        <button onclick="switchSection('overview')" 
-            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 transition">
-            <span class="material-symbols-outlined text-xl">arrow_back</span>
-        </button>
         <div>
             <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Communications</h1>
             <p class="text-xs text-slate-500 dark:text-slate-400">
@@ -893,7 +1195,7 @@
                 <div class="p-4 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer border border-transparent transition-all group">
                     <div class="flex gap-3 text-left">
                         <div class="relative flex-shrink-0">
-                            <img class="w-12 h-12 rounded-xl object-cover opacity-90 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeGBfiwEPSl9MzdNr6Qf6M50vTt3uGyQk5ujxhV8E9tnFoGwVMuyzUsc3p124h30sFd6ZMj4p7SiEqfA3XEGKEyHclfB0_LwBgG0MXYEwahf1zdZwRpitRmvIs-_vKtUjen9rw0CO4FnrO4r944wpOMtYp19hOMKaMqMypTeONUcwyrSU9FsNQXy6wxmlOPq6SjR95Gs5HQRxEZCbhhBWJLgNYR1dKkJvdiYGMveZwPg8yv-tGBdn-PJQH2JDPCawwxdl1Mj_7vPg" alt="Elena Rodriguez"/>
+                            <img class="w-12 h-12 rounded-xl object-cover opacity-90 group-hover:opacity-100 transition-opacity" src="../assets/images/Elena Rodriguez_animated.png" alt="Elena Rodriguez"/>
                             <div class="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-indigo-500 border-2 border-white dark:border-slate-900 rounded-full"></div>
                         </div>
                         <div class="flex-1 min-w-0">
@@ -1040,14 +1342,10 @@
 </div>
 </script>
 
-<script type="text/template" id="tmpl-settings">
+    <script type="text/template" id="tmpl-settings">
 <div class="space-y-8 animate-in fade-in duration-500">
     <!-- HEADER -->
     <div class="flex items-center gap-4 mb-8">
-        <button onclick="switchSection('overview')" 
-            class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-primary/10 transition">
-            <span class="material-symbols-outlined text-xl">arrow_back</span>
-        </button>
         <div>
             <h1 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Dashboard Settings</h1>
             <p class="text-xs text-slate-500 dark:text-slate-400">
@@ -1087,90 +1385,37 @@
 </div>
 </script>
 
-<script>
-    function switchSection(sectionId) {
-        const contentArea = document.getElementById('dashboard-content');
-        const template = document.getElementById('tmpl-' + sectionId);
-        if (template) {
-            // Reset all regular nav links
-            document.querySelectorAll('#sidebar-nav a').forEach(link => {
-                link.classList.remove('bg-primary', 'text-white', 'dark:text-white', 'font-medium');
-                link.classList.add('text-slate-500', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-            });
+    <!-- Mobile Bottom Navigation -->
+    <nav
+        class="md:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200 dark:border-accent-dark px-2 pb-safe pt-2 flex justify-around items-center shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+        <a href="#overview"
+            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
+            <span class="material-symbols-outlined text-[22px]">grid_view</span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Home</span>
+        </a>
+        <a href="#orders"
+            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
+            <span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Orders</span>
+        </a>
+        <a href="#saved"
+            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
+            <span class="material-symbols-outlined text-[22px]">bookmark</span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Saved</span>
+        </a>
+        <a href="#messages"
+            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
+            <span class="material-symbols-outlined text-[22px]">mail</span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Inbox</span>
+        </a>
+        <a href="#profile"
+            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
+            <span class="material-symbols-outlined text-[22px]">person</span>
+            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Profile</span>
+        </a>
+    </nav>
 
-            // Reset bottom nav links
-            document.querySelectorAll('nav.md\\:hidden a.menu-item').forEach(link => {
-                link.classList.remove('text-primary');
-                link.classList.add('text-slate-500', 'dark:text-slate-400');
-            });
-            
-            // Reset bottom profile section
-            const profileBottom = document.getElementById('nav-profile-bottom');
-            if (profileBottom) {
-                profileBottom.classList.remove('bg-primary/10', 'border-primary/20');
-                profileBottom.classList.add('hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-            }
-
-            const activeLink = document.getElementById('nav-' + sectionId);
-            const activeProfileBottom = (sectionId === 'profile') ? profileBottom : null;
-
-            if (activeLink) {
-                activeLink.classList.remove('text-slate-500', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-                activeLink.classList.add('bg-primary', 'text-white', 'dark:text-white', 'font-medium');
-            }
-
-            if (activeProfileBottom) {
-                activeProfileBottom.classList.remove('hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-                activeProfileBottom.classList.add('bg-primary/10', 'border', 'border-primary/20');
-            }
-
-            // Activate bottom nav link
-            const bottomNavLink = document.querySelector(`nav.md\\:hidden a[href="#${sectionId}"]`);
-            if (bottomNavLink) {
-                bottomNavLink.classList.remove('text-slate-500', 'dark:text-slate-400');
-                bottomNavLink.classList.add('text-primary');
-            }
-
-            contentArea.innerHTML = template.innerHTML;
-            window.location.hash = sectionId;
-            window.scrollTo(0, 0);
-        }
-    }
-    window.addEventListener('DOMContentLoaded', () => {
-        const hash = window.location.hash.replace('#', '');
-        switchSection(hash && document.getElementById('tmpl-' + hash) ? hash : 'overview');
-    });
-    window.addEventListener('hashchange', () => {
-        const hash = window.location.hash.replace('#', '');
-        if (hash && document.getElementById('tmpl-' + hash)) switchSection(hash);
-    });
-</script>
-<!-- Mobile Bottom Navigation -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200 dark:border-accent-dark px-2 pb-safe pt-2 flex justify-around items-center shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
-    <a href="#overview" class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-        <span class="material-symbols-outlined text-[22px]">grid_view</span>
-        <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Home</span>
-    </a>
-    <a href="#appointments" class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-        <span class="material-symbols-outlined text-[22px]">event_available</span>
-        <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Appts</span>
-    </a>
-    <a href="#vehicles" class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-        <span class="material-symbols-outlined text-[22px]">directions_car</span>
-        <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Fleet</span>
-    </a>
-    <a href="#invoices" class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors relative">
-        <span class="material-symbols-outlined text-[22px]">receipt_long</span>
-        <span class="absolute top-[6px] right-4 w-1.5 h-1.5 bg-red-500 rounded-full border border-white dark:border-slate-900"></span>
-        <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Billing</span>
-    </a>
-    <a href="#profile" class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-        <span class="material-symbols-outlined text-[22px]">person</span>
-        <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Team</span>
-    </a>
-</nav>
-
-<script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
-</html>
 
+</html>

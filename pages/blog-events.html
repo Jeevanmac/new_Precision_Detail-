@@ -3,26 +3,80 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Article Not Found | Precision Detail</title>
+<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="../assets/js/tailwind-config.js"></script>
-<style>
-        body {
-            font-family: 'Public Sans', sans-serif;
-        }
-    </style>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
-</head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
-<header id="navbar" class="flex items-center justify-between px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+    <style>
+        /* Force navbar text colors for this page (override global white text) */
+        html:not(.dark) body #navbar:not(.scrolled) h2 { color: #0f172a !important; }
+        html:not(.dark) body #navbar:not(.scrolled) nav > a:not(.text-primary),
+        html:not(.dark) body #navbar:not(.scrolled) nav > div > a.dropdown-trigger:not(.text-primary) { color: #475569 !important; }
+        html:not(.dark) body #navbar:not(.scrolled) nav > a:hover:not(.text-primary),
+        html:not(.dark) body #navbar:not(.scrolled) nav > div > a.dropdown-trigger:hover:not(.text-primary) { color: #ec5b13 !important; }
+        
+        html:not(.dark) body #navbar:not(.scrolled) [id^="dir-toggle"],
+        html:not(.dark) body #navbar:not(.scrolled) [id^="theme-toggle"],
+        html:not(.dark) body #navbar:not(.scrolled) #mobile-menu-trigger {
+            color: #475569 !important;
+            background-color: rgba(241, 245, 249, 0.5) !important;
+            border-color: #e2e8f0 !important;
+        }
+        
+        html:not(.dark) body #navbar:not(.scrolled) a[href="login.html"] {
+            color: #475569 !important;
+            background-color: #f8fafc !important;
+            border-color: #e2e8f0 !important;
+        }
+        html:not(.dark) body #navbar:not(.scrolled) a[href="login.html"]:hover,
+        html:not(.dark) body #navbar:not(.scrolled) [id^="dir-toggle"]:hover,
+        html:not(.dark) body #navbar:not(.scrolled) [id^="theme-toggle"]:hover,
+        html:not(.dark) body #navbar:not(.scrolled) #mobile-menu-trigger:hover {
+            color: #ec5b13 !important;
+        }
 
-  <!-- LEFT (LOGO) -->
-  <div class="flex items-center gap-2">
+        /* Dark mode */
+        html.dark body #navbar h2 { color: #f1f5f9 !important; }
+        html.dark body #navbar nav > a:not(.text-primary),
+        html.dark body #navbar nav > div > a.dropdown-trigger:not(.text-primary),
+        html.dark body #navbar [id^="dir-toggle"],
+        html.dark body #navbar [id^="theme-toggle"],
+        html.dark body #navbar #mobile-menu-trigger { color: #e2e8f0 !important; }
+        
+        html.dark body #navbar a[href="login.html"] {
+            color: #94a3b8 !important;
+            background-color: rgba(30, 41, 59, 0.5) !important;
+            border-color: #334155 !important;
+        }
+
+        html.dark body #navbar a[href="login.html"] span {
+            color: #94a3b8 !important;
+        }
+
+        html.dark body #navbar nav > a:hover:not(.text-primary),
+        html.dark body #navbar nav > div > a.dropdown-trigger:hover:not(.text-primary),
+        html.dark body #navbar a[href="login.html"]:hover,
+        html.dark body #navbar [id^="dir-toggle"]:hover,
+        html.dark body #navbar [id^="theme-toggle"]:hover,
+        html.dark body #navbar #mobile-menu-trigger:hover { color: #ec5b13 !important; }
+        
+        html.dark body #navbar [id^="dir-toggle"] span,
+        html.dark body #navbar [id^="theme-toggle"] span,
+        html.dark body #navbar #mobile-menu-trigger span {
+            color: #e2e8f0 !important;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<header id="navbar" class="flex items-center justify-between px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+<div class="flex items-center gap-3">
         <div class="relative group flex items-center gap-2">
             <a href="index.html" class="flex items-center gap-1">
                 <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
@@ -31,10 +85,13 @@
                 </h2>
             </a>
         </div>
-    </div>
-
-  <!-- CENTER (MENU) -->
-  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
+    <div class="h-4 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+    <a href="login.html" class="flex items-center justify-center size-8 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
+        <span class="material-symbols-outlined text-[20px]">account_circle</span>
+    </a>
+</div>
+<div class="flex flex-1 justify-end gap-3 lg:gap-4 items-center">
+<nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
 <div class="relative">
 <a class="nav-home dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
 <div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
@@ -56,25 +113,21 @@
 </div>
 </div>
 </nav>
-  <!-- RIGHT (ACTIONS) -->
-  <div class="flex items-center gap-2 z-10">
-    <button id="dir-toggle-nav" class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest transition-colors">LTR</button>
-    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
-      <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-      <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-    </button>
-    <a href="login.html" class="hidden nav-mobile:flex items-center justify-center size-7 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
-      <span class="material-symbols-outlined text-[14px]">account_circle</span>
-    </a>
-    <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-      Book Services
-    </a>
-    <!-- MOBILE MENU -->
-    <button id="mobile-menu-trigger" class="nav-mobile:hidden h-8 w-8 bg-slate-100 dark:bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
-      <span class="material-symbols-outlined text-[20px]">menu</span>
-    </button>
-  </div>
-
+<div class="flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 pl-4 ml-2">
+<button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">LTR</button>
+<button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+</button>
+<a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
+    Book Services
+</a>
+<!-- Mobile Menu Trigger -->
+<button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center rounded-lg h-8 w-8 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
+    <span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+</div>
+</div>
 </header>
 
 <!-- Mobile Drawer Overlay -->
@@ -86,7 +139,7 @@
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
             <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
-            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
+            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
                 Precision Detail
                 <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
             </h2>
@@ -175,127 +228,107 @@
         </p>
     </div>
 </div><!-- End Mobile Drawer -->
-<main class="flex-grow">
-<div class="w-full py-0">
-<!-- Hero Section -->
-<section class="mb-0">
-<div class="relative h-[60vh] md:h-[70vh] overflow-hidden group">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury car being detailed with precision tools" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZbJiG5_aBenZOHT0e2o63pQwiAsN0RPF52z8AKuDuo_D-o6gHv-5O72x_wQE-PFY3_4XJ54j3eVqHPTlmwhkW7wvT6UB5S0D9Ntts7oPqcfxXcqN7g_pjSktdbgHLZV7FnPzjrFqp6yH0ax1twtUacr0npz5eobwJlsZkdFcbhJrb5Tu6yYflBQLzxcj3Q8zJbKYY_-druuY_tiRlz5anpGapBBkgIFy4ndoxfFnSopzCRdhigjlD9DU4SdsCfu0-6ZNenlLvDLI");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/40 to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-8 md:p-12">
-<span class="bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white mb-4 inline-block">Featured Story</span>
-<h1 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Precision Journal</h1>
-<p class="text-slate-200 max-w-xl text-lg">Expert insights into the world of automotive restoration, ceramic protection, and premium car care.</p>
-</div>
-</div>
-</section>
 <main class="w-full flex flex-col min-h-screen pt-24 md:pt-[10%]">
 <!-- Category Navigation -->
-<section class="sticky top-[56px] lg:top-[72px] z-[40] border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#030712]/95 backdrop-blur-md transition-colors duration-300 w-full mb-8 pt-0 pl-0 mt-0">
-<div class="max-w-7xl mx-auto px-6 lg:px-20">
-<div class="flex gap-2 sm:gap-3 items-center overflow-x-auto no-scrollbar py-3 w-full">
-<button class="bg-primary text-white text-[10px] md:text-[11px] font-bold tracking-widest uppercase px-4 md:px-5 py-2 border border-primary shadow-md shadow-primary/20 whitespace-nowrap flex-shrink-0 rounded-[2px]">All Stories</button>
-<a href="blog-car-care.html" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-500 hover:text-primary transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase px-4 md:px-5 py-2 shadow-sm rounded-[2px] whitespace-nowrap flex-shrink-0">Car Care</a>
-<a href="blog-ceramic.html" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-500 hover:text-primary transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase px-4 md:px-5 py-2 shadow-sm rounded-[2px] whitespace-nowrap flex-shrink-0">Ceramic Coating</a>
-<a href="blog-restoration.html" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-500 hover:text-primary transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase px-4 md:px-5 py-2 shadow-sm rounded-[2px] whitespace-nowrap flex-shrink-0">Restoration Stories</a>
-<a href="blog-events.html" class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-500 hover:text-primary transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase px-4 md:px-5 py-2 shadow-sm rounded-[2px] whitespace-nowrap flex-shrink-0">Event Coverage</a>
+<section class="sticky top-[56px] lg:top-[72px] z-[40] border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#030712]/95 backdrop-blur-md transition-colors duration-300 w-full mb-8">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex gap-2 sm:gap-3 items-center md:justify-center overflow-x-auto no-scrollbar py-3">
+<a href="blog.html" class="px-4 md:px-5 py-2 rounded-none bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase border border-transparent whitespace-nowrap flex-shrink-0">All Stories</a>
+<a href="blog-car-care.html" class="px-4 md:px-5 py-2 rounded-none bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase border border-transparent whitespace-nowrap flex-shrink-0">Car Care</a>
+<a href="blog-ceramic.html" class="px-4 md:px-5 py-2 rounded-none bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase border border-transparent whitespace-nowrap flex-shrink-0">Ceramic Coating</a>
+<a href="blog-restoration.html" class="px-4 md:px-5 py-2 rounded-none bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase border border-transparent whitespace-nowrap flex-shrink-0">Restoration Stories</a>
+<button class="px-4 md:px-5 py-2 rounded-none bg-primary text-white text-[10px] md:text-[11px] font-bold tracking-widest uppercase shadow-md shadow-primary/20 whitespace-nowrap flex-shrink-0">Event Coverage</button>
 </div>
 </div>
 </section>
-<div class="max-w-7xl mx-auto px-6 lg:px-20 pb-12 flex-1 w-full">
-<!-- Featured Grid -->
-<h2 class="text-2xl font-bold mb-6 border-l-4 border-primary pl-4">Latest Insights</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Article 1 -->
-<div class="flex flex-col gap-4 group transition-all duration-300 hover:shadow-[0_0_20px_rgba(236,91,19,0.15)] dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] p-4 rounded-xl border border-transparent hover:border-primary">
-<div class="aspect-video overflow-hidden rounded-none">
-<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of water beading on car paint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4UaGqeYhQMCLa-vj0LTFPSprH9nv2m4PaLxDWcSlqIxVsi4HGUZvDY-zU3rHW1bAYSSvoXn99tko_8PRu73NMGihqQjZtmlhPopzZ20PVdTIiCqretGzLC8rXqWoh2X-bjK_qqRGOUmOykgf5684BjrFNz4OyAoauRDpIN0tuP_zSHSVHL2ea8ggbscag_o4cT-3RCJ2lYCn3TVNspWwJcShf1NM6dCKbMaVwhnzzG3BA19-t4xTblZSOsaI8SkBDKHk3tFedPc"/>
-</div>
-<div class="flex flex-col gap-2">
-<span class="text-primary font-bold text-xs uppercase tracking-widest">Ceramic Coating</span>
-<a href="blog-ceramic.html"><a href="blog-ceramic.html"><h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">5 Tips for Maintaining Your Ceramic Coating</h3></a></a>
-<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Learn how to keep your car shining for years with these essential maintenance routines used by professionals.</p>
-<div class="flex items-center gap-2 mt-2 text-slate-400 text-xs">
-<span class="material-symbols-outlined text-sm">calendar_today</span>
-<span>Oct 12, 2023</span>
-<span class="mx-1">•</span>
-<span class="material-symbols-outlined text-sm">schedule</span>
-<span>5 min read</span>
+<div class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8 flex-1 w-full">
+<!-- Hero Section -->
+<article>
+<div class="relative rounded-xl overflow-hidden mb-8 aspect-video @container">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
+<img alt="High-end supercars at a Precision Detail event" class="w-full h-full object-cover" data-alt="Event Coverage showing a line of luxury cars" src="../assets/images/Event Coverage.png"/>
+<div class="absolute bottom-0 left-0 p-6 sm:p-10 z-20">
+<span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-none uppercase tracking-widest mb-4 inline-block">Event Coverage</span>
+<h1 class="text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight uppercase italic">Precision Invitational 2024</h1>
 </div>
 </div>
-</div>
-<!-- Article 2 -->
-<div class="flex flex-col gap-4 group transition-all duration-300 hover:shadow-[0_0_20px_rgba(236,91,19,0.15)] dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] p-4 rounded-xl border border-transparent hover:border-primary">
-<div class="aspect-video overflow-hidden rounded-none">
-<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional polishing a black car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6YyQv9QgF2qIOSyDMb2Fw91W5nR2nNeVadFIiWtXaOCc8TVjooPi-HUhbC4KanJXnTTd0YlIaBF77xqQ9oVjMSp4v1gkouyuHBwwT8IGqPkwnmHykn5Qfrxdk-v6JzVhM5xHLDwbJ69wCHRr2K9z4IiePY42jlYADvs576rNNuSImcrQdYi5-Ehc2S9cxQmTijHvocjycBTNYZ8qBs3LmhSSIeqqYvbDtcRdfWow8iiwc5-C-gDojDG9JpKeVsNJul-IWYwxW7Gw"/>
-</div>
-<div class="flex flex-col gap-2">
-<span class="text-primary font-bold text-xs uppercase tracking-widest">Car Care</span>
-<a href="blog-404.html"><a href="blog-404.html"><h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">The Ultimate Guide to Paint Correction</h3></a></a>
-<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Achieving a mirror-like finish requires precision and the right technique. We break down the multistage process.</p>
-<div class="flex items-center gap-2 mt-2 text-slate-400 text-xs">
-<span class="material-symbols-outlined text-sm">calendar_today</span>
-<span>Oct 08, 2023</span>
-<span class="mx-1">•</span>
-<span class="material-symbols-outlined text-sm">schedule</span>
-<span>8 min read</span>
-</div>
-</div>
-</div>
-<!-- Article 3 -->
-<div class="flex flex-col gap-4 group transition-all duration-300 hover:shadow-[0_0_20px_rgba(236,91,19,0.15)] dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] p-4 rounded-xl border border-transparent hover:border-primary">
-<div class="aspect-video overflow-hidden rounded-none">
-<img alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Classic red vintage mustang in garage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIS0avkLKcqR-6lQj7IqUGnHk3vZMeLYmsDmGQfv3TO4ik5N1ZGuFS23xFTaW-tl9lqf8r1IiD53_A4ovhdKUF6nG2oXLjAbMtdznujDHaskJ6_9nZ3NQt_TWZeRla68evZ9Ve_db5Z_dnnBCkr_747w6Gk4HVh5wuvdEqez7SdWawRblTSrNEHTWGtvtKL4dFO7NmPXh49TkB-9NoQAXEDyK2_IpBRiPaTZcuCzYTTC_3Vprwm-s7u9jlFBG6_N21cQy1dsPdjXU"/>
-</div>
-<div class="flex flex-col gap-2">
-<span class="text-primary font-bold text-xs uppercase tracking-widest">Restoration Stories</span>
-<a href="blog-404.html"><a href="blog-404.html"><h3 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">1967 Mustang Restoration: A Deep Dive</h3></a></a>
-<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Bringing a classic back to its former glory. Follow the journey of this American icon from rust to concours-ready.</p>
-<div class="flex items-center gap-2 mt-2 text-slate-400 text-xs">
-<span class="material-symbols-outlined text-sm">calendar_today</span>
-<span>Oct 01, 2023</span>
-<span class="mx-1">•</span>
-<span class="material-symbols-outlined text-sm">schedule</span>
-<span>12 min read</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Secondary Section -->
-<h2 class="text-2xl font-bold mt-16 mb-6 border-l-4 border-primary pl-4">Community &amp; Lifestyle</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="flex gap-6 items-center bg-white dark:bg-slate-800/50 p-4 rounded-none border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="w-32 h-32 flex-shrink-0 rounded-none overflow-hidden">
-<img alt="" class="w-full h-full object-cover" data-alt="High end luxury car interior detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9YW-zN3yYqHZgTuaQykm5DqHSdDFed-DKlME6FV0wcD_V3wXGLoHMM-6F7Jp5Zi7HoWgzsqkSMStOGsuTTI03I4n-WFrUWOcc5fN0I6BPXVGtn9mSJnOcUgJ-sXOUfi5ljhE9gXVa_An2-rmnulL2ThNZEeuxaSwBOGDVzE7PrxlEo5iyNwHh7zcVDVsHBPgpfvIAcf9JYf-vNDyXWIQZCtPZuZcGYKbWnA-88iOzimO0p-s4JwU_85sEnmHmPMKAQcLHbX9C3xk"/>
-</div>
+<!-- Author & Meta -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 pb-8 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<img alt="Headshot of detailing expert" class="w-12 h-12 rounded-full border-2 border-primary object-cover" data-alt="Portrait of a professional car detailer in uniform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY2alEukgirhidq3CwCh9Gpx8b78h7xlODIA8tO-hO6QfcRnS_lc-nmMEBO7WbT_yNScjoY4rdZO7oMYcaO_exZy1iKm9YUVIzYM-zDizcqhTeJrI1E6cRMVZOAyGh81TLdDvalbei0qN4V-ppVgnl72CU_OEArHoy5xip5kQCWfnAz5EjPWzZ26brxcAstVWxYAyhmUKxwY96us7Xs4HUcbb8ZUuzmYtaOKCfMZ4pJ034a4qRpovQ-nbWW9iI7I1qkxxJXZExMN4"/>
 <div>
-<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Technique</span>
-<h4 class="font-bold text-lg leading-tight mb-2">Interior Detailing Mastery</h4>
-<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">The secrets to a showroom-fresh cabin that lasts.</p>
+<p class="font-bold text-slate-900 dark:text-slate-100">David Miller</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Master Detailer &amp; Tech Lead</p>
 </div>
 </div>
-<div class="flex gap-6 items-center bg-white dark:bg-slate-800/50 p-4 rounded-none border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="w-32 h-32 flex-shrink-0 rounded-none overflow-hidden">
-<img alt="" class="w-full h-full object-cover" data-alt="Wheels being cleaned with foam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC2zignupfAfOlgg8Ej7iQJjJ3JjQujT5de42sYG-vtGS_BZxCWP6GkByCPneKO_we5r-Z3Rzfh3kpVLvwYQSN5W5hvgncHJ6U6lOpW0NfVBvBKeLK4YJae6aENRsTs1ohLOP5kWK1eIr1z8t0Ia7fLGXIYQoumnz6i4irQoITdhfynbWiyGjcrJa3PLMoCtIAmkjWreh6ykLOhVowksG2W10dFhZgV2dfokB5nDtLMHFwdp2K-WzBInvoIbX-dR5KRIz8oKEla3s"/>
+<div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>March 15, 2024</span>
 </div>
-<div>
-<span class="text-primary text-[10px] font-bold uppercase tracking-widest">Product Review</span>
-<h4 class="font-bold text-lg leading-tight mb-2">Why PH-Neutral Soap Matters</h4>
-<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Choosing the right chemicals for your clear coat protection.</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>10 min read</span>
 </div>
 </div>
 </div>
-<!-- Newsletter Subscription -->
-<section class="mt-20 bg-primary/10 rounded-3xl p-8 md:p-12 text-center">
-<h3 class="text-2xl md:text-3xl font-bold mb-4">Never miss an update</h3>
-<p class="text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto">Get the latest car care tips, project showcases, and exclusive member offers delivered to your inbox.</p>
-<form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-<input class="flex-1 rounded-none px-4 py-3 border-none ring-1 ring-slate-300 dark:ring-slate-700 focus:ring-2 focus:ring-primary dark:bg-slate-900" placeholder="Your email address" type="email"/>
-<button class="bg-primary text-white font-bold px-8 py-3 rounded-none hover:bg-primary/90 transition-colors">Subscribe</button>
-</form>
+<!-- Article Content -->
+<div class="prose prose-slate dark:prose-invert max-w-none space-y-8 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+<p class="text-xl font-medium text-slate-900 dark:text-slate-100 italic border-l-4 border-primary pl-6 py-2">
+    Our biggest event of the year, the Precision Invitational, brought together over 100 supercars and the finest detailing enthusiasts from around the country.
+</p>
+<p>
+    The atmosphere was electric as the gates opened at 9:00 AM. A symphony of high-performance engines filled the air, with everything from classic Italian thoroughbreds to the latest German hypercars. This year, we wanted to showcase more than just clean cars—we wanted to showcase the *art* of preservation.
+</p>
+
+<!-- Feature Image -->
+<figure class="my-12">
+    <div class="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-2xl aspect-video relative group">
+        <img alt="Ferrari F8 Tributo featured at the event" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="../assets/images/2022 Ferrari F8 Tributo.png" />
+        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-black text-sm uppercase tracking-widest bg-primary/80 px-6 py-2">Crowd Favorite</span>
+        </div>
+    </div>
+    <figcaption class="text-center text-sm text-slate-500 mt-4 font-bold tracking-widest uppercase">The Star of the Show: A pristine Ferrari F8 Tributo</figcaption>
+</figure>
+
+<h3 class="text-2xl font-black text-slate-900 dark:text-white uppercase italic tracking-wider">Live Demonstrations</h3>
+<p>
+    Our team spent the afternoon performing live multi-stage paint correction and ceramic coating demonstrations. We believe that seeing the process first-hand is the best way for our clients to understand the level of detail we put into every square inch of paintwork. The crowd watched in awe as we transformed a swirl-marked panel into a deep, mirror-like finish using our proprietary Precision Compound.
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+    <div class="bg-slate-50 dark:bg-slate-800/50 p-8 border border-slate-200 dark:border-slate-700 shadow-sm relative">
+        <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary flex items-center justify-center text-white font-black text-xl italic shadow-lg shadow-primary/30">1</div>
+        <h4 class="text-lg font-bold mb-4 uppercase italic">Technical Workshop</h4>
+        <p class="text-sm">Exclusive session for our Platinum members covering the latest in paint protection film (PPF) technology and ceramic maintenance.</p>
+    </div>
+    <div class="bg-slate-50 dark:bg-slate-800/50 p-8 border border-slate-200 dark:border-slate-700 shadow-sm relative">
+        <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary flex items-center justify-center text-white font-black text-xl italic shadow-lg shadow-primary/30">2</div>
+        <h4 class="text-lg font-bold mb-4 uppercase italic">The Detailing Lounge</h4>
+        <p class="text-sm">A relaxation hub for car owners to exchange stories over premium espresso while viewing our gallery of restoration projects.</p>
+    </div>
+</div>
+
+<p>
+    As the sun began to set, we handed out the "Concours Excellence" awards. It wasn't just about the rarest car, but the best-maintained one. We want to thank everyone who joined us for making the Precision Invitational 2024 an unforgettable experience. See you on the track next year!
+</p>
+</div>
+</article>
+<!-- Newsletter Section -->
+<section class="mt-20 p-8 sm:p-12 rounded-xl bg-slate-900 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">mail</span>
+</div>
+<div class="relative z-10 max-w-xl">
+<h2 class="text-2xl sm:text-3xl font-bold mb-4">Stay updated with detailing tips</h2>
+<p class="text-slate-400 mb-8 text-lg">Join 5,000+ car enthusiasts and receive the latest tech insights and maintenance guides.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email" type="email"/>
+<button class="px-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all">Subscribe</button>
+</div>
+</div>
 </section>
-</div><!-- end padded wrapper -->
-</div>
 </div>
 </main>
 <!-- Footer -->
@@ -353,6 +386,5 @@
                 </div>
 </div>
 </footer>
-</div>
 <script src="../assets/js/main.js"></script>
 </body></html>

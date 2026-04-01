@@ -207,3 +207,160 @@ html.dark #navbar a[href="login.html"] {
 html.dark #navbar a[href="login.html"] span {
     color: #0f172a !important;
 }
+
+
+/* ============================================
+   Inline Subscription Success
+   ============================================ */
+.subscription-success-text {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.1rem !important;
+    color: #ec5b13 !important;
+    margin-top: 1rem !important;
+    font-style: italic !important;
+    font-weight: 700 !important;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+    display: block;
+}
+
+.subscription-success-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   Custom Premium Dropdown
+   ============================================ */
+.dropdown-arrow {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-select.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.premium-select-menu.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.premium-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.premium-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.premium-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(236, 91, 19, 0.2);
+    border-radius: 10px;
+}
+
+.premium-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(236, 91, 19, 0.4);
+}
+
+.dropdown-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: #ec5b13;
+    transition: height 0.3s ease;
+}
+
+.dropdown-item:hover::after {
+    height: 60%;
+}
+
+/* Dark mode adjustments for glassmorphism dropdown */
+html.dark .premium-select-menu {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   Glass & Premium UI Components
+   ============================================ */
+
+/* 🌫️ GLASS (LIGHT + DARK SAFE) */
+.glass-premium {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+html.dark .glass-premium {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 🔥 GLASS EFFECT */
+.glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 🌈 GRADIENT BORDER */
+.gradient-border {
+    position: relative;
+    border-radius: 16px;
+}
+
+.gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ff7a18, #ff3d00, #ffb347);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* ✨ SHINE EFFECT */
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transform: skewX(-25deg);
+}
+
+.shine:hover::after {
+    left: 130%;
+    transition: 0.8s;
+}
+

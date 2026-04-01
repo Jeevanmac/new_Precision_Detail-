@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>3D Interactive Model | Precision Detail</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1"></script>
+</head>
+<body class="bg-[#030712] text-white overflow-hidden w-screen h-screen m-0 p-0 flex flex-col relative selection:bg-primary/30">
+    
+    <!-- Top Navigation Bar -->
+    <div class="absolute top-0 left-0 w-full z-10 flex items-center justify-between p-6 lg:px-10 bg-gradient-to-b from-black/70 to-transparent pointer-events-none">
+        <div class="flex items-center gap-4 pointer-events-auto">
+            <a href="book-services.html" class="flex items-center justify-center size-10 rounded-full bg-white/10 hover:bg-white/20 hover:text-primary transition backdrop-blur-md border border-white/10">
+                <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+            </a>
+            <h1 class="font-sora font-bold text-lg hidden sm:block tracking-wide">Interactive 3D Preview</h1>
+        </div>
+        <div class="pointer-events-auto">
+            <a href="book-services.html" class="h-10 px-6 rounded-full bg-primary text-white text-[11px] font-black uppercase tracking-widest shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-105 active:scale-95 transition-all glow-cyan hover:shadow-primary/50">
+                Book Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Spline 3D Viewer Natively Embedded (Full Screen) -->
+    <spline-viewer url="https://prod.spline.design/3180a7a5-0ca2-4318-aafa-d8a4d5bced7a/scene.splinecode" class="w-full h-full flex-1 z-0 relative"></spline-viewer>
+
+</body>
+</html>
