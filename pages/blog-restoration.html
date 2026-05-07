@@ -94,11 +94,11 @@
 
     <!-- CENTER (MENU) -->
     <nav class="hidden nav-mobile:flex items-center gap-4 lg:gap-6 text-slate-600 dark:text-slate-400">
-      <div class="relative">
+      <div class="relative group">
         <a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400"
-          href="index.html">Home <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+          href="index.html">Home <span class="material-symbols-outlined text-[14px] transition-transform duration-300 group-hover:-rotate-180">expand_more</span></a>
         <div
-          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
           <a href="index.html"
             class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home
             1</a>
@@ -118,11 +118,11 @@
         href="contact.html">Contact</a>
       <a class="nav-about hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
         href="about.html">About</a>
-      <div class="relative">
+      <div class="relative group">
         <a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400"
-          href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+          href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[14px] transition-transform duration-300 group-hover:-rotate-180">expand_more</span></a>
         <div
-          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
           <a href="dashboard.html"
             class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
           <a href="user-dashboard.html"
@@ -297,7 +297,7 @@
     <main class="w-full flex flex-col min-h-screen pt-0">
         <!-- Category Navigation -->
         <section class="w-full border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-[#030712]/95 backdrop-blur-md transition-colors duration-300 mb-0">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 lg:px-20 lg:px-8">
                 <div class="flex gap-2 sm:gap-3 items-center justify-center overflow-x-auto no-scrollbar py-3">
                     <a href="blog.html" class="px-4 md:px-5 py-2 rounded-none bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase border border-transparent whitespace-nowrap flex-shrink-0">All Stories</a>
                     <a href="blog-car-care.html" class="px-4 md:px-5 py-2 rounded-none bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-[10px] md:text-[11px] font-medium tracking-widest uppercase border border-transparent whitespace-nowrap flex-shrink-0">Car Care</a>
@@ -308,7 +308,7 @@
             </div>
         </section>
         
-        <div class="max-w-4xl mx-auto px-4 py-0 sm:px-6 lg:px-20 lg:px-8 flex-1 w-full">
+        <div class="max-w-4xl mx-auto px-4 py-0 sm:px-6 lg:px-20 lg:px-20 lg:px-8 flex-1 w-full">
 
 <article>
 <!-- Author & Meta -->
@@ -398,7 +398,7 @@
 </main>
 <!-- Footer -->
 <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
-    <div class="max-w-7xl mx-auto px-6 lg:px-20 lg:px-20 py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 lg:px-20 lg:px-20 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
           <div class="flex items-center gap-2 mb-6">
