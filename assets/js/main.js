@@ -780,6 +780,23 @@ window.switchSection = function(sectionId) {
             activeMobileLink.classList.add('bg-primary', 'text-white', 'font-bold');
         }
 
+        // Update Mobile Header Title and Subtitle
+        const mobileTitle = document.getElementById('mobile-header-title');
+        const mobileSubtitle = document.getElementById('mobile-header-subtitle');
+        if (mobileTitle && mobileSubtitle) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = template.innerHTML;
+            const h1 = tempDiv.querySelector('h1');
+            const p = tempDiv.querySelector('p');
+            
+            if (h1) {
+                mobileTitle.textContent = h1.textContent.trim();
+            }
+            if (p) {
+                mobileSubtitle.innerHTML = p.innerHTML;
+            }
+        }
+
         contentArea.innerHTML = template.innerHTML;
         window.location.hash = sectionId;
         window.scrollTo(0, 0);
