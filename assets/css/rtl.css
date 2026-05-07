@@ -11,10 +11,20 @@
     right: 0;
 }
 
-/* Flip main content margin: ml-60 -> mr-60 */
-[dir="rtl"] main#dashboard-content {
+/* Flip main content margins */
+[dir="rtl"] .md\:ml-60 {
     margin-left: 0 !important;
-    margin-right: 15rem; /* 60 * 0.25rem = 15rem */
+    margin-right: 15rem !important;
+}
+[dir="rtl"] .md\:ml-72 {
+    margin-left: 0 !important;
+    margin-right: 18rem !important;
+}
+
+/* Specific fix for main content areas */
+[dir="rtl"] main#dashboard-content,
+[dir="rtl"] #user-dashboard-content {
+    margin-left: 0 !important;
 }
 
 /* Flip border on sidebar */
