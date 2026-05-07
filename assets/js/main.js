@@ -754,10 +754,10 @@ window.switchSection = function(sectionId) {
             profileBottom.classList.add('hover:bg-slate-100', 'dark:hover:bg-accent-dark');
         }
 
-        // Reset mobile bottom nav links
-        document.querySelectorAll('nav.md\\:hidden a.menu-item').forEach(link => {
-            link.classList.remove('text-primary');
-            link.classList.add('text-slate-500', 'dark:text-slate-400');
+        // Reset mobile drawer nav links
+        document.querySelectorAll('#mobile-drawer-dash a.menu-item').forEach(link => {
+            link.classList.remove('bg-primary', 'text-white', 'font-bold');
+            link.classList.add('text-white/70', 'hover:bg-white/5', 'hover:text-white', 'font-medium');
         });
 
         const activeLink = document.getElementById('nav-' + sectionId);
@@ -773,11 +773,11 @@ window.switchSection = function(sectionId) {
             activeProfileBottom.classList.add('bg-primary/10', 'border', 'border-primary/20');
         }
 
-        // Activate mobile bottom nav link
-        const bottomNavLink = document.querySelector(`nav.md\\:hidden a[href="#${sectionId}"]`);
-        if (bottomNavLink) {
-            bottomNavLink.classList.remove('text-slate-500', 'dark:text-slate-400');
-            bottomNavLink.classList.add('text-primary');
+        // Activate mobile drawer nav link
+        const activeMobileLink = document.getElementById('nav-mobile-' + sectionId);
+        if (activeMobileLink) {
+            activeMobileLink.classList.remove('text-white/70', 'hover:bg-white/5', 'hover:text-white', 'font-medium');
+            activeMobileLink.classList.add('bg-primary', 'text-white', 'font-bold');
         }
 
         contentArea.innerHTML = template.innerHTML;
