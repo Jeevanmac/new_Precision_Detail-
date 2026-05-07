@@ -123,7 +123,8 @@ for filename in os.listdir(directory):
     
     # 4. Standardize side spacing in main containers
     # Target common patterns like max-w-7xl mx-auto px-6
-    content = re.sub(r'class="([^"]*max-w-[^"]*mx-auto[^"]*)px-6([^"]*)"', r'class="\1px-6 lg:px-20\2"', content)
+    content = re.sub(r'px-6(\s+lg:px-\d+)+', 'px-6 lg:px-20', content)
+    content = re.sub(r'class="([^"]*max-w-[^"]*mx-auto[^"]*)px-6(?!\s+lg:px)([^"]*)"', r'class="\1px-6 lg:px-20\2"', content)
     
     # 5. Remove WhatsApp buttons
     content = re.sub(r'<!--\s*FLOATING BUTTONS\s*-->\s*<div[^>]*>\s*<a[^>]*href="https://wa\.me/[^>]*>[\s\S]*?</a>\s*</div>', '', content, flags=re.IGNORECASE)
