@@ -743,20 +743,20 @@ window.switchSection = function(sectionId) {
     if (contentArea && template) {
         // Reset all regular nav links
         document.querySelectorAll('#sidebar-nav a').forEach(link => {
-            link.classList.remove('bg-primary', 'text-white', 'font-bold', 'font-medium');
+            link.classList.remove('bg-primary', 'text-white', 'font-bold', 'font-medium', 'shadow-md', 'shadow-primary/20');
             link.classList.add('text-slate-500', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-accent-dark');
         });
 
         // Reset bottom profile section
         const profileBottom = document.getElementById('nav-profile-bottom');
         if (profileBottom) {
-            profileBottom.classList.remove('bg-primary/10', 'border', 'border-primary/20');
+            profileBottom.classList.remove('bg-primary/10', 'border', 'border-primary/20', 'shadow-md', 'shadow-primary/20');
             profileBottom.classList.add('hover:bg-slate-100', 'dark:hover:bg-accent-dark');
         }
 
         // Reset mobile drawer nav links
         document.querySelectorAll('#mobile-drawer-dash a.menu-item').forEach(link => {
-            link.classList.remove('bg-primary', 'text-white', 'font-bold');
+            link.classList.remove('bg-primary', 'text-white', 'font-bold', 'shadow-md', 'shadow-primary/20');
             link.classList.add('text-white/70', 'hover:bg-white/5', 'hover:text-white', 'font-medium');
         });
 
@@ -765,12 +765,12 @@ window.switchSection = function(sectionId) {
 
         if (activeLink) {
             activeLink.classList.remove('text-slate-500', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-            activeLink.classList.add('bg-primary', 'text-white', 'font-bold');
+            activeLink.classList.add('bg-primary', 'text-white', 'font-bold', 'shadow-md', 'shadow-primary/20');
         }
 
         if (activeProfileBottom) {
             activeProfileBottom.classList.remove('hover:bg-slate-100', 'dark:hover:bg-accent-dark');
-            activeProfileBottom.classList.add('bg-primary/10', 'border', 'border-primary/20');
+            activeProfileBottom.classList.add('bg-primary/10', 'border', 'border-primary/20', 'shadow-md', 'shadow-primary/20');
         }
 
         // Activate mobile drawer nav link
