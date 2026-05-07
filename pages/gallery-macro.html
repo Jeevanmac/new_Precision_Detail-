@@ -81,171 +81,213 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
 <header id="navbar"
-  class="flex items-center justify-between px-6 lg:px-20 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+    class="flex items-center justify-between px-6 lg:px-32 py-4 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 
-  <!-- LEFT (LOGO) -->
-  <div class="flex items-center gap-2">
-        <div class="relative group flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
-                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
-                    Precision Detail
-                </h2>
-            </a>
-        </div>
+    <!-- LEFT (LOGO) -->
+    <div class="flex items-center gap-2">
+      <div class="relative group flex items-center gap-2">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="../assets/images/logo.png" alt="Logo"
+            class="w-10 h-10 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+          <h2
+            class="text-slate-900 dark:text-slate-100 text-base font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
+            Precision Detail
+          </h2>
+        </a>
+      </div>
     </div>
 
-  <!-- CENTER (MENU) -->
-  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4 text-slate-600 dark:text-slate-400">
-<div class="relative">
-<a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
-<a href="index.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 1</a>
-<a href="home2.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 2</a>
-</div>
-</div>
-<a class="nav-services hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="services.html">Services</a>
+    <!-- CENTER (MENU) -->
+    <nav class="hidden nav-mobile:flex items-center gap-4 lg:gap-6 text-slate-600 dark:text-slate-400">
+      <div class="relative">
+        <a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400"
+          href="index.html">Home <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+        <div
+          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+          <a href="index.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home
+            1</a>
+          <a href="home2.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home
+            2</a>
+        </div>
+      </div>
+      <a class="nav-services hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="services.html">Services</a>
 
-<a class="nav-gallery hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-primary font-black scale-105" href="gallery.html">Gallery</a>
-<a class="nav-blog hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="blog.html">Blog</a>
-<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="contact.html">Contact</a>
-<a class="nav-about hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="about.html">About</a>
-<div class="relative">
-<a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
-<a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
-<a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
-</div>
-</div>
-</nav>
+      <a class="nav-gallery hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-primary font-black scale-105"
+        href="gallery.html">Gallery</a>
+      <a class="nav-blog hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="blog.html">Blog</a>
+      <a class="nav-contact hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="contact.html">Contact</a>
+      <a class="nav-about hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="about.html">About</a>
+      <div class="relative">
+        <a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400"
+          href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+        <div
+          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+          <a href="dashboard.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
+          <a href="user-dashboard.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
+        </div>
+      </div>
+    </nav>
 
-  <!-- RIGHT (ACTIONS) -->
-  <div class="flex items-center gap-2 z-10">
+    <!-- RIGHT (ACTIONS) -->
+    <div class="flex items-center gap-2 z-10">
 
-    <button id="dir-toggle-nav"
-      class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center">
-      LTR
-    </button>
+      <button id="dir-toggle-nav"
+        class="size-11 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center text-[12px]">
+        LTR
+      </button>
 
-    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
-<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-</button>
+      <button id="theme-toggle-nav"
+        class="flex items-center justify-center size-11 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+        <span class="material-symbols-outlined text-[22px] dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined text-[22px] hidden dark:block">light_mode</span>
+      </button>
 
-    <a href="login.html"
-      class="hidden nav-mobile:flex size-7 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
-      <span class="material-symbols-outlined text-[14px]">account_circle</span>
-    </a>
+      <a href="login.html"
+        class="hidden nav-mobile:flex size-9 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
+        <span class="material-symbols-outlined text-[18px]">account_circle</span>
+      </a>
 
-    <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-    Book Services
-</a>
+      <a href="book-services.html"
+        class="hidden nav-mobile:flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-[12px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
+        Book Services
+      </a>
 
-    <!-- MOBILE MENU -->
-    <button id="mobile-menu-trigger"
-      class="nav-mobile:hidden h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
+      <!-- MOBILE MENU -->
+      <button id="mobile-menu-trigger"
+        class="nav-mobile:hidden h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
 
-  </div>
+    </div>
 
-</header>
+  </header>
 
 <!-- Mobile Drawer Overlay -->
-<div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
+  <div id="drawer-overlay"
+    class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300">
+  </div>
 
-<!-- Mobile Drawer -->
-<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer"
+    class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
     <!-- Header -->
     <div class="flex items-center justify-between p-6">
-        <div class="flex items-center gap-2">
-            <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
-            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
-                Precision Detail
-                <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
-            </h2>
-        </div>
-        <button id="mobile-menu-close" class="text-slate-500 dark:text-slate-600 dark:text-white/60 hover:text-primary dark:hover:text-white transition-colors">
-            <span class="material-symbols-outlined text-2xl">close</span>
-        </button>
+      <div class="flex items-center gap-2">
+        <img src="../assets/images/logo.png" alt="Precision Detail Logo"
+          class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
+        <h2
+          class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
+          Precision Detail
+          <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
+        </h2>
+      </div>
+      <button id="mobile-menu-close"
+        class="text-slate-500 dark:text-slate-600 dark:text-white/60 hover:text-primary dark:hover:text-white transition-colors">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
     </div>
-    
+
     <!-- Navigation -->
     <div class="flex-1 overflow-y-auto px-6 py-4">
-        <nav class="flex flex-col gap-6">
-            <!-- Home Links -->
-            <div>
-                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
-                    Home
-                    <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
-                </div>
-                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
-                    <a href="index.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
-                        Version 1
-                        <span class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
-                    </a>
-                    <a href="home2.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors">Version 2</a>
-                </div>
-            </div>
-
-            <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Services
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+      <nav class="flex flex-col gap-6">
+        <!-- Home Links -->
+        <div>
+          <div
+            class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
+            Home
+            <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
+          </div>
+          <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
+            <a href="index.html"
+              class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
+              Version 1
+              <span
+                class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
             </a>
-            
-            <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Gallery
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-            <a href="blog.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Blog
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-            <a href="contact.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Contact
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-            <a href="about.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                About
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
-
-            <!-- Dashboard/Profile -->
-            <div class="mt-4 pt-6 border-t border-slate-200 dark:border-white/5 space-y-4">
-                 <a href="dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
-                    Dashboard
-                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-                </a>
-                <a href="user-dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
-                    User Dashboard
-                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-                </a>
-            </div>
-        </nav>
-    </div>
-    
-    <!-- Footer Section -->
-    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
-        <!-- Book Service Action -->
-        <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
-            <span class="material-symbols-outlined text-lg">auto_awesome</span>
-            Book Service
-        </a>
-
-        <!-- Social Icons -->
-        <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-slate-600 dark:text-white/40 pt-2">
-            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">public</span>
-            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">share</span>
-            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">alternate_email</span>
-            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">chat_bubble</span>
+            <a href="home2.html"
+              class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors">Version
+              2</a>
+          </div>
         </div>
 
-        <!-- Copyright -->
-        <p class="text-[9px] text-center text-slate-500 dark:text-white/30 uppercase tracking-[0.2em]">
-            © 2026 Precision Detail Automotive Group
-        </p>
+        <a href="services.html"
+          class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+          Services
+          <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+        </a>
+
+        <a href="gallery.html"
+          class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+          Gallery
+          <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+        </a>
+        <a href="blog.html"
+          class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+          Blog
+          <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+        </a>
+        <a href="contact.html"
+          class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+          Contact
+          <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+        </a>
+        <a href="about.html"
+          class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+          About
+          <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+        </a>
+
+        <!-- Dashboard/Profile -->
+        <div class="mt-4 pt-6 border-t border-slate-200 dark:border-white/5 space-y-4">
+          <a href="dashboard.html"
+            class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+            Dashboard
+            <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+          </a>
+          <a href="user-dashboard.html"
+            class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+            User Dashboard
+            <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+          </a>
+        </div>
+      </nav>
     </div>
-</div><!-- End Mobile Drawer -->
+
+    <!-- Footer Section -->
+    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
+      <!-- Book Service Action -->
+      <a href="book-services.html"
+        class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+        <span class="material-symbols-outlined text-lg">auto_awesome</span>
+        Book Service
+      </a>
+
+      <!-- Social Icons -->
+      <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-slate-600 dark:text-white/40 pt-2">
+        <span
+          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">public</span>
+        <span
+          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">share</span>
+        <span
+          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">alternate_email</span>
+        <span
+          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">chat_bubble</span>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-[9px] text-center text-slate-500 dark:text-white/30 uppercase tracking-[0.2em]">
+        © 2026 Precision Detail Automotive Group
+      </p>
+    </div>
+  </div><!-- End Mobile Drawer -->
 
 <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
 <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 border-l border-slate-200 dark:border-white/5 flex flex-col">
@@ -333,25 +375,65 @@
 </main>
 
 <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div class="col-span-1">
-                <h4 class="font-black uppercase italic text-xl mb-4">Precision Detail</h4>
-                <p class="text-slate-500 text-sm">Defining automotive excellence.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Quick Links</h4>
-                <ul class="text-sm text-slate-500 space-y-2">
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </ul>
-            </div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 lg:px-20 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+          <div class="flex items-center gap-2 mb-6">
+            <h4 class="text-slate-900 dark:text-white font-black text-xl tracking-tighter uppercase italic relative">
+              Precision Detail
+              <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
+            </h4>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence through
+            meticulous craftsmanship and premium protection services.</p>
+          <div class="flex gap-4">
+            <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-[18px]">public</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-[18px]">share</span>
+            </a>
+          </div>
         </div>
-        <div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
-            © 2026 Precision Detail. All rights reserved.
+        <div>
+          <h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
+          <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+            <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
+            <li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
+          </ul>
         </div>
+        <div>
+          <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
+          <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
+          <div class="flex gap-2">
+            <input
+              class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50"
+              placeholder="Email" type="email" />
+            <button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
+              <span class="material-symbols-outlined text-[20px]">send</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+        © 2025 Precision Detail. All rights reserved.
+      </div>
     </div>
-</footer>
+  </footer>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

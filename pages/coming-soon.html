@@ -18,75 +18,94 @@
 
     <!-- Desktop Navbar (Luxury Style) -->
     <header id="navbar"
-  class="flex items-center justify-between px-6 lg:px-20 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+    class="flex items-center justify-between px-6 lg:px-32 py-4 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 
-  <!-- LEFT (LOGO) -->
-  <div class="flex items-center gap-2">
-        <div class="relative group flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
-                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
-                    Precision Detail
-                </h2>
-            </a>
-        </div>
+    <!-- LEFT (LOGO) -->
+    <div class="flex items-center gap-2">
+      <div class="relative group flex items-center gap-2">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <img src="../assets/images/logo.png" alt="Logo"
+            class="w-10 h-10 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+          <h2
+            class="text-slate-900 dark:text-slate-100 text-base font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
+            Precision Detail
+          </h2>
+        </a>
+      </div>
     </div>
 
-  <!-- CENTER (MENU) -->
-  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4 text-slate-600 dark:text-slate-400">
-<div class="relative">
-<a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-primary font-black scale-105" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
-<a href="index.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 1</a>
-<a href="home2.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 2</a>
-</div>
-</div>
-<a class="nav-services hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="services.html">Services</a>
+    <!-- CENTER (MENU) -->
+    <nav class="hidden nav-mobile:flex items-center gap-4 lg:gap-6 text-slate-600 dark:text-slate-400">
+      <div class="relative">
+        <a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-primary font-black scale-105"
+          href="index.html">Home <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+        <div
+          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+          <a href="index.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home
+            1</a>
+          <a href="home2.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home
+            2</a>
+        </div>
+      </div>
+      <a class="nav-services hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="services.html">Services</a>
 
-<a class="nav-gallery hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="gallery.html">Gallery</a>
-<a class="nav-blog hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="blog.html">Blog</a>
-<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="contact.html">Contact</a>
-<a class="nav-about hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="about.html">About</a>
-<div class="relative">
-<a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
-<a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
-<a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
-</div>
-</div>
-</nav>
+      <a class="nav-gallery hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="gallery.html">Gallery</a>
+      <a class="nav-blog hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="blog.html">Blog</a>
+      <a class="nav-contact hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="contact.html">Contact</a>
+      <a class="nav-about hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400"
+        href="about.html">About</a>
+      <div class="relative">
+        <a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[12px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400"
+          href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+        <div
+          class="nav-dropdown absolute top-full left-0 mt-1 w-48 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+          <a href="dashboard.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
+          <a href="user-dashboard.html"
+            class="px-4 py-3 text-[12px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
+        </div>
+      </div>
+    </nav>
 
-  <!-- RIGHT (ACTIONS) -->
-  <div class="flex items-center gap-2 z-10">
+    <!-- RIGHT (ACTIONS) -->
+    <div class="flex items-center gap-2 z-10">
 
-    <button id="dir-toggle-nav"
-      class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center">
-      LTR
-    </button>
+      <button id="dir-toggle-nav"
+        class="size-11 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center text-[12px]">
+        LTR
+      </button>
 
-    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
-<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-</button>
+      <button id="theme-toggle-nav"
+        class="flex items-center justify-center size-11 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+        <span class="material-symbols-outlined text-[22px] dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined text-[22px] hidden dark:block">light_mode</span>
+      </button>
 
-    <a href="login.html"
-      class="hidden nav-mobile:flex size-7 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
-      <span class="material-symbols-outlined text-[14px]">account_circle</span>
-    </a>
+      <a href="login.html"
+        class="hidden nav-mobile:flex size-9 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
+        <span class="material-symbols-outlined text-[18px]">account_circle</span>
+      </a>
 
-    <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-    Book Services
-</a>
+      <a href="book-services.html"
+        class="hidden nav-mobile:flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-[12px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
+        Book Services
+      </a>
 
-    <!-- MOBILE MENU -->
-    <button id="mobile-menu-trigger"
-      class="nav-mobile:hidden h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
-      <span class="material-symbols-outlined">menu</span>
-    </button>
+      <!-- MOBILE MENU -->
+      <button id="mobile-menu-trigger"
+        class="nav-mobile:hidden h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
 
-  </div>
+    </div>
 
-</header>
+  </header>
 
     <!-- Mobile Drawer Overlay -->
     <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
@@ -120,7 +139,7 @@
     </div>
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col items-center max-w-5xl mx-auto w-full px-6 pt-32 pb-12 z-10">
+    <main class="flex-1 flex flex-col items-center max-w-5xl mx-auto w-full px-6 lg:px-20 pt-32 pb-12 z-10">
         
         <!-- Hero Section -->
         <div class="w-full">
@@ -197,11 +216,66 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-white/5 mt-auto">
-        <div class="max-w-7xl mx-auto px-6 lg:px-20 py-12 text-center text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-[0.2em]">
-            © 2026 Precision Detail. All rights reserved.
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 lg:px-20 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+          <div class="flex items-center gap-2 mb-6">
+            <h4 class="text-slate-900 dark:text-white font-black text-xl tracking-tighter uppercase italic relative">
+              Precision Detail
+              <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
+            </h4>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence through
+            meticulous craftsmanship and premium protection services.</p>
+          <div class="flex gap-4">
+            <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-[18px]">public</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-[18px]">share</span>
+            </a>
+          </div>
         </div>
-    </footer>
+        <div>
+          <h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
+          <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+            <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
+            <li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
+          <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
+          <div class="flex gap-2">
+            <input
+              class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50"
+              placeholder="Email" type="email" />
+            <button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
+              <span class="material-symbols-outlined text-[20px]">send</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+        © 2025 Precision Detail. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
