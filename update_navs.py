@@ -94,22 +94,17 @@ for filename in os.listdir(directory):
     if not filename.endswith(".html"):
         continue
     
-    # Skip login and register pages as they have custom headers
-    if filename in ["login.html", "register.html"]:
-        print(f"Skipping {filename} (custom header preserved)")
-        continue
-    
     filepath = os.path.join(directory, filename)
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
     
     original_content = content
-    
-    # Get header for this specific file
-    file_header = get_highlighted_header(ref_header, filename)
+    is_custom_page = filename in ["login.html", "register.html"]
     
     # 1. Replace header
-    content = re.sub(r'<header[\s\S]*?</header>', file_header, content, count=1)
+    if not is_custom_page:
+        file_header = get_highlighted_header(ref_header, filename)
+        content = re.sub(r'<header[\s\S]*?</header>', file_header, content, count=1)
     
     # 2. Replace or insert drawer
     if '<!-- Mobile Drawer Overlay -->' in content:

@@ -151,12 +151,12 @@
     <div class="flex items-center gap-2 z-10">
 
       <button id="dir-toggle-nav"
-        class="size-11 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center text-[12px]">
+        class="hidden nav-mobile:flex size-11 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center text-[12px]">
         LTR
       </button>
 
       <button id="theme-toggle-nav"
-        class="flex items-center justify-center size-11 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+        class="hidden nav-mobile:flex items-center justify-center size-11 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
         <span class="material-symbols-outlined text-[22px] dark:hidden">dark_mode</span>
         <span class="material-symbols-outlined text-[22px] hidden dark:block">light_mode</span>
       </button>
@@ -173,7 +173,7 @@
 
       <!-- MOBILE MENU -->
       <button id="mobile-menu-trigger"
-        class="nav-mobile:hidden h-10 w-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
+        class="nav-mobile:hidden h-10 w-10 bg-white rounded-lg flex items-center justify-center text-black shadow-sm">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
 
@@ -279,28 +279,36 @@
     </div>
 
     <!-- Footer Section -->
-    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
-      <!-- Book Service Action -->
+    <div class="p-6 bg-slate-50 dark:bg-[#0a0a0a] border-t border-slate-200 dark:border-white/10 space-y-4">
+      
+      <!-- Row 1: Theme & Direction -->
+      <div class="flex gap-3">
+        <button id="dir-toggle-drawer"
+          class="flex-1 h-12 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl flex items-center justify-center text-[13px] font-bold tracking-widest text-slate-900 dark:text-white uppercase transition-all active:scale-95">
+          LTR
+        </button>
+        <button id="theme-toggle-drawer"
+          class="flex-1 h-12 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl flex items-center justify-center text-slate-900 dark:text-white transition-all active:scale-95">
+          <span class="material-symbols-outlined text-[20px] dark:hidden">dark_mode</span>
+          <span class="material-symbols-outlined text-[20px] hidden dark:block">light_mode</span>
+        </button>
+      </div>
+
+      <!-- Row 2: Book Service -->
       <a href="book-services.html"
         class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
         <span class="material-symbols-outlined text-lg">auto_awesome</span>
         Book Service
       </a>
 
-      <!-- Social Icons -->
-      <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-slate-600 dark:text-white/40 pt-2">
-        <span
-          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">public</span>
-        <span
-          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">share</span>
-        <span
-          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">alternate_email</span>
-        <span
-          class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">chat_bubble</span>
-      </div>
+      <!-- Row 3: Login -->
+      <a href="login.html"
+        class="flex items-center justify-center w-full h-14 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black uppercase tracking-widest text-sm rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all">
+        Login
+      </a>
 
       <!-- Copyright -->
-      <p class="text-[9px] text-center text-slate-500 dark:text-white/30 uppercase tracking-[0.2em]">
+      <p class="text-[9px] text-center text-slate-500 dark:text-white/30 uppercase tracking-[0.2em] pt-2">
         © 2026 Precision Detail Automotive Group
       </p>
     </div>
