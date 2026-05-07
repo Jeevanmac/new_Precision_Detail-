@@ -194,16 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape') closeDrawer();
     });
 
-    // 5. Coming Soon Floating Button Injection
-    const footerBtn = document.createElement('a');
-    footerBtn.href = 'coming-soon.html';
-    footerBtn.className = 'fixed bottom-24 md:bottom-6 right-6 z-[60] bg-[#ec5b13] hover:bg-[#ec5b13]/90 text-white p-3 rounded-full shadow-2xl flex items-center gap-0 group transition-all active:scale-95 overflow-hidden w-12 hover:w-40 border border-white/20';
-    footerBtn.innerHTML = `
-        <span class="material-symbols-outlined text-[24px]">rocket_launch</span>
-        <span class="font-black text-[10px] uppercase tracking-widest ml-3 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Coming Soon</span>
-    `;
-    document.body.appendChild(footerBtn);
-
+    // 5. Coming Soon Floating Button Injection (Removed as per user request)
     // 6. Global Form Validation
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {

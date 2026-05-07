@@ -43,6 +43,148 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <!-- Mobile Header -->
+    <div class="md:hidden bg-[#161210] dark:bg-[#0a0a0a] p-4 flex items-center justify-between border-b border-white/5 fixed top-0 w-full z-[60]">
+        <button id="mobile-menu-trigger-dash" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/70 hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <div class="flex-1 px-4">
+            <h1 class="text-white font-bold text-[15px] leading-tight">Dashboard Overview</h1>
+            <p class="text-white/40 text-[10px] leading-tight flex items-center gap-1">
+                Your project status is updated in real-time.
+            </p>
+        </div>
+        <div class="flex items-center bg-white/5 rounded-lg p-1">
+            <button id="dir-toggle-mobile" class="px-3 py-1.5 rounded bg-transparent text-white font-bold text-[10px]">RTL</button>
+            <button id="theme-toggle-mobile" class="px-3 py-1.5 rounded bg-transparent text-white/50 hover:text-white">
+                <span class="material-symbols-outlined text-[14px] dark:hidden">dark_mode</span>
+                <span class="material-symbols-outlined text-[14px] hidden dark:block">light_mode</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="drawer-overlay-dash" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300 md:hidden"></div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer-dash" class="fixed top-0 left-0 h-full w-[280px] bg-[#0a0a0a] text-white z-[101] -translate-x-full transition-transform duration-300 ease-in-out border-r border-white/10 shadow-2xl flex flex-col md:hidden">
+        <!-- Header -->
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-white text-2xl">camera</span>
+                <h2 class="text-white text-lg font-black leading-tight tracking-tighter uppercase italic">
+                    LUMINI
+                </h2>
+            </div>
+            <button id="mobile-menu-close-dash" class="text-white/60 hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="flex-1 overflow-y-auto px-4 py-4 space-y-1">
+            <a class="menu-item flex items-center gap-3 px-3 py-3 rounded-xl bg-primary text-white font-bold text-sm transition-all"
+                href="javascript:void(0)" onclick="switchSection('overview'); document.getElementById('mobile-menu-close-dash').click();" id="nav-mobile-overview">
+                <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a class="menu-item flex items-center gap-3 px-3 py-3 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all text-sm font-medium"
+                href="javascript:void(0)" onclick="switchSection('orders'); document.getElementById('mobile-menu-close-dash').click();" id="nav-mobile-orders">
+                <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                <span>Orders</span>
+            </a>
+            <a class="menu-item flex items-center gap-3 px-3 py-3 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all text-sm font-medium"
+                href="javascript:void(0)" onclick="switchSection('saved'); document.getElementById('mobile-menu-close-dash').click();" id="nav-mobile-saved">
+                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+                <span>Saved</span>
+            </a>
+            <a class="menu-item flex items-center gap-3 px-3 py-3 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all text-sm font-medium"
+                href="javascript:void(0)" onclick="switchSection('messages'); document.getElementById('mobile-menu-close-dash').click();" id="nav-mobile-messages">
+                <span class="material-symbols-outlined text-[20px]">mail</span>
+                <span>Messages</span>
+            </a>
+            <a class="menu-item flex items-center gap-3 px-3 py-3 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all text-sm font-medium"
+                href="javascript:void(0)" onclick="switchSection('settings'); document.getElementById('mobile-menu-close-dash').click();" id="nav-mobile-settings">
+                <span class="material-symbols-outlined text-[20px]">settings</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+        
+        <!-- Profile & Signout -->
+        <div class="p-4 border-t border-white/10 space-y-2">
+            <a class="menu-item flex items-center gap-3 px-3 py-3 rounded-xl text-white/70 hover:bg-white/5 hover:text-white transition-all text-sm font-medium"
+                href="javascript:void(0)" onclick="switchSection('profile'); document.getElementById('mobile-menu-close-dash').click();" id="nav-mobile-profile">
+                <span class="material-symbols-outlined text-[20px]">person</span>
+                <span>Profile Settings</span>
+            </a>
+            <a class="flex items-center gap-3 px-3 py-3 rounded-xl text-red-400 hover:bg-white/5 hover:text-red-300 transition-all text-sm font-bold"
+                href="index.html">
+                <span class="material-symbols-outlined text-[20px]">logout</span>
+                <span>Sign Out</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openBtn = document.getElementById('mobile-menu-trigger-dash');
+            const closeBtn = document.getElementById('mobile-menu-close-dash');
+            const drawer = document.getElementById('mobile-drawer-dash');
+            const overlay = document.getElementById('drawer-overlay-dash');
+
+            const openDrawer = () => {
+                drawer.classList.remove('-translate-x-full');
+                drawer.classList.add('translate-x-0');
+                overlay.classList.remove('opacity-0', 'invisible');
+                overlay.classList.add('opacity-100', 'visible');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeDrawer = () => {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100', 'visible');
+                overlay.classList.add('opacity-0', 'invisible');
+                document.body.style.overflow = '';
+            };
+
+            if (openBtn) openBtn.addEventListener('click', openDrawer);
+            if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+            if (overlay) overlay.addEventListener('click', closeDrawer);
+
+            // Toggles
+            const html = document.documentElement;
+            const themeBtn = document.getElementById('theme-toggle-mobile');
+            const dirBtn = document.getElementById('dir-toggle-mobile');
+
+            if (themeBtn) {
+                themeBtn.addEventListener('click', () => {
+                    const isDark = html.classList.contains('dark');
+                    if (isDark) {
+                        html.classList.remove('dark');
+                        html.classList.add('light');
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        html.classList.add('dark');
+                        html.classList.remove('light');
+                        localStorage.setItem('theme', 'dark');
+                    }
+                    themeBtn.querySelector('.dark\\:hidden').style.display = isDark ? 'block' : 'none';
+                    themeBtn.querySelector('.hidden.dark\\:block').style.display = isDark ? 'none' : 'block';
+                });
+            }
+
+            if (dirBtn) {
+                dirBtn.addEventListener('click', () => {
+                    const newDir = html.getAttribute('dir') === 'ltr' ? 'rtl' : 'ltr';
+                    html.setAttribute('dir', newDir);
+                    dirBtn.textContent = newDir.toUpperCase();
+                    localStorage.setItem('dir', newDir);
+                });
+            }
+        });
+    </script>
+
     <div class="flex min-h-screen">
         <!-- Sidebar Navigation -->
         <aside
@@ -131,7 +273,7 @@
 
         <!-- Main Content Area -->
         <main
-            class="flex-1 ml-0 md:ml-72 pt-24 md:pt-4 p-4 md:p-8 pb-32 md:pb-8 min-h-screen transition-all duration-300"
+            class="flex-1 ml-0 md:ml-72 pt-24 md:pt-4 p-4 md:p-8 min-h-screen transition-all duration-300 w-full overflow-x-hidden"
             id="dashboard-content">
             <!-- Content loaded via JavaScript -->
         </main>
@@ -1385,35 +1527,7 @@ dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
 </div>
 </script>
 
-    <!-- Mobile Bottom Navigation -->
-    <nav
-        class="md:hidden fixed bottom-0 left-0 right-0 z-[100] bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200 dark:border-accent-dark px-2 pb-safe pt-2 flex justify-around items-center shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
-        <a href="#overview"
-            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-            <span class="material-symbols-outlined text-[22px]">grid_view</span>
-            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Home</span>
-        </a>
-        <a href="#orders"
-            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-            <span class="material-symbols-outlined text-[22px]">shopping_cart</span>
-            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Orders</span>
-        </a>
-        <a href="#saved"
-            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-            <span class="material-symbols-outlined text-[22px]">bookmark</span>
-            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Saved</span>
-        </a>
-        <a href="#messages"
-            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-            <span class="material-symbols-outlined text-[22px]">mail</span>
-            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Inbox</span>
-        </a>
-        <a href="#profile"
-            class="menu-item flex flex-col items-center gap-1 p-2 w-16 text-slate-500 dark:text-slate-400 transition-colors">
-            <span class="material-symbols-outlined text-[22px]">person</span>
-            <span class="text-[9px] font-bold uppercase tracking-[0.1em]">Profile</span>
-        </a>
-    </nav>
+
 
     <script src="../assets/js/main.js"></script>
 </body>

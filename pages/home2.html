@@ -22,7 +22,8 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<header id="navbar" class="flex items-center justify-between px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+<header id="navbar"
+  class="flex items-center justify-between px-6 lg:px-20 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 
   <!-- LEFT (LOGO) -->
   <div class="flex items-center gap-2">
@@ -37,45 +38,57 @@
     </div>
 
   <!-- CENTER (MENU) -->
-  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
+  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4 text-slate-600 dark:text-slate-400">
 <div class="relative">
 <a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-primary font-black scale-105" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
 <a href="index.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 1</a>
 <a href="home2.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 2</a>
 </div>
 </div>
-<a class="nav-services text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="services.html">Services</a>
-<a class="nav-pricing text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="pricing.html">Pricing</a>
-<a class="nav-gallery text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="gallery.html">Gallery</a>
-<a class="nav-blog text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="blog.html">Blog</a>
-<a class="nav-contact text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="contact.html">Contact</a>
-<a class="nav-about text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="about.html">About</a>
+<a class="nav-services hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="services.html">Services</a>
+
+<a class="nav-gallery hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="gallery.html">Gallery</a>
+<a class="nav-blog hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="blog.html">Blog</a>
+<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="contact.html">Contact</a>
+<a class="nav-about hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="about.html">About</a>
 <div class="relative">
-<a class="nav-dashboard dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
+<a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
 <a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
 <a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
 </div>
 </div>
 </nav>
+
   <!-- RIGHT (ACTIONS) -->
   <div class="flex items-center gap-2 z-10">
-    <button id="dir-toggle-nav" class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest transition-colors">LTR</button>
-    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
-      <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-      <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+
+    <button id="dir-toggle-nav"
+      class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center">
+      LTR
     </button>
-    <a href="login.html" class="hidden nav-mobile:flex items-center justify-center size-7 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
+
+    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+</button>
+
+    <a href="login.html"
+      class="hidden nav-mobile:flex size-7 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
       <span class="material-symbols-outlined text-[14px]">account_circle</span>
     </a>
+
     <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-      Book Services
-    </a>
+    Book Services
+</a>
+
     <!-- MOBILE MENU -->
-    <button id="mobile-menu-trigger" class="nav-mobile:hidden h-8 w-8 bg-slate-100 dark:bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
-      <span class="material-symbols-outlined text-[20px]">menu</span>
+    <button id="mobile-menu-trigger"
+      class="nav-mobile:hidden h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
+      <span class="material-symbols-outlined">menu</span>
     </button>
+
   </div>
 
 </header>
@@ -84,12 +97,12 @@
 <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
 
 <!-- Mobile Drawer -->
-<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-slate-900/40 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
     <!-- Header -->
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
             <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
-            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
+            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
                 Precision Detail
                 <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
             </h2>
@@ -104,11 +117,11 @@
         <nav class="flex flex-col gap-6">
             <!-- Home Links -->
             <div>
-                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-slate-900/40 dark:border-white/10 pb-2">
+                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
                     Home
                     <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
                 </div>
-                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-slate-900/40 dark:border-white/10 ml-1">
+                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
                     <a href="index.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
                         Version 1
                         <span class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
@@ -121,10 +134,7 @@
                 Services
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
             </a>
-            <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Pricing
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
+            
             <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
                 Gallery
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
@@ -157,7 +167,7 @@
     </div>
     
     <!-- Footer Section -->
-    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-slate-900/40 dark:border-white/10 space-y-6">
+    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
         <!-- Book Service Action -->
         <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
             <span class="material-symbols-outlined text-lg">auto_awesome</span>
@@ -181,7 +191,7 @@
 <!-- Hero Section -->
 <section class="relative min-h-screen pt-10 md:pt-[5%] flex items-center justify-center overflow-hidden bg-charcoal">
 <div class="absolute inset-0 opacity-60">
-<img class="w-full h-full object-cover" data-alt="Luxury sports car in a dark studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8oZSUxJ92FV4PVuZXOWHRmrkO9uyAA_5HiJI6spTD4TqoPdgiievDFzHnp60BplhNjqlTPs3Q4yW8lpFhzvnNAwYG-25uNtEzOZAts4SeCC6dj4RDzJRuiT2O9ra9Nt9Bzc3a58zo8hTTQAwBYFjbD30xmhrfoOVlJPJIiaU8m_DQTdjxv_OOW_mrRYNq8ckc9ls4Sog-xfysVr2gYZL_IIP3Cg2ga7x3rX2x9PFZk8Q-dhALmb8atCq228eCUOKclHsdmWX192E"/>
+<img class="w-full h-full object-cover" data-alt="Luxury sports car in a dark studio" src="../assets/images/home2-hero.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent"></div>
 </div>
 <div class="relative z-10 max-w-4xl px-6 text-center">
@@ -200,7 +210,7 @@
 </section>
 <!-- Comparison Slider Concept (Static Representation) -->
 <section class="py-24 bg-white dark:bg-charcoal/50">
-<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div>
 <h2 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black tracking-tighter mb-6 uppercase italic">The Transformation</h2>
@@ -225,11 +235,11 @@
 <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
 <div class="aspect-[4/3] flex">
 <div class="w-1/2 relative">
-<img class="h-full w-full object-cover" data-alt="Dirty car wheel before cleaning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLNbCCZB-1HZoLz7JWaVk5SdmHTeEkMAHkWynHBW2jXL8VuA54sEBUnZHBNy_wm0y3lRtKTvrMTrA8FDmCtRqMSBeQIMNoSD4gvE1rJ6tBRkzMmGcLKQJWGZL944PVLmxZH4MWcEOXUwp_Jh5C7fy71CM2QBZP9FBh3Ok_XJnq328gz9i8dAUdOXLgsakBXV_dT15HmWTd1iyqRMrm3Px0xKrBTB9j9hDbqvFnOzIqz14EW0dBkvbsVg6xFhJm-cq6m4y3uxsiQVg"/>
+<img class="h-full w-full object-cover" data-alt="Dirty car wheel before cleaning" src="../assets/images/home2-before.png"/>
 <div class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">Before</div>
 </div>
 <div class="w-1/2 relative border-l-4 border-primary">
-<img class="h-full w-full object-cover" data-alt="Shiny polished car wheel after cleaning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZ_JHj-5ikD_flMQOX-_4JsistBz1BcvAh2Pobbv_rShOYzZMEK7hqwyH2abykIvmVHJvYuxmBidh4OEzt5ZGLM3IsmJ0eAmCR_1qWl5Q_v07CpKBypaHvJwdVC8RROUU3g6uvbhnvkfZgG7_2qAfSv9o_tUhAZ7KcuGId9QZM-SzGL5V97bcayGi86qeRGFKOcAfDwWior06vik37q4ZmX0UT0X-645-XbXiWj1B10rnWx0A8v3K9SVdZOGh2iRB_3UcYyRHddg"/>
+<img class="h-full w-full object-cover" data-alt="Shiny polished car wheel after cleaning" src="../assets/images/home2-after.png"/>
 <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">After</div>
 </div>
 </div>
@@ -245,7 +255,7 @@
 
         <!-- Why Choose Us Section -->
 <section class="py-24 bg-background-light dark:bg-background-dark">
-  <div class="max-w-7xl mx-auto px-6 text-center">
+  <div class="max-w-7xl mx-auto px-6 lg:px-20 text-center">
     
     <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase italic">
       Why Choose Us
@@ -291,7 +301,7 @@
         
 <!-- Pricing Section -->
 <section class="py-24 bg-background-light dark:bg-background-dark">
-<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
 <div class="text-center mb-16">
 <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 uppercase italic">Transparent Pricing</h2>
 <p class="text-slate-500 uppercase tracking-widest text-sm font-bold">Choose your level of perfection</p>
@@ -342,7 +352,7 @@
 </section>
 <!-- Booking Form Section -->
 <section class="py-24 bg-white dark:bg-charcoal">
-<div class="max-w-4xl mx-auto px-6">
+<div class="max-w-4xl mx-auto px-6 lg:px-20">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
 <div>
 <h2 class="text-4xl font-black tracking-tighter mb-6 uppercase italic leading-tight">Secure Your Appointment</h2>
@@ -412,7 +422,7 @@
 
         <!-- Our Process Section -->
 <section class="py-24 bg-white dark:bg-charcoal">
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-6 lg:px-20">
 
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">

@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="../assets/js/tailwind-config.js"></script>
-<title>Services | Precision Detail</title>
-<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <title>Services | Precision Detail</title>
+    <meta name="description"
+        content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dark-mode.css">
     <link rel="stylesheet" href="../assets/css/rtl.css">
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-200">
-<header id="navbar" class="flex items-center justify-between px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <header id="navbar"
+  class="flex items-center justify-between px-6 lg:px-20 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 
   <!-- LEFT (LOGO) -->
   <div class="flex items-center gap-2">
         <div class="relative group flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2">
-                <img src="../assets/images/logo.png" alt="Logo" class="w-6 h-6 rounded-full object-cover">
-                <h2 class="hidden md:block text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
                     Precision Detail
                 </h2>
             </a>
@@ -31,59 +41,71 @@
     </div>
 
   <!-- CENTER (MENU) -->
-  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
+  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4 text-slate-600 dark:text-slate-400">
 <div class="relative">
-<a class="nav-home dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
+<a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
 <a href="index.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 1</a>
 <a href="home2.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 2</a>
 </div>
 </div>
 <a class="nav-services hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-primary font-black scale-105" href="services.html">Services</a>
-<a class="nav-pricing text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="pricing.html">Pricing</a>
-<a class="nav-gallery text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="gallery.html">Gallery</a>
-<a class="nav-blog text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="blog.html">Blog</a>
-<a class="nav-contact text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="contact.html">Contact</a>
-<a class="nav-about text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="about.html">About</a>
+
+<a class="nav-gallery hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="gallery.html">Gallery</a>
+<a class="nav-blog hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="blog.html">Blog</a>
+<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="contact.html">Contact</a>
+<a class="nav-about hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="about.html">About</a>
 <div class="relative">
-<a class="nav-dashboard dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
+<a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
 <a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
-<a href="user-dashboard.html#overview" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
+<a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
 </div>
 </div>
 </nav>
+
   <!-- RIGHT (ACTIONS) -->
   <div class="flex items-center gap-2 z-10">
-    <button id="dir-toggle-nav" class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest transition-colors">LTR</button>
-    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
-      <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-      <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+
+    <button id="dir-toggle-nav"
+      class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center">
+      LTR
     </button>
-    <a href="login.html" class="hidden nav-mobile:flex items-center justify-center size-7 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
+
+    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+</button>
+
+    <a href="login.html"
+      class="hidden nav-mobile:flex size-7 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
       <span class="material-symbols-outlined text-[14px]">account_circle</span>
     </a>
+
     <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-      Book Services
-    </a>
+    Book Services
+</a>
+
     <!-- MOBILE MENU -->
-    <button id="mobile-menu-trigger" class="nav-mobile:hidden h-8 w-8 bg-slate-100 dark:bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
-      <span class="material-symbols-outlined text-[20px]">menu</span>
+    <button id="mobile-menu-trigger"
+      class="nav-mobile:hidden h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
+      <span class="material-symbols-outlined">menu</span>
     </button>
+
   </div>
 
 </header>
 
-<!-- Mobile Drawer Overlay -->
+    <!-- Mobile Drawer Overlay -->
 <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
 
 <!-- Mobile Drawer -->
-<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-slate-900/40 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
     <!-- Header -->
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
-            <img src="../assets/images/logo.png" alt="Logo" class="w-6 h-6 rounded-full object-cover">
-            <h2 class="hidden md:block text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative">
+            <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
+            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
                 Precision Detail
                 <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
             </h2>
@@ -98,11 +120,11 @@
         <nav class="flex flex-col gap-6">
             <!-- Home Links -->
             <div>
-                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-slate-900/40 dark:border-white/10 pb-2">
+                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
                     Home
                     <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
                 </div>
-                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-slate-900/40 dark:border-white/10 ml-1">
+                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
                     <a href="index.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
                         Version 1
                         <span class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
@@ -111,14 +133,11 @@
                 </div>
             </div>
 
-            <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-primary font-bold text-xl transition-colors">
+            <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
                 Services
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
             </a>
-            <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Pricing
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
+            
             <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
                 Gallery
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
@@ -142,7 +161,7 @@
                     Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
-                <a href="user-dashboard.html#overview" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                <a href="user-dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
                     User Dashboard
                     <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
                 </a>
@@ -151,7 +170,7 @@
     </div>
     
     <!-- Footer Section -->
-    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-slate-900/40 dark:border-white/10 space-y-6">
+    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
         <!-- Book Service Action -->
         <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
             <span class="material-symbols-outlined text-lg">auto_awesome</span>
@@ -172,271 +191,560 @@
         </p>
     </div>
 </div><!-- End Mobile Drawer -->
-<main class="flex-1">
-<!-- Hero Section -->
-<div class="relative w-full @container">
-<div class="w-full">
-<div class="relative h-screen w-full overflow-hidden rounded-none bg-slate-900 flex flex-col justify-end p-8 md:p-16">
-<div class="absolute inset-0 opacity-60">
-<img alt="Luxury car close up" class="w-full h-full object-cover" data-alt="Close up of a luxury car with deep gloss finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc7EwZhkYm2hVeXCdA_8qHtTAgSuCRAtnEkJyKXO_gKunkcpVZsxRva9wJeRJYqFcIz3ZXSo2fu3mKnn8PzfsTvhE4gXxqNzz1zQDY7fAoUoQAeXZdikh_YDRZ2xJnYuXJ91yH3LDmi3qoFmVftJHFUx0rtn-Ey9tKlgd_J5_lFSEbH9QpBkEOp7fSqvYHIBRDSgucSfGnQC5XTUfpbOY1BuJBcK-6KDYpRhJEVuVBguxpA5hvKiXXW7RIi1j9zvCN16B3KTiFFEY"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
-<div class="relative z-10 max-w-2xl">
-<span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Premium Detailing Excellence</span>
-<h1 class="text-white text-4xl md:text-6xl font-black leading-tight mb-4">Precision Protection</h1>
-<p class="text-slate-300 text-lg md:text-xl max-w-lg leading-relaxed">Experience automotive rejuvenation with our specialist detailing tiers designed for those who demand perfection.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Service Tiers Section -->
-<div class="px-6 md:px-20 py-12">
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<!-- Tier 1: Paint Correction -->
-<div class="flex flex-col gap-4 md:gap-6 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-6 md:p-8 transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] shadow-sm">
-<div class="flex flex-col gap-2">
-<div class="bg-primary/10 w-fit p-3 rounded-lg mb-2">
-<span class="material-symbols-outlined text-primary text-3xl">auto_fix_high</span>
-</div>
-<h3 class="text-slate-900 dark:text-white text-2xl font-bold">Paint Correction</h3>
-<div class="flex items-baseline gap-2 pt-2">
-<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Starting at</span>
-<span class="text-slate-900 dark:text-white text-5xl font-black tracking-tighter">$499</span>
-</div>
-</div>
-<button class="w-full cursor-pointer items-center justify-center rounded-lg h-10 md:h-12 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-                        Select Package
-                    </button>
-<div class="flex flex-col gap-4 mt-2">
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Multi-stage orbital buffing</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">85-95% Swirl mark removal</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Chemical decontamination &amp; clay bar</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Jeweled gloss finishing polish</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">6-month wax sealant included</span>
-</div>
-</div>
-</div>
-<!-- Tier 2: Ceramic Coating (Highlighted) -->
-<div class="relative flex flex-col gap-4 md:gap-6 rounded-none border-2 border-primary bg-white dark:bg-slate-900 p-6 md:p-8 shadow-2xl shadow-primary/10 md:scale-105 z-10 transition-all duration-300 dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2">
-<span class="bg-primary text-white text-[10px] uppercase font-black px-4 py-1.5 rounded-full tracking-widest shadow-lg">Most Recommended</span>
-</div>
-<div class="flex flex-col gap-2">
-<div class="bg-primary w-fit p-3 rounded-lg mb-2 shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined text-white text-3xl">shield</span>
-</div>
-<h3 class="text-slate-900 dark:text-white text-2xl font-bold">Ceramic Coating</h3>
-<div class="flex items-baseline gap-2 pt-2">
-<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Starting at</span>
-<span class="text-slate-900 dark:text-white text-5xl font-black tracking-tighter">$999</span>
-</div>
-</div>
-<button class="w-full cursor-pointer items-center justify-center rounded-lg h-10 md:h-12 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
-                        Select Package
-                    </button>
-<div class="flex flex-col gap-4 mt-2">
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">verified</span>
-<span class="text-sm font-semibold italic text-primary">Includes Paint Correction</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">9H Hardness ceramic coating</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Ultimate hydrophobic surface</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Permanent UV &amp; chemical protection</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">5-Year certified warranty</span>
-</div>
-</div>
-</div>
-<!-- Tier 3: PPF -->
-<div class="flex flex-col gap-6 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] shadow-sm">
-<div class="flex flex-col gap-2">
-<div class="bg-primary/10 w-fit p-3 rounded-lg mb-2">
-<span class="material-symbols-outlined text-primary text-3xl">layers</span>
-</div>
-<h3 class="text-slate-900 dark:text-white text-2xl font-bold">Paint Protection Film</h3>
-<div class="flex items-baseline gap-2 pt-2">
-<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Starting at</span>
-<span class="text-slate-900 dark:text-white text-5xl font-black tracking-tighter">$1,999</span>
-</div>
-</div>
-<button class="w-full cursor-pointer items-center justify-center rounded-lg h-10 md:h-12 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-                        Select Package
-                    </button>
-<div class="flex flex-col gap-4 mt-2">
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">8-mil self-healing TPU film</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Rock chip &amp; scratch protection</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Computer-cut precision fit</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">Wrapped seamless edges</span>
-</div>
-<div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">10-Year yellowing warranty</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Detailed Checklist Section -->
-<div class="px-4 md:px-20 py-16 bg-slate-100 dark:bg-slate-900/30">
-<div class="max-w-4xl mx-auto">
-<h2 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight mb-8 text-center">Every Package Includes Our White-Glove Standard</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<label class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="relative flex items-center">
-<input checked="" class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary" disabled="" type="checkbox"/>
-</div>
-<div class="flex flex-col">
-<p class="text-slate-900 dark:text-white font-bold">24-Step Hand Wash &amp; Dry</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs">Ph-balanced foam bath and microfiber dry</p>
-</div>
-</label>
-<label class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="relative flex items-center">
-<input checked="" class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary" disabled="" type="checkbox"/>
-</div>
-<div class="flex flex-col">
-<p class="text-slate-900 dark:text-white font-bold">Iron Fallout Removal</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs">Deep chemical breakdown of metallic particles</p>
-</div>
-</label>
-<label class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="relative flex items-center">
-<input checked="" class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary" disabled="" type="checkbox"/>
-</div>
-<div class="flex flex-col">
-<p class="text-slate-900 dark:text-white font-bold">Clay Bar Treatment</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs">Mechanical decontamination for glass-smooth paint</p>
-</div>
-</label>
-<label class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="relative flex items-center">
-<input checked="" class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary" disabled="" type="checkbox"/>
-</div>
-<div class="flex flex-col">
-<p class="text-slate-900 dark:text-white font-bold">Tire &amp; Rim Detailing</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs">Barrel cleaning and non-sling satin dressing</p>
-</div>
-</label>
-<label class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="relative flex items-center">
-<input checked="" class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary" disabled="" type="checkbox"/>
-</div>
-<div class="flex flex-col">
-<p class="text-slate-900 dark:text-white font-bold">Door Jambs &amp; Trim Cleanse</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs">Detailed cleansing of all hidden crevices</p>
-</div>
-</label>
-<label class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="relative flex items-center">
-<input checked="" class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary" disabled="" type="checkbox"/>
-</div>
-<div class="flex flex-col">
-<p class="text-slate-900 dark:text-white font-bold">Interior Refresh</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs">Full vacuum and dashboard UV protection</p>
-</div>
-</label>
-</div>
-</div>
-</div>
-<!-- Footer Call to Action -->
-<div class="px-4 md:px-20 py-20 text-center">
-<h2 class="text-slate-900 dark:text-white text-4xl font-black mb-6">Ready for the Ultimate Shine?</h2>
-<p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto mb-0 text-lg">Our master detailers are ready to transform your vehicle. Book your spot today or call for a custom consultation.</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="bg-primary text-white font-bold h-14 px-10 rounded-none text-lg shadow-xl shadow-primary/30 hover:scale-105 transition-transform">Schedule Appointment</button>
-<button class="bg-transparent border-2 border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold h-14 px-10 rounded-none text-lg hover:border-primary transition-colors">Call (555) 012-3456</button>
-</div>
-</div>
-</main>
-<!-- Simple Footer -->
-<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
-<div class="max-w-7xl mx-auto px-6 lg:px-20 py-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
-                <div class="flex items-center gap-2 mb-6">
-                    <!-- <h4 class="text-slate-900 dark:text-white font-black text-xl tracking-tighter uppercase italic relative">
-                        Precision Detail
-                    </h4> -->
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <div class="relative w-full @container">
+            <div class="w-full">
+                <div
+                    class="relative h-screen w-full overflow-hidden rounded-none bg-slate-900 flex flex-col justify-end p-8 md:p-16">
+                    <div class="absolute inset-0 opacity-60">
+                        <img alt="Luxury car close up" class="w-full h-full object-cover"
+                            data-alt="Close up of a luxury car with deep gloss finish"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc7EwZhkYm2hVeXCdA_8qHtTAgSuCRAtnEkJyKXO_gKunkcpVZsxRva9wJeRJYqFcIz3ZXSo2fu3mKnn8PzfsTvhE4gXxqNzz1zQDY7fAoUoQAeXZdikh_YDRZ2xJnYuXJ91yH3LDmi3qoFmVftJHFUx0rtn-Ey9tKlgd_J5_lFSEbH9QpBkEOp7fSqvYHIBRDSgucSfGnQC5XTUfpbOY1BuJBcK-6KDYpRhJEVuVBguxpA5hvKiXXW7RIi1j9zvCN16B3KTiFFEY" />
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent">
+                    </div>
+                    <div class="relative z-10 max-w-2xl">
+                        <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Premium
+                            Detailing Excellence</span>
+                        <h1 class="text-white text-4xl md:text-6xl font-black leading-tight mb-4">Precision Protection
+                        </h1>
+                        <p class="text-slate-300 text-lg md:text-xl max-w-lg leading-relaxed">Experience automotive
+                            rejuvenation with our specialist detailing tiers designed for those who demand perfection.
+                        </p>
+                    </div>
                 </div>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence through meticulous craftsmanship and premium protection services.</p>
-<div class="flex gap-4">
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">public</span>
-</a>
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">share</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
-<li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
-<div class="flex gap-2">
-<input class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50" placeholder="Email" type="email"/>
-<button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
-<span class="material-symbols-outlined text-[20px]">send</span>
-</button>
-</div>
-</div>
-</div>
-<div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
-                    © 2025 Precision Detail. All rights reserved.
+            </div>
+        </div>
+        <!-- Service Tiers Section -->
+        <div class="px-6 lg:px-20 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Tier 1: Paint Correction -->
+                <div
+                    class="flex flex-col gap-4 md:gap-6 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-6 md:p-8 transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] shadow-sm">
+                    <div class="flex flex-col gap-2">
+                        <div class="bg-primary/10 w-fit p-3 rounded-lg mb-2">
+                            <span class="material-symbols-outlined text-primary text-3xl">auto_fix_high</span>
+                        </div>
+                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold">Paint Correction</h3>
+                        <div class="flex items-baseline gap-2 pt-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Starting at</span>
+                            <span
+                                class="text-slate-900 dark:text-white text-5xl font-black tracking-tighter">$499</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full cursor-pointer items-center justify-center rounded-lg h-10 md:h-12 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                        Select Package
+                    </button>
+                    <div class="flex flex-col gap-4 mt-2">
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Multi-stage orbital buffing</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">85-95% Swirl mark removal</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Chemical decontamination &amp; clay bar</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Jeweled gloss finishing polish</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">6-month wax sealant included</span>
+                        </div>
+                    </div>
                 </div>
-</div>
-</footer>
-</div>
-<script src="../assets/js/main.js"></script>
-</body></html>
+                <!-- Tier 2: Ceramic Coating (Highlighted) -->
+                <div
+                    class="relative flex flex-col gap-4 md:gap-6 rounded-none border-2 border-primary bg-white dark:bg-slate-900 p-6 md:p-8 shadow-2xl shadow-primary/10 md:scale-105 z-10 transition-all duration-300 dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <span
+                            class="bg-primary text-white text-[10px] uppercase font-black px-4 py-1.5 rounded-full tracking-widest shadow-lg">Most
+                            Recommended</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="bg-primary w-fit p-3 rounded-lg mb-2 shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-white text-3xl">shield</span>
+                        </div>
+                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold">Ceramic Coating</h3>
+                        <div class="flex items-baseline gap-2 pt-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Starting at</span>
+                            <span
+                                class="text-slate-900 dark:text-white text-5xl font-black tracking-tighter">$999</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full cursor-pointer items-center justify-center rounded-lg h-10 md:h-12 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
+                        Select Package
+                    </button>
+                    <div class="flex flex-col gap-4 mt-2">
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">verified</span>
+                            <span class="text-sm font-semibold italic text-primary">Includes Paint Correction</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">9H Hardness ceramic coating</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Ultimate hydrophobic surface</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Permanent UV &amp; chemical protection</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">5-Year certified warranty</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tier 3: PPF -->
+                <div
+                    class="flex flex-col gap-6 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-8 transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)] shadow-sm">
+                    <div class="flex flex-col gap-2">
+                        <div class="bg-primary/10 w-fit p-3 rounded-lg mb-2">
+                            <span class="material-symbols-outlined text-primary text-3xl">layers</span>
+                        </div>
+                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold">Paint Protection Film</h3>
+                        <div class="flex items-baseline gap-2 pt-2">
+                            <span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Starting at</span>
+                            <span
+                                class="text-slate-900 dark:text-white text-5xl font-black tracking-tighter">$1,999</span>
+                        </div>
+                    </div>
+                    <button
+                        class="w-full cursor-pointer items-center justify-center rounded-lg h-10 md:h-12 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                        Select Package
+                    </button>
+                    <div class="flex flex-col gap-4 mt-2">
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">8-mil self-healing TPU film</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Rock chip &amp; scratch protection</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Computer-cut precision fit</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">Wrapped seamless edges</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm">10-Year yellowing warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Detailed Checklist Section (Existing) -->
+        <div class="px-4 md:px-20 py-16 bg-slate-100 dark:bg-slate-900/30">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight mb-8 text-center">Every
+                    Package Includes Our White-Glove Standard</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label
+                        class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="relative flex items-center">
+                            <input checked=""
+                                class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary"
+                                disabled="" type="checkbox" />
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-slate-900 dark:text-white font-bold">24-Step Hand Wash &amp; Dry</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs">Ph-balanced foam bath and microfiber
+                                dry</p>
+                        </div>
+                    </label>
+                    <label
+                        class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="relative flex items-center">
+                            <input checked=""
+                                class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary"
+                                disabled="" type="checkbox" />
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-slate-900 dark:text-white font-bold">Iron Fallout Removal</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs">Deep chemical breakdown of metallic
+                                particles</p>
+                        </div>
+                    </label>
+                    <label
+                        class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="relative flex items-center">
+                            <input checked=""
+                                class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary"
+                                disabled="" type="checkbox" />
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-slate-900 dark:text-white font-bold">Clay Bar Treatment</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs">Mechanical decontamination for
+                                glass-smooth paint</p>
+                        </div>
+                    </label>
+                    <label
+                        class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="relative flex items-center">
+                            <input checked=""
+                                class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary"
+                                disabled="" type="checkbox" />
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-slate-900 dark:text-white font-bold">Tire &amp; Rim Detailing</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs">Barrel cleaning and non-sling satin
+                                dressing</p>
+                        </div>
+                    </label>
+                    <label
+                        class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="relative flex items-center">
+                            <input checked=""
+                                class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary"
+                                disabled="" type="checkbox" />
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-slate-900 dark:text-white font-bold">Door Jambs &amp; Trim Cleanse</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs">Detailed cleansing of all hidden
+                                crevices</p>
+                        </div>
+                    </label>
+                    <label
+                        class="flex items-center gap-4 p-4 rounded-none border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark shadow-sm cursor-pointer transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                        <div class="relative flex items-center">
+                            <input checked=""
+                                class="h-6 w-6 rounded-full border-slate-300 dark:border-slate-700 border-2 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary"
+                                disabled="" type="checkbox" />
+                        </div>
+                        <div class="flex flex-col">
+                            <p class="text-slate-900 dark:text-white font-bold">Interior Refresh</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs">Full vacuum and dashboard UV
+                                protection</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTIONS START -->
+        
+        <!-- Interior Masterclass Section -->
+        <section class="px-6 lg:px-20 py-24 bg-white dark:bg-slate-900/50">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="../assets/images/service-interior.png" alt="Interior detailing" class="rounded-2xl shadow-2xl w-full h-[400px] object-cover" data-alt="Close up of steam cleaning car seats">
+                </div>
+                <div class="order-1 lg:order-2 space-y-6">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs">Deep Restoration</span>
+                    <h2 class="text-slate-900 dark:text-white text-4xl font-black">Interior Masterclass</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        Our interior detailing goes beyond a simple vacuum. We utilize professional-grade steam extraction to eliminate bacteria and allergens, followed by pH-balanced leather conditioning that restores factory suppleness. Every crevice, vent, and button is meticulously cleaned using specialized brushes and compressed air.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Deep Steam Extraction & Sanitization
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Leather Rejuvenation & Protection
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Stain Removal & Fabric Guard
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engine Bay Perfection Section -->
+        <section class="px-6 lg:px-20 py-24 bg-slate-50 dark:bg-slate-900">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs">Mechanical Beauty</span>
+                    <h2 class="text-slate-900 dark:text-white text-4xl font-black">Engine Bay Perfection</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        A clean engine runs cooler and looks better. We safely degrease and steam-clean the engine compartment, protecting sensitive electronics while removing years of grime and salt. We finish with a non-greasy, heat-resistant dressing that makes your engine bay look better than showroom new.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Safe Electronic-Friendly Steam Cleaning
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Heat-Resistant Plastic & Rubber Dressing
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Underside Hood Degreasing
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="../assets/images/service-engine.png" alt="Clean engine bay" class="rounded-2xl shadow-2xl w-full h-[400px] object-cover" data-alt="Meticulously cleaned luxury car engine">
+                </div>
+            </div>
+        </section>
+
+        <!-- Headlight & Glass Clarity Section -->
+        <section class="px-6 lg:px-20 py-24 bg-white dark:bg-slate-900/50">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="../assets/images/service-headlight.png" alt="Headlight restoration" class="rounded-2xl shadow-2xl w-full h-[400px] object-cover" data-alt="Restored clear headlight vs foggy headlight">
+                </div>
+                <div class="order-1 lg:order-2 space-y-6">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs">Visibility & Safety</span>
+                    <h2 class="text-slate-900 dark:text-white text-4xl font-black">Headlight & Glass Clarity</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        Cloudy headlights reduce night vision and ruin your car's look. We perform a multi-stage wet-sanding and polishing process to restore crystal clarity, followed by a UV-resistant ceramic coating to prevent future oxidation. Our glass detailing includes deep polishing to remove water spots and a hydrophobic treatment for safer driving in rain.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Oxidation Removal & UV Ceramic Protection
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Glass Deep Polishing & Water Spot Removal
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            Hydrophobic Windshield Coating
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ozone & Odor Elimination Section -->
+        <section class="px-6 lg:px-20 py-24 bg-slate-900 text-white overflow-hidden relative">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+            </div>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs">Purity Guaranteed</span>
+                    <h2 class="text-white text-4xl font-black">Ozone & Odor Elimination</h2>
+                    <p class="text-slate-400 text-lg leading-relaxed">
+                        Masking odors with perfumes only works temporarily. Our industrial ozone generator attacks odor-causing molecules at the source—smoke, pet dander, mold, and bacteria are permanently neutralized. This treatment leaves your interior smelling completely neutral and medically sterilized.
+                    </p>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-md">
+                        <p class="text-sm italic text-slate-300">"The absolute gold standard for pre-owned vehicle sanitization or recovering a car from smoke damage."</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-64 h-64 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping"></div>
+                        <div class="absolute inset-4 bg-primary/40 rounded-full animate-pulse"></div>
+                        <span class="material-symbols-outlined text-8xl text-primary relative">sanitizer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Luxury Maintenance Concierge Section -->
+        <section class="px-6 lg:px-20 py-24 bg-white dark:bg-slate-900/50">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-primary font-bold tracking-widest uppercase text-xs">Elite Convenience</span>
+                <h2 class="text-slate-900 dark:text-white text-4xl font-black">Luxury Maintenance Concierge</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-lg">Your time is your most valuable asset. We've designed our service around your schedule.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-colors text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">local_shipping</span>
+                    <h4 class="text-xl font-bold mb-2">Valet Pick-up</h4>
+                    <p class="text-slate-500 text-sm">We collect your vehicle from your home or office using professional enclosed transport if requested.</p>
+                </div>
+                <div class="p-8 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-colors text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">home_work</span>
+                    <h4 class="text-xl font-bold mb-2">On-Site Detailing</h4>
+                    <p class="text-slate-500 text-sm">Our fully equipped mobile units bring the entire workshop to you, including power and deionized water.</p>
+                </div>
+                <div class="p-8 border border-slate-200 dark:border-slate-800 rounded-2xl hover:border-primary transition-colors text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">event_repeat</span>
+                    <h4 class="text-xl font-bold mb-2">Membership Plans</h4>
+                    <p class="text-slate-500 text-sm">Automated monthly maintenance to ensure your ceramic coating or PPF remains in perfect condition.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTIONS END -->
+
+
+        <section class="mb-20 px-6 lg:px-20">
+            <h2 class="text-slate-900 dark:text-white text-3xl font-bold mb-8 px-4 border-l-4 border-primary">Feature
+                Comparison</h2>
+            <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 dark:bg-slate-900/80">
+                            <th
+                                class="p-6 text-sm font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800">
+                                Feature</th>
+                            <th
+                                class="p-6 text-sm font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800">
+                                Essential</th>
+                            <th
+                                class="p-6 text-sm font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800">
+                                Signature</th>
+                            <th
+                                class="p-6 text-sm font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800">
+                                Bespoke</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+                        <tr>
+                            <td class="p-6 text-sm text-slate-700 dark:text-slate-300">Hand Wash</td>
+                            <td class="p-6 text-sm text-primary font-medium">Included</td>
+                            <td class="p-6 text-sm text-primary font-medium">Included</td>
+                            <td class="p-6 text-sm text-primary font-medium">Included</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-sm text-slate-700 dark:text-slate-300">Interior Detail</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Basic</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Deep Clean</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Full Restoration</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-sm text-slate-700 dark:text-slate-300">Paint Protection</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Spray Wax</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Sealant</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Ceramic Coating</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-sm text-slate-700 dark:text-slate-300">Wheel &amp; Tire Care</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Standard</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Polished</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Detail &amp; Coat</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-sm text-slate-700 dark:text-slate-300">Time Required</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">2-3 Hours</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">5-7 Hours</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">2+ Days</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 text-sm text-slate-700 dark:text-slate-300">Mobile Service</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Available</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">Available</td>
+                            <td class="p-6 text-sm text-slate-500 dark:text-slate-400">In-Shop Only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="px-6 lg:px-20 mb-20">
+            <section
+                class="bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 border border-primary/20">
+                <div class="flex flex-col gap-4 text-center lg:text-left">
+                    <h2 class="text-slate-900 dark:text-white text-3xl font-bold">Need a custom quote?</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-lg">For commercial fleets, luxury collections, or
+                        specific restoration needs, contact our specialist team for a tailored proposal.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="contact.html"
+                        class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-6 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-colors">
+                        Contact Us
+                    </a>
+                    <button
+                        class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-6 bg-primary text-white font-bold shadow-lg shadow-primary/30">
+                        Get Custom Quote
+                    </button>
+                </div>
+            </section>
+        </div>
+        <!-- Footer Call to Action -->
+        <div class="px-6 lg:px-20 py-20 text-center">
+            <h2 class="text-slate-900 dark:text-white text-4xl font-black mb-6">Ready for the Ultimate Shine?</h2>
+            <p class="text-slate-600 dark:text-slate-400 max-w-xl mx-auto mb-0 text-lg">Our master detailers are ready
+                to transform your vehicle. Book your spot today or call for a custom consultation.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-primary text-white font-bold h-14 px-10 rounded-none text-lg shadow-xl shadow-primary/30 hover:scale-105 transition-transform">Schedule
+                    Appointment</button>
+                <button
+                    class="bg-transparent border-2 border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold h-14 px-10 rounded-none text-lg hover:border-primary transition-colors">Call
+                    (555) 012-3456</button>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+                    <div class="flex items-center gap-2 mb-6">
+                        <h4 class="text-slate-900 dark:text-white font-black text-xl tracking-tighter uppercase italic relative">
+                            Precision Detail
+                            <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
+                        </h4>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence
+                        through meticulous craftsmanship and premium protection services.</p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-[18px]">public</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-[18px]">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50"
+                            placeholder="Email" type="email" />
+                        <button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
+                            <span class="material-symbols-outlined text-[20px]">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+                © 2025 Precision Detail. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

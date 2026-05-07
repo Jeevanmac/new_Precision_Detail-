@@ -1,165 +1,577 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Register | Precision Detail</title>
-<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
+  <title>Register | Precision Detail</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="../assets/js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-<style>
-body {
-  font-family: 'Public Sans', sans-serif;
-}
-</style>
-    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+  <style>
+    body {
+      font-family: 'Public Sans', sans-serif;
+    }
+
+    .register-bg {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.72)),
+        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1883&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .glass-dark {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-light {
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .light-ui-bg {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(248, 250, 252, 0.65),
+          rgba(248, 250, 252, 0.85)),
+        url('../assets/images/light_car_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .social-box {
+      transition: 0.3s;
+    }
+
+    .social-box:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+
 </head>
 
-<body class="bg-gray-100 dark:bg-[#030712] transition-all duration-500 min-h-screen flex items-start justify-center pt-28 pb-10 px-4">
+<body class="bg-background-light dark:bg-background-dark transition-colors duration-300 h-screen overflow-hidden">
 
-<!-- TOP BAR -->
-<div class="fixed top-5 left-1/2 -translate-x-1/2 flex items-center gap-4 z-50">
+  <!-- NAVBAR -->
+  <header id="navbar"
+    class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 lg:px-20 py-4">
 
-  <!-- BACK -->
-  <button onclick="window.location.href='login.html'"
-    class="flex items-center gap-2 px-4 py-2 rounded-full
-    bg-white/70 dark:bg-slate-800/70 backdrop-blur-md
-    border border-gray-200 dark:border-white/10
-    text-gray-800 dark:text-white text-sm font-semibold
-    hover:scale-105 transition">
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center gap-3">
 
-    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-    Back
-  </button>
+      <img src="../assets/images/logo.png"
+        class="w-10 h-10 rounded-full border border-white/10 shadow-xl" />
 
-  <!-- THEME -->
-  <button id="theme-toggle-auth"
-    class="p-2 rounded-full
-    bg-white/70 dark:bg-slate-800/70 backdrop-blur-md
-    border border-gray-200 dark:border-white/10
-    text-gray-800 dark:text-white
-    hover:scale-105 transition">
+      <h2 class="text-white text-xl font-black uppercase italic tracking-tight">
+        Precision Detail
+      </h2>
 
-    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
-    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
-  </button>
+    </a>
 
-</div>
+    <!-- RIGHT -->
+    <div class="flex items-center gap-2">
 
-<!-- CARD -->
-<div class="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden
-bg-white dark:bg-slate-900/60 backdrop-blur-xl
-border border-gray-200 dark:border-white/10 shadow-2xl">
+      <!-- RTL -->
+      <button id="dir-toggle-nav"
+        class="h-10 px-4 rounded-xl glass-dark text-white text-sm font-bold hover:scale-105 transition-all">
 
-  <!-- IMAGE SIDE -->
-  <div class="relative hidden lg:block overflow-hidden group">
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtJpTxA7mecT3ZQ_q7dYBihLQPSMXR4m2AfEK8XK2kLVAvcVDXoiKqdZCGMRHGLtTJbaowsYkbu4bv3mxalwJq5Vgnsw2CLonSgSOnTkaEsi9sEj6_3aQLuaw_KHv_MODhobfEVm7To1MKY7ZKAalRYQwPHJku92XXxjMA0QtoGL1XutFjYQfnkD3BI7bR2MrUu9qe2lY_jK5VJBcZe4Tc5XQDYieWBkcvZSwXDaA3YYB9U0OniXJZ-R4BkF2SpEK3kXEKLGD-25A"
-    class="absolute inset-0 w-full h-full object-cover"/>
+        LTR
 
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-
-    <div class="relative z-10 p-6 h-full flex flex-col justify-end">
-      <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Excellence Guaranteed</span>
-      <h2 class="text-white text-2xl font-bold mt-2">Refining the Art of the Automobile</h2>
-    </div>
-  </div>
-
-  <!-- FORM -->
-  <div class="p-6 flex flex-col justify-center">
-
-    <h1 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Create Account</h1>
-    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Join the premium detailing experience</p>
-
-    <form class="space-y-4">
-
-      <!-- NAME -->
-      <div>
-        <label class="text-xs font-bold uppercase text-gray-500 dark:text-gray-400">Full Name</label>
-        <div class="relative mt-1">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">person</span>
-          <input type="text"
-            class="w-full pl-10 pr-3 py-2 rounded-lg
-            bg-gray-100 dark:bg-slate-800/50
-            border border-gray-200 dark:border-white/10
-            text-sm text-gray-900 dark:text-white
-            focus:ring-2 focus:ring-orange-500 outline-none"
-            placeholder="John Doe"/>
-        </div>
-      </div>
-
-      <!-- EMAIL -->
-      <div>
-        <label class="text-xs font-bold uppercase text-gray-500 dark:text-gray-400">Email</label>
-        <div class="relative mt-1">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">alternate_email</span>
-          <input type="email"
-            class="w-full pl-10 pr-3 py-2 rounded-lg
-            bg-gray-100 dark:bg-slate-800/50
-            border border-gray-200 dark:border-white/10
-            text-sm text-gray-900 dark:text-white
-            focus:ring-2 focus:ring-orange-500 outline-none"
-            placeholder="client@precision.com"/>
-        </div>
-      </div>
-
-      <!-- PASSWORD -->
-      <div class="grid grid-cols-2 gap-3">
-
-        <div>
-          <label class="text-xs font-bold uppercase text-gray-500 dark:text-gray-400">Password</label>
-          <input type="password"
-            class="w-full mt-1 py-2 px-3 rounded-lg
-            bg-gray-100 dark:bg-slate-800/50
-            border border-gray-200 dark:border-white/10
-            text-sm text-gray-900 dark:text-white
-            focus:ring-2 focus:ring-orange-500 outline-none"
-            placeholder="••••••••"/>
-        </div>
-
-        <div>
-          <label class="text-xs font-bold uppercase text-gray-500 dark:text-gray-400">Confirm</label>
-          <input type="password"
-            class="w-full mt-1 py-2 px-3 rounded-lg
-            bg-gray-100 dark:bg-slate-800/50
-            border border-gray-200 dark:border-white/10
-            text-sm text-gray-900 dark:text-white
-            focus:ring-2 focus:ring-orange-500 outline-none"
-            placeholder="••••••••"/>
-        </div>
-
-      </div>
-
-      <!-- TERMS -->
-      <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-        <input type="checkbox"/>
-        Accept Terms & Privacy
-      </div>
-
-      <!-- BUTTON -->
-      <button type="submit"
-        class="w-full py-2 rounded-lg bg-orange-600 text-white font-bold text-sm
-        hover:brightness-110 transition active:scale-95">
-        Create Account
       </button>
 
-      <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
-        Already have an account?
-        <a href="login.html" class="text-orange-500 font-bold hover:underline">Login</a>
-      </p>
+      <!-- THEME -->
+      <button id="theme-toggle"
+        class="w-10 h-10 rounded-xl glass-dark text-white flex items-center justify-center hover:scale-105 transition-all">
 
-    </form>
+        <span class="material-symbols-outlined dark:hidden">
+          dark_mode
+        </span>
 
-  </div>
-</div>
+        <span class="material-symbols-outlined hidden dark:block">
+          light_mode
+        </span>
 
-<!-- SCRIPT -->
-<script src="../assets/js/main.js"></script>
+      </button>
+
+    </div>
+
+  </header>
+
+<!-- Mobile Drawer Overlay -->
+<div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
+
+<!-- Mobile Drawer -->
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
+    <!-- Header -->
+    <div class="flex items-center justify-between p-6">
+        <div class="flex items-center gap-2">
+            <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
+            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
+                Precision Detail
+                <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
+            </h2>
+        </div>
+        <button id="mobile-menu-close" class="text-slate-500 dark:text-slate-600 dark:text-white/60 hover:text-primary dark:hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="flex-1 overflow-y-auto px-6 py-4">
+        <nav class="flex flex-col gap-6">
+            <!-- Home Links -->
+            <div>
+                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
+                    Home
+                    <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
+                </div>
+                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
+                    <a href="index.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
+                        Version 1
+                        <span class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
+                    </a>
+                    <a href="home2.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors">Version 2</a>
+                </div>
+            </div>
+
+            <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Services
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            
+            <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Gallery
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            <a href="blog.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Blog
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            <a href="contact.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Contact
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            <a href="about.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                About
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+
+            <!-- Dashboard/Profile -->
+            <div class="mt-4 pt-6 border-t border-slate-200 dark:border-white/5 space-y-4">
+                 <a href="dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                    Dashboard
+                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+                </a>
+                <a href="user-dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                    User Dashboard
+                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
+        <!-- Book Service Action -->
+        <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <span class="material-symbols-outlined text-lg">auto_awesome</span>
+            Book Service
+        </a>
+
+        <!-- Social Icons -->
+        <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-slate-600 dark:text-white/40 pt-2">
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">public</span>
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">share</span>
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">alternate_email</span>
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">chat_bubble</span>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-[9px] text-center text-slate-500 dark:text-white/30 uppercase tracking-[0.2em]">
+            © 2026 Precision Detail Automotive Group
+        </p>
+    </div>
+</div><!-- End Mobile Drawer -->
+
+  <!-- REGISTER -->
+  <section id="page-bg" class="register-bg h-screen flex items-center justify-center px-5 transition-all duration-500">
+
+    <div class="w-full max-w-5xl grid lg:grid-cols-2 gap-6 items-center">
+
+      <!-- LEFT -->
+      <div id="left-content" class="text-slate-900 dark:text-white transition-colors">
+
+        <h1 class="text-3xl md:text-5xl font-black leading-none">
+          Create <br />
+          Account
+        </h1>
+
+        <p class="mt-4 md:mt-6 dark:text-slate-300 text-slate-600 text-base leading-7 max-w-md">
+          Join the premium detailing experience and unlock luxury automotive care services.
+        </p>
+
+        <!-- LINE -->
+        <div class="w-14 h-1 bg-primary mt-4 md:mt-7 rounded-full"></div>
+
+        <!-- SOCIAL -->
+        <div class="flex gap-3 mt-6 md:mt-10">
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl dark:bg-white bg-slate-100 dark:text-slate-900 text-slate-700 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg border dark:border-transparent border-slate-200">
+
+            <span class="material-symbols-outlined text-[20px]">
+              public
+            </span>
+
+          </a>
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl bg-white text-slate-900 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg">
+
+            <span class="material-symbols-outlined text-[20px]">
+              share
+            </span>
+
+          </a>
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl bg-white text-slate-900 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg">
+
+            <span class="material-symbols-outlined text-[20px]">
+              photo_camera
+            </span>
+
+          </a>
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl bg-white text-slate-900 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg">
+
+            <span class="material-symbols-outlined text-[20px]">
+              play_arrow
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="w-full max-w-[420px] lg:ml-auto">
+
+        <div id="register-card"
+          class="glass-dark rounded-[28px] p-4 md:p-6 shadow-2xl transition-all duration-300">
+
+          <h2 class="text-3xl font-black dark:text-white text-slate-900 mb-6">
+
+            Register
+
+          </h2>
+
+          <form class="space-y-2 md:space-y-4">
+
+            <!-- NAME -->
+            <div class="relative">
+
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">
+
+                person
+
+              </span>
+
+              <input type="text"
+                placeholder="Full name"
+                class="w-full h-11 rounded-2xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                pl-11 pr-4
+                text-[14px]
+                dark:text-white text-slate-900
+                dark:placeholder:text-slate-400 placeholder:text-slate-500
+                focus:border-primary
+                focus:ring-primary
+                outline-none transition-all" />
+
+            </div>
+
+            <!-- EMAIL -->
+            <div class="relative">
+
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">
+
+                mail
+
+              </span>
+
+              <input type="email"
+                placeholder="Enter your email"
+                class="w-full h-11 rounded-2xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                pl-11 pr-4
+                text-[14px]
+                dark:text-white text-slate-900
+                dark:placeholder:text-slate-400 placeholder:text-slate-500
+                focus:border-primary
+                focus:ring-primary
+                outline-none transition-all" />
+
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="relative">
+
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">
+
+                lock
+
+              </span>
+
+              <input id="password"
+                type="password"
+                placeholder="Password"
+                class="w-full h-11 rounded-2xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                pl-11 pr-11
+                text-[14px]
+                dark:text-white text-slate-900
+                dark:placeholder:text-slate-400 placeholder:text-slate-500
+                focus:border-primary
+                focus:ring-primary
+                outline-none transition-all" />
+
+              <span onclick="togglePassword()"
+                class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer text-[18px]">
+
+                visibility
+
+              </span>
+
+            </div>
+
+            <!-- CONFIRM PASSWORD -->
+            <div class="relative">
+
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">
+
+                verified_user
+
+              </span>
+
+              <input type="password"
+                placeholder="Confirm password"
+                class="w-full h-11 rounded-2xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                pl-11 pr-4
+                text-[14px]
+                dark:text-white text-slate-900
+                dark:placeholder:text-slate-400 placeholder:text-slate-500
+                focus:border-primary
+                focus:ring-primary
+                outline-none transition-all" />
+
+            </div>
+
+            <!-- TERMS -->
+            <div class="flex items-center justify-between text-[12px]">
+
+              <label class="flex items-center gap-2 dark:text-slate-300 text-slate-600">
+
+                <input type="checkbox"
+                  class="rounded dark:border-white/20 border-slate-300 text-primary focus:ring-primary w-4 h-4">
+
+                Accept Terms & Privacy
+
+              </label>
+
+            </div>
+
+            <!-- BUTTON -->
+            <button
+              class="w-full h-11 rounded-2xl bg-primary text-white font-bold text-[15px]
+              hover:brightness-110 active:scale-[0.98]
+              transition-all shadow-lg shadow-primary/20">
+
+              Create Account
+
+            </button>
+
+            <!-- LOGIN -->
+            <div
+              class="text-center text-[13px] dark:text-slate-300 text-slate-600 pt-1">
+
+              Already have an account?
+
+              <a href="login.html"
+                class="text-primary font-bold hover:underline">
+
+                Login
+
+              </a>
+
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="flex items-center gap-3 py-1">
+
+              <div class="flex-1 h-px bg-white/10"></div>
+
+              <span class="text-slate-400 text-[11px]">
+                continue with
+              </span>
+
+              <div class="flex-1 h-px bg-white/10"></div>
+
+            </div>
+
+            <!-- SOCIAL LOGIN -->
+            <div class="grid grid-cols-3 gap-2">
+
+              <button type="button"
+                class="h-10 rounded-xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                dark:text-white text-slate-700
+                text-[12px] font-semibold
+                hover:border-primary transition-all">
+
+                Google
+
+              </button>
+
+              <button type="button"
+                class="h-10 rounded-xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                dark:text-white text-slate-700
+                text-[12px] font-semibold
+                hover:border-primary transition-all">
+
+                Facebook
+
+              </button>
+
+              <button type="button"
+                class="h-10 rounded-xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                dark:text-white text-slate-700
+                text-[12px] font-semibold
+                hover:border-primary transition-all">
+
+                Apple
+
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+
+    // PASSWORD
+    function togglePassword() {
+
+      const password = document.getElementById("password");
+
+      if (password.type === "password") {
+        password.type = "text";
+      } else {
+        password.type = "password";
+      }
+
+    }
+
+    // THEME OBSERVER (React to main.js theme toggle)
+    const html = document.documentElement;
+    const registerCard = document.getElementById("register-card");
+    const pageBg = document.getElementById("page-bg");
+
+    function updateThemeUI() {
+      const isDark = html.classList.contains("dark");
+      
+      if (isDark) {
+        registerCard?.classList.remove("glass-light");
+        registerCard?.classList.add("glass-dark");
+        pageBg?.classList.remove("light-ui-bg");
+        pageBg?.classList.add("login-bg");
+      } else {
+        registerCard?.classList.remove("glass-dark");
+        registerCard?.classList.add("glass-light");
+        pageBg?.classList.remove("register-bg");
+        pageBg?.classList.add("light-ui-bg");
+      }
+
+      // Update Navbar Buttons
+      document.querySelectorAll('#dir-toggle-nav, #theme-toggle').forEach(btn => {
+        if (isDark) {
+          btn.classList.remove("glass-light", "text-slate-900");
+          btn.classList.add("glass-dark", "text-white");
+        } else {
+          btn.classList.remove("glass-dark", "text-white");
+          btn.classList.add("glass-light", "text-slate-900");
+        }
+      });
+    }
+
+    // Initial check
+    updateThemeUI();
+
+    // Observe class changes on html tag
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          updateThemeUI();
+        }
+      });
+    });
+    observer.observe(html, { attributes: true });
+
+  </script>
+
+  <!-- MAIN JS -->
+  <script src="../assets/js/main.js"></script>
 
 </body>
+
 </html>

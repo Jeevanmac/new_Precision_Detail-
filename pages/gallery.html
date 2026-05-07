@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="../assets/js/tailwind-config.js"></script>
-<style>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="../assets/js/tailwind-config.js"></script>
+    <style>
         body {
             font-family: "Public Sans", sans-serif;
         }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 1rem;
         }
+
         @media (min-width: 768px) {
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -30,12 +38,20 @@
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
     <style>
         /* Force navbar text colors for this page (override global white text) */
-        html:not(.dark) body #navbar:not(.scrolled) h2 { color: #0f172a !important; }
-        html:not(.dark) body #navbar:not(.scrolled) nav > a:not(.text-primary),
-        html:not(.dark) body #navbar:not(.scrolled) nav > div > a.dropdown-trigger:not(.text-primary) { color: #475569 !important; }
-        html:not(.dark) body #navbar:not(.scrolled) nav > a:hover:not(.text-primary),
-        html:not(.dark) body #navbar:not(.scrolled) nav > div > a.dropdown-trigger:hover:not(.text-primary) { color: #ec5b13 !important; }
-        
+        html:not(.dark) body #navbar:not(.scrolled) h2 {
+            color: #0f172a !important;
+        }
+
+        html:not(.dark) body #navbar:not(.scrolled) nav>a:not(.text-primary),
+        html:not(.dark) body #navbar:not(.scrolled) nav>div>a.dropdown-trigger:not(.text-primary) {
+            color: #475569 !important;
+        }
+
+        html:not(.dark) body #navbar:not(.scrolled) nav>a:hover:not(.text-primary),
+        html:not(.dark) body #navbar:not(.scrolled) nav>div>a.dropdown-trigger:hover:not(.text-primary) {
+            color: #ec5b13 !important;
+        }
+
         html:not(.dark) body #navbar:not(.scrolled) [id^="dir-toggle"],
         html:not(.dark) body #navbar:not(.scrolled) [id^="theme-toggle"],
         html:not(.dark) body #navbar:not(.scrolled) #mobile-menu-trigger {
@@ -43,12 +59,13 @@
             background-color: rgba(241, 245, 249, 0.5) !important;
             border-color: #e2e8f0 !important;
         }
-        
+
         html:not(.dark) body #navbar:not(.scrolled) a[href="login.html"] {
             color: #475569 !important;
             background-color: #f8fafc !important;
             border-color: #e2e8f0 !important;
         }
+
         html:not(.dark) body #navbar:not(.scrolled) a[href="login.html"]:hover,
         html:not(.dark) body #navbar:not(.scrolled) [id^="dir-toggle"]:hover,
         html:not(.dark) body #navbar:not(.scrolled) [id^="theme-toggle"]:hover,
@@ -57,13 +74,18 @@
         }
 
         /* Dark mode */
-        html.dark body #navbar h2 { color: #f1f5f9 !important; }
-        html.dark body #navbar nav > a:not(.text-primary),
-        html.dark body #navbar nav > div > a.dropdown-trigger:not(.text-primary),
+        html.dark body #navbar h2 {
+            color: #f1f5f9 !important;
+        }
+
+        html.dark body #navbar nav>a:not(.text-primary),
+        html.dark body #navbar nav>div>a.dropdown-trigger:not(.text-primary),
         html.dark body #navbar [id^="dir-toggle"],
         html.dark body #navbar [id^="theme-toggle"],
-        html.dark body #navbar #mobile-menu-trigger { color: #e2e8f0 !important; }
-        
+        html.dark body #navbar #mobile-menu-trigger {
+            color: #e2e8f0 !important;
+        }
+
         html.dark body #navbar a[href="login.html"] {
             color: #94a3b8 !important;
             background-color: rgba(30, 41, 59, 0.5) !important;
@@ -74,13 +96,15 @@
             color: #94a3b8 !important;
         }
 
-        html.dark body #navbar nav > a:hover:not(.text-primary),
-        html.dark body #navbar nav > div > a.dropdown-trigger:hover:not(.text-primary),
+        html.dark body #navbar nav>a:hover:not(.text-primary),
+        html.dark body #navbar nav>div>a.dropdown-trigger:hover:not(.text-primary),
         html.dark body #navbar a[href="login.html"]:hover,
         html.dark body #navbar [id^="dir-toggle"]:hover,
         html.dark body #navbar [id^="theme-toggle"]:hover,
-        html.dark body #navbar #mobile-menu-trigger:hover { color: #ec5b13 !important; }
-        
+        html.dark body #navbar #mobile-menu-trigger:hover {
+            color: #ec5b13 !important;
+        }
+
         html.dark body #navbar [id^="dir-toggle"] span,
         html.dark body #navbar [id^="theme-toggle"] span,
         html.dark body #navbar #mobile-menu-trigger span {
@@ -88,13 +112,16 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<header id="navbar" class="flex items-center justify-between px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <header id="navbar"
+  class="flex items-center justify-between px-6 lg:px-20 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
 
   <!-- LEFT (LOGO) -->
   <div class="flex items-center gap-2">
         <div class="relative group flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-1">
+            <a href="index.html" class="flex items-center gap-2 group">
                 <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
                 <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
                     Precision Detail
@@ -104,54 +131,66 @@
     </div>
 
   <!-- CENTER (MENU) -->
-  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4">
+  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4 text-slate-600 dark:text-slate-400">
 <div class="relative">
-<a class="nav-home dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
+<a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
 <a href="index.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 1</a>
 <a href="home2.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 2</a>
 </div>
 </div>
-<a class="nav-services text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="services.html">Services</a>
-<a class="nav-pricing text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="pricing.html">Pricing</a>
+<a class="nav-services hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="services.html">Services</a>
+
 <a class="nav-gallery hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-primary font-black scale-105" href="gallery.html">Gallery</a>
-<a class="nav-blog text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="blog.html">Blog</a>
-<a class="nav-contact text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="contact.html">Contact</a>
-<a class="nav-about text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors" href="about.html">About</a>
+<a class="nav-blog hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="blog.html">Blog</a>
+<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="contact.html">Contact</a>
+<a class="nav-about hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="about.html">About</a>
 <div class="relative">
-<a class="nav-dashboard dropdown-trigger text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
-<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100]">
+<a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
 <a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
 <a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
 </div>
 </div>
 </nav>
+
   <!-- RIGHT (ACTIONS) -->
   <div class="flex items-center gap-2 z-10">
-    <button id="dir-toggle-nav" class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary text-[10px] font-bold tracking-widest transition-colors">LTR</button>
-    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
-      <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-      <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+
+    <button id="dir-toggle-nav"
+      class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center">
+      LTR
     </button>
-    <a href="login.html" class="hidden nav-mobile:flex items-center justify-center size-7 rounded-full bg-slate-50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors border border-slate-200 dark:border-slate-700 active:scale-95" title="Login / Account">
+
+    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+</button>
+
+    <a href="login.html"
+      class="hidden nav-mobile:flex size-7 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
       <span class="material-symbols-outlined text-[14px]">account_circle</span>
     </a>
+
     <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
-      Book Services
-    </a>
+    Book Services
+</a>
+
     <!-- MOBILE MENU -->
-    <button id="mobile-menu-trigger" class="nav-mobile:hidden h-8 w-8 bg-slate-100 dark:bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 transition-colors active:scale-90">
-      <span class="material-symbols-outlined text-[20px]">menu</span>
+    <button id="mobile-menu-trigger"
+      class="nav-mobile:hidden h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
+      <span class="material-symbols-outlined">menu</span>
     </button>
+
   </div>
 
 </header>
 
-<!-- Mobile Drawer Overlay -->
+    <!-- Mobile Drawer Overlay -->
 <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
 
 <!-- Mobile Drawer -->
-<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-slate-900/40 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
     <!-- Header -->
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center gap-2">
@@ -171,11 +210,11 @@
         <nav class="flex flex-col gap-6">
             <!-- Home Links -->
             <div>
-                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-slate-900/40 dark:border-white/10 pb-2">
+                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
                     Home
                     <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
                 </div>
-                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-slate-900/40 dark:border-white/10 ml-1">
+                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
                     <a href="index.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
                         Version 1
                         <span class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
@@ -188,10 +227,7 @@
                 Services
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
             </a>
-            <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
-                Pricing
-                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
-            </a>
+            
             <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
                 Gallery
                 <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
@@ -224,7 +260,7 @@
     </div>
     
     <!-- Footer Section -->
-    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-slate-900/40 dark:border-white/10 space-y-6">
+    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
         <!-- Book Service Action -->
         <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
             <span class="material-symbols-outlined text-lg">auto_awesome</span>
@@ -245,169 +281,315 @@
         </p>
     </div>
 </div><!-- End Mobile Drawer -->
-<main class="flex-1 px-4 py-12 lg:px-20 pt-24 md:pt-[5%]">
-<div class="max-w-6xl mx-auto">
-<section class="mb-16">
-<div class="flex flex-col gap-4">
-<h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tighter dark:text-slate-50">
-                                The Art of <span class="text-primary italic">Reflection</span>
-</h1>
-<p class="max-w-2xl text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
-                                A curated collection of automotive transformation and precision. We don't just clean; we restore the soul of the machine through meticulous macro-detailing and surface perfection.
-                            </p>
-</div>
-</section>
-<section class="mb-12 px-4">
-<div class="flex flex-wrap gap-3 items-center">
-<button class="px-4 md:px-6 py-2 rounded-full bg-primary text-white text-xs md:text-sm font-bold tracking-tight">All Works</button>
-<a href="gallery-macro.html" class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Macro Details</a>
-<a href="gallery-paint.html" class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Paint Correction</a>
-<a href="gallery-interior.html" class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Interiors</a>
-<a href="gallery-restoration.html" class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Restorations</a>
-</div>
-</section>
-<section class="gallery-grid px-4">
-<div class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[4/5] border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Macro photography of car paint reflection depth" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHS181YeI_srw-XkB7-nBcqjlc1K1SRHe8W0hed2nBd5wZv4Gh7cc_Mq2UxhoS5CijhGHw0cBgCe9G3NYABuvTM6FVmhiy5SXNxW_QN2xA401JCFF-HSVvGUkFDpNPEP29d8F0MYoUd2xxlA3Szkc9-W2JvTUMMfHbP0U98Po6A3d2qo7s9zM0yZARWhTJdh23NTCNtZLDV21btsy1l5o2CUHbLC2kjS1fqbCFGIB5ZfbATuRaw-qlqX1K-JGpEZyN118VqWEyV4c')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Paint Correction</span>
-<h3 class="text-white text-xl font-bold">Obsidian Black Depth</h3>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-square border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Extreme close up of wheel spoke detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtaqovmwUex-VKNUn79ziu3V-jFBqUTCa889_gAt0cc4KUwMzl5u_8i40LaVWfTAai84JAsGo3Fve2-DoR0QK3AyIP_hKmGIBOrKIE54KHhBBPDA38muddjwX-vc7I-nUJ4CJ2_v3VUHUVMtarirApUhi0W8kEKiPt5jj-_ch-X668G-1sWWgvENy0Xlwyi-doc0eYt4iEJON5YIWmkeV4qPHkWMJ39rNc9jpjEXLS5bFXLZnq731OKWt-Z7p_fcVCL9mI1rL7bR0')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Macro Details</span>
-<h3 class="text-white text-xl font-bold">Forged Precision</h3>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[4/5] border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of luxury leather interior textures" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwjAGiSgdgMkN-gbZaVtXkVc5Y7Ni8jwPSHyVIEPoq0rx0KBbDRCj_rBde4cTsbtCna_9m8a9K7g3ZZ2cQGPqBerUJoHBj0MxiIXAwdTKqJ-x6UuNN4Xg91QLA9fjyhan7i4NftEiVI0Sx5chbCte0iHATfLPpr3Khdkid5PzP6lCzLamO5mHlv00ttVO9tUvJnyoUrupAfLrAxvQAWI8BPmFKhe1qDJrufa7Y66lNEl86-YWnUpDm-7B8TM5-TmHPxA3XdJl-784')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Interiors</span>
-<h3 class="text-white text-xl font-bold">Nappa Leather Grain</h3>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-square border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Restored headlight crystal clear lens detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArwMZdxqFV4Ul6VyExjJK4OLxB9WXSmvq_0dQP_u_188vzwF2L7u--7Y0tiotIakq0ng7G8Ayw09Za5CA09IJENCwAmzRKsdbodziv_dCUgIL2bZlVkhlEnKmpiHru--cumwKbBgMTiuWBkDC5NupmE5m9cYY2lKZEMTOmWUuXBJnNAgoJ2oo-HyXO-hdgarWNdFvD-zz0k5rbA5GLMVVOESmuCzMhaFFf5gJVN2JQVzVuoiIeAewnUox97ozsUbOBJbRRBx8Sjjc')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Restorations</span>
-<h3 class="text-white text-xl font-bold">Crystal Clarity</h3>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[4/5] border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Mirror-like reflection on exotic car hood" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSAcUr7eQUGUVIs-jEcagKctA40BC2aXQTxIHjSHTAHzJZ3jwex12VXTvqWNw81ag71poDSWJwVauwf01zlCb-Y-DUMn3gcEBg6foLxNIAIkBFcfAblpoC_d8WL_EOZ0c-bTIpPCAcHsKHQIQdvF55PXssXalJ9HSZQ4D_HIXh3hRndhP49RyWZX2Qn1BRqgaG6Xc9Djjq6AnvWtZEN2bJXUYiNIpVwqMtkgPa9X2-P8k2k8ERWcw2Ryx7IwBNB0H6Gbj_lGvqPJU')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Paint Correction</span>
-<h3 class="text-white text-xl font-bold">Mirror Finish</h3>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-square border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Macro view of carbon fiber weave detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNtXTH_fnEzCOr_UyKPwSIODoAc0UDCH6fFekfC7lNyujwIyDWJCPpFCnbWIHb4vRgU_VolxN_ITNMz8jJeBXb_9R9WyD70dusz9o2Ied5xEVfoWbN-4ssT6OagkQFIqHye7xHWLpKLGQpAKsshYJ1NCkLriGrSLw2tntd42y3lCx7h4POBlgMZmb6Y9TCxb0KpBFeXzs2FZ9YyzbAyXJG0qvXgmLqCnjpcJw5NtHHQBdR_Mjt_0BSJn8fqaw8V313WlfNpChcXJs')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Macro Details</span>
-<h3 class="text-white text-xl font-bold">Composite Weave</h3>
-</div>
-</div>
-</section>
-<section class="mt-24 border-t border-primary/20 pt-16">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-<div class="px-4">
-<h2 class="text-3xl font-black mb-6">Our Process</h2>
-<div class="space-y-6">
-<div class="flex gap-4">
-<div class="flex-none size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</div>
-<div>
-<h4 class="font-bold text-lg">Decontamination</h4>
-<p class="text-slate-600 dark:text-slate-400">Removing every microscopic impurity from the surface to ensure a pure canvas.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="flex-none size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div>
-<div>
-<h4 class="font-bold text-lg">Multi-Stage Correction</h4>
-<p class="text-slate-600 dark:text-slate-400">Removing swirls and scratches to restore absolute optical clarity.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<div class="flex-none size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</div>
-<div>
-<h4 class="font-bold text-lg">Ceramic Protection</h4>
-<p class="text-slate-600 dark:text-slate-400">Locking in the reflection with aerospace-grade ceramic coatings.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="rounded-xl overflow-hidden aspect-video bg-slate-800 relative shadow-2xl">
-    <video 
-        class="absolute inset-0 w-full h-full object-cover" 
-        src="../assets/videos/PixVerse_V5.5_Extend_360P_add_a_next_frame_a_m.mp4" 
-        autoplay 
-        loop 
-        muted 
-        playsinline
-        controls>
-    </video>
-</div>
-</div>
-</section>
-</div>
-</main>
-<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
-<div class="max-w-7xl mx-auto px-6 lg:px-20 py-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
-                <div class="flex items-center gap-2 mb-6">
-                    <h4 class="text-slate-900 dark:text-white font-black text-xl tracking-tighter uppercase italic relative">
-                        Precision Detail
-                        <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
-                    </h4>
+    <main class="flex-1 px-4 py-12 lg:px-20 pt-24 md:pt-[5%]">
+        <div class="max-w-6xl mx-auto">
+            <section class="mb-16">
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tighter dark:text-slate-50">
+                        The Art of <span class="text-primary italic">Reflection</span>
+                    </h1>
+                    <p class="max-w-2xl text-lg text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                        A curated collection of automotive transformation and precision. We don't just clean; we restore
+                        the soul of the machine through meticulous macro-detailing and surface perfection.
+                    </p>
                 </div>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence through meticulous craftsmanship and premium protection services.</p>
-<div class="flex gap-4">
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">public</span>
-</a>
-<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">share</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
-<li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
-<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
-<div class="flex gap-2">
-<input class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50" placeholder="Email" type="email"/>
-<button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
-<span class="material-symbols-outlined text-[20px]">send</span>
-</button>
-</div>
-</div>
-</div>
-<div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
-                    © 2025 Precision Detail. All rights reserved.
+            </section>
+            <section class="mb-12 px-6 lg:px-20">
+                <div class="flex flex-wrap gap-3 items-center">
+                    <button
+                        class="px-4 md:px-6 py-2 rounded-full bg-primary text-white text-xs md:text-sm font-bold tracking-tight">All
+                        Works</button>
+                    <a href="gallery-macro.html"
+                        class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Macro
+                        Details</a>
+                    <a href="gallery-paint.html"
+                        class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Paint
+                        Correction</a>
+                    <a href="gallery-interior.html"
+                        class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Interiors</a>
+                    <a href="gallery-restoration.html"
+                        class="px-4 md:px-6 py-2 rounded-full bg-primary/10 text-slate-900 dark:text-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-colors text-xs md:text-sm font-medium">Restorations</a>
                 </div>
-</div>
-</footer>
-</div>
-</div>
-<script src="../assets/js/main.js"></script>
-</body></html>
+            </section>
+            <section class="gallery-grid px-4">
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[4/5] border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Macro photography of car paint reflection depth"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHS181YeI_srw-XkB7-nBcqjlc1K1SRHe8W0hed2nBd5wZv4Gh7cc_Mq2UxhoS5CijhGHw0cBgCe9G3NYABuvTM6FVmhiy5SXNxW_QN2xA401JCFF-HSVvGUkFDpNPEP29d8F0MYoUd2xxlA3Szkc9-W2JvTUMMfHbP0U98Po6A3d2qo7s9zM0yZARWhTJdh23NTCNtZLDV21btsy1l5o2CUHbLC2kjS1fqbCFGIB5ZfbATuRaw-qlqX1K-JGpEZyN118VqWEyV4c')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Paint
+                            Correction</span>
+                        <h3 class="text-white text-xl font-bold">Obsidian Black Depth</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-square border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Extreme close up of wheel spoke detail"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtaqovmwUex-VKNUn79ziu3V-jFBqUTCa889_gAt0cc4KUwMzl5u_8i40LaVWfTAai84JAsGo3Fve2-DoR0QK3AyIP_hKmGIBOrKIE54KHhBBPDA38muddjwX-vc7I-nUJ4CJ2_v3VUHUVMtarirApUhi0W8kEKiPt5jj-_ch-X668G-1sWWgvENy0Xlwyi-doc0eYt4iEJON5YIWmkeV4qPHkWMJ39rNc9jpjEXLS5bFXLZnq731OKWt-Z7p_fcVCL9mI1rL7bR0')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Macro Details</span>
+                        <h3 class="text-white text-xl font-bold">Forged Precision</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[4/5] border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Close up of luxury leather interior textures"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwjAGiSgdgMkN-gbZaVtXkVc5Y7Ni8jwPSHyVIEPoq0rx0KBbDRCj_rBde4cTsbtCna_9m8a9K7g3ZZ2cQGPqBerUJoHBj0MxiIXAwdTKqJ-x6UuNN4Xg91QLA9fjyhan7i4NftEiVI0Sx5chbCte0iHATfLPpr3Khdkid5PzP6lCzLamO5mHlv00ttVO9tUvJnyoUrupAfLrAxvQAWI8BPmFKhe1qDJrufa7Y66lNEl86-YWnUpDm-7B8TM5-TmHPxA3XdJl-784')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Interiors</span>
+                        <h3 class="text-white text-xl font-bold">Nappa Leather Grain</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-square border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Restored headlight crystal clear lens detail"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuArwMZdxqFV4Ul6VyExjJK4OLxB9WXSmvq_0dQP_u_188vzwF2L7u--7Y0tiotIakq0ng7G8Ayw09Za5CA09IJENCwAmzRKsdbodziv_dCUgIL2bZlVkhlEnKmpiHru--cumwKbBgMTiuWBkDC5NupmE5m9cYY2lKZEMTOmWUuXBJnNAgoJ2oo-HyXO-hdgarWNdFvD-zz0k5rbA5GLMVVOESmuCzMhaFFf5gJVN2JQVzVuoiIeAewnUox97ozsUbOBJbRRBx8Sjjc')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Restorations</span>
+                        <h3 class="text-white text-xl font-bold">Crystal Clarity</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[4/5] border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Mirror-like reflection on exotic car hood"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSAcUr7eQUGUVIs-jEcagKctA40BC2aXQTxIHjSHTAHzJZ3jwex12VXTvqWNw81ag71poDSWJwVauwf01zlCb-Y-DUMn3gcEBg6foLxNIAIkBFcfAblpoC_d8WL_EOZ0c-bTIpPCAcHsKHQIQdvF55PXssXalJ9HSZQ4D_HIXh3hRndhP49RyWZX2Qn1BRqgaG6Xc9Djjq6AnvWtZEN2bJXUYiNIpVwqMtkgPa9X2-P8k2k8ERWcw2Ryx7IwBNB0H6Gbj_lGvqPJU')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Paint
+                            Correction</span>
+                        <h3 class="text-white text-xl font-bold">Mirror Finish</h3>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-square border-2 border-transparent transition-all duration-300 hover:border-primary dark:hover:border-primary dark:hover:shadow-[0_0_20px_rgba(236,91,19,0.25)]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        data-alt="Macro view of carbon fiber weave detail"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNtXTH_fnEzCOr_UyKPwSIODoAc0UDCH6fFekfC7lNyujwIyDWJCPpFCnbWIHb4vRgU_VolxN_ITNMz8jJeBXb_9R9WyD70dusz9o2Ied5xEVfoWbN-4ssT6OagkQFIqHye7xHWLpKLGQpAKsshYJ1NCkLriGrSLw2tntd42y3lCx7h4POBlgMZmb6Y9TCxb0KpBFeXzs2FZ9YyzbAyXJG0qvXgmLqCnjpcJw5NtHHQBdR_Mjt_0BSJn8fqaw8V313WlfNpChcXJs')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Macro Details</span>
+                        <h3 class="text-white text-xl font-bold">Composite Weave</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CAR SHAPE GALLERY -->
+            <section class="py-8 md:py-12 px-4 overflow-hidden">
+
+                <!-- TITLE -->
+                <div class="text-center mb-6">
+
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tight dark:text-white text-slate-900">
+                        Crafted Through
+                        <span class="text-primary italic">
+                            Precision
+                        </span>
+                    </h2>
+
+                    <p class="mt-5 max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-base leading-8">
+                        Every detail tells a story of perfection, reflection and automotive elegance.
+                    </p>
+
+                </div>
+
+                <!-- CAR SHAPE -->
+                <div class="max-w-5xl mx-auto relative">
+
+                    <!-- GLOW -->
+                    <div class="absolute inset-0 bg-primary/20 blur-[120px] rounded-full opacity-50">
+                    </div>
+
+                    <!-- TOP -->
+                    <div class="flex justify-center gap-2 md:gap-4 mb-3">
+
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
+                            class="w-16 h-16 md:w-28 md:h-28 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-2xl">
+
+                        <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=800&auto=format&fit=crop"
+                            class="w-20 h-20 md:w-32 md:h-32 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-2xl">
+
+                        <img src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?q=80&w=800&auto=format&fit=crop"
+                            class="w-24 h-24 md:w-40 md:h-40 object-cover rounded-2xl hover:scale-110 transition duration-300 shadow-2xl">
+
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=800&auto=format&fit=crop"
+                            class="w-20 h-20 md:w-32 md:h-32 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-2xl">
+
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=800&auto=format&fit=crop"
+                            class="w-16 h-16 md:w-28 md:h-28 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-2xl">
+
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="flex justify-center gap-2 md:gap-4 mb-3">
+
+                        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=800&auto=format&fit=crop"
+                            class="w-20 h-20 md:w-32 md:h-32 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-xl">
+
+                        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=800&auto=format&fit=crop"
+                            class="w-28 h-28 md:w-44 md:h-44 object-cover rounded-2xl hover:scale-110 transition duration-300 shadow-xl">
+
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800&auto=format&fit=crop"
+                            class="w-36 h-36 md:w-56 md:h-56 object-cover rounded-3xl border-4 border-primary hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(236,91,19,0.35)]">
+
+                        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=800&auto=format&fit=crop"
+                            class="w-28 h-28 md:w-44 md:h-44 object-cover rounded-2xl hover:scale-110 transition duration-300 shadow-xl">
+
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=800&auto=format&fit=crop"
+                            class="w-20 h-20 md:w-32 md:h-32 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-xl">
+
+                    </div>
+
+                    <!-- LOWER BODY -->
+                    <div class="flex justify-center gap-2 md:gap-4 mb-3">
+
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop"
+                            class="w-20 h-20 md:w-32 md:h-32 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-xl">
+
+                        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop"
+                            class="w-28 h-28 md:w-44 md:h-44 object-cover rounded-2xl hover:scale-110 transition duration-300 shadow-xl">
+
+                        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=800&auto=format&fit=crop"
+                            class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-3xl hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(255,255,255,0.15)]">
+
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=800&auto=format&fit=crop"
+                            class="w-28 h-28 md:w-44 md:h-44 object-cover rounded-2xl hover:scale-110 transition duration-300 shadow-xl">
+
+                        <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?q=80&w=800&auto=format&fit=crop"
+                            class="w-20 h-20 md:w-32 md:h-32 object-cover rounded-xl hover:scale-110 transition duration-300 shadow-xl">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="mt-6 md:mt-10 border-t border-primary/20 pt-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="px-4">
+                        <h2 class="text-3xl font-black mb-6">Our Process</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-none size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                                    1</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Decontamination</h4>
+                                    <p class="text-slate-600 dark:text-slate-400">Removing every microscopic impurity
+                                        from the surface to ensure a pure canvas.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-none size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                                    2</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Multi-Stage Correction</h4>
+                                    <p class="text-slate-600 dark:text-slate-400">Removing swirls and scratches to
+                                        restore absolute optical clarity.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex-none size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                                    3</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Ceramic Protection</h4>
+                                    <p class="text-slate-600 dark:text-slate-400">Locking in the reflection with
+                                        aerospace-grade ceramic coatings.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-xl overflow-hidden aspect-video bg-slate-800 relative shadow-2xl">
+                        <video class="absolute inset-0 w-full h-full object-cover"
+                            src="../assets/videos/PixVerse_V5.5_Extend_360P_add_a_next_frame_a_m.mp4" autoplay loop
+                            muted playsinline controls>
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+                    <div class="flex items-center gap-2 mb-6">
+                        <h4
+                            class="text-slate-900 dark:text-white font-black text-xl tracking-tighter uppercase italic relative">
+                            Precision Detail
+                            <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
+                        </h4>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Defining automotive excellence
+                        through meticulous craftsmanship and premium protection services.</p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-[18px]">public</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-[18px]">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="services.html">Services</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Locations</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Subscribe</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest tips and offers.</p>
+                    <div class="flex gap-2">
+                        <input
+                            class="bg-slate-50 dark:bg-slate-800 border-none rounded-lg text-sm px-4 h-10 w-full focus:ring-2 focus:ring-primary/50"
+                            placeholder="Email" type="email" />
+                        <button class="bg-primary text-white px-4 rounded-lg h-10 hover:opacity-90">
+                            <span class="material-symbols-outlined text-[20px]">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500 dark:text-slate-400">
+                © 2025 Precision Detail. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

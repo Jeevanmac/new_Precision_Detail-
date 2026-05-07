@@ -17,43 +17,76 @@
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300 min-h-screen flex flex-col">
 
     <!-- Desktop Navbar (Luxury Style) -->
-    <header id="navbar" class="flex items-center justify-between px-4 lg:px-6 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
-        <div class="flex items-center gap-4">
+    <header id="navbar"
+  class="flex items-center justify-between px-6 lg:px-20 py-2 bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-500">
+
+  <!-- LEFT (LOGO) -->
+  <div class="flex items-center gap-2">
+        <div class="relative group flex items-center gap-2">
             <a href="index.html" class="flex items-center gap-2 group">
-                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform" />
-                <h2 class="hidden md:block text-slate-900 dark:text-white text-[15px] font-black tracking-tighter uppercase italic relative">
-                    Precision Detail 
+                <img src="../assets/images/logo.png" alt="Logo" class="w-8 h-8 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform">
+                <h2 class="text-slate-900 dark:text-slate-100 text-sm font-black leading-tight tracking-tighter hover:text-primary transition-colors uppercase italic relative hidden md:block">
+                    Precision Detail
                 </h2>
             </a>
         </div>
-        
-        <!-- Center Nav -->
-        <nav class="hidden nav-mobile:flex items-center gap-5 lg:gap-6 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-            <a href="index.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">Home</a>
-            <a href="services.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">Services</a>
-            <a href="pricing.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">Pricing</a>
-            <a href="gallery.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">Gallery</a>
-            <a href="blog.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">Blog</a>
-            <a href="contact.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">Contact</a>
-            <a href="about.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">About</a>
-            <a href="dashboard.html" class="text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition-colors">Dashboard</a>
-        </nav>
+    </div>
 
-        <!-- Right Tools -->
-        <div class="flex items-center gap-3">
-            <button id="dir-toggle-nav" class="flex items-center justify-center size-9 text-[11px] font-bold rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-[#ec5b13] transition">LTR</button>
-            <button id="theme-toggle-nav" class="flex items-center justify-center size-9 rounded-lg bg-white/60 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 transition hover:text-[#ec5b13]">
-                <span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
-                <span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
-            </button>
-            <a href="book-services.html" class="hidden md:flex items-center justify-center h-9 px-5 rounded-lg bg-[#ec5b13] text-white text-[11px] font-black uppercase tracking-wider shadow-[0_0_15px_rgba(236,91,19,0.3)] hover:brightness-110 hover:-translate-y-0.5 transition-all">
-                Book Services
-            </a>
-            <button id="mobile-menu-trigger" class="nav-mobile:hidden flex items-center justify-center h-9 w-9 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:text-[#ec5b13] transition">
-                <span class="material-symbols-outlined text-[20px]">menu</span>
-            </button>
-        </div>
-    </header>
+  <!-- CENTER (MENU) -->
+  <nav class="hidden nav-mobile:flex items-center gap-3 lg:gap-4 text-slate-600 dark:text-slate-400">
+<div class="relative">
+<a class="nav-home dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-primary font-black scale-105" href="index.html">Home <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+<a href="index.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 1</a>
+<a href="home2.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Home 2</a>
+</div>
+</div>
+<a class="nav-services hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="services.html">Services</a>
+
+<a class="nav-gallery hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="gallery.html">Gallery</a>
+<a class="nav-blog hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="blog.html">Blog</a>
+<a class="nav-contact hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="contact.html">Contact</a>
+<a class="nav-about hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors text-slate-600 dark:text-slate-400" href="about.html">About</a>
+<div class="relative">
+<a class="nav-dashboard dropdown-trigger hover:text-primary dark:hover:text-primary text-[10px] font-bold uppercase tracking-wider transition-colors flex items-center gap-0.5 cursor-pointer text-slate-600 dark:text-slate-400" href="dashboard.html">Dashboard <span class="material-symbols-outlined text-[12px]">expand_more</span></a>
+<div class="nav-dropdown absolute top-full left-0 mt-1 w-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 opacity-0 invisible transition-all flex flex-col overflow-hidden z-[100] text-slate-600 dark:text-slate-400">
+<a href="dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">Admin</a>
+<a href="user-dashboard.html" class="px-3 py-2 text-[10px] text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-primary">User</a>
+</div>
+</div>
+</nav>
+
+  <!-- RIGHT (ACTIONS) -->
+  <div class="flex items-center gap-2 z-10">
+
+    <button id="dir-toggle-nav"
+      class="size-9 bg-white/50 dark:bg-slate-800/50 rounded-lg border flex items-center justify-center">
+      LTR
+    </button>
+
+    <button id="theme-toggle-nav" class="flex items-center justify-center size-9 text-slate-600 dark:text-slate-400 hover:text-primary bg-white/50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[18px] dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined text-[18px] hidden dark:block">light_mode</span>
+</button>
+
+    <a href="login.html"
+      class="hidden nav-mobile:flex size-7 rounded-full bg-slate-50 items-center justify-center text-slate-600 dark:text-slate-400">
+      <span class="material-symbols-outlined text-[14px]">account_circle</span>
+    </a>
+
+    <a href="book-services.html" class="hidden nav-mobile:flex items-center justify-center rounded-lg h-7 px-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider transition-all hover:brightness-110 active:scale-95 shadow-md shadow-primary/20">
+    Book Services
+</a>
+
+    <!-- MOBILE MENU -->
+    <button id="mobile-menu-trigger"
+      class="nav-mobile:hidden h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-400">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+
+  </div>
+
+</header>
 
     <!-- Mobile Drawer Overlay -->
     <div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
@@ -72,7 +105,7 @@
             <nav class="flex flex-col gap-6">
                 <a href="index.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors hover:text-[#ec5b13]">Home <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
                 <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors hover:text-[#ec5b13]">Services <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
-                <a href="pricing.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors hover:text-[#ec5b13]">Pricing <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
+                
                 <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors hover:text-[#ec5b13]">Gallery <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
                 <a href="blog.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors hover:text-[#ec5b13]">Blog <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>
                 <a href="contact.html" class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl transition-colors hover:text-[#ec5b13]">Contact <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span></a>

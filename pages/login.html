@@ -1,156 +1,559 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<title>Login | Precision Detail</title>
-<meta name="description" content="Precision Detail offers premier luxury automotive detailing, ceramic coating, paint correction, and interior restoration services." />
+  <title>Login | Precision Detail</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="../assets/js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-<style>
-body {
-  font-family: 'Public Sans', sans-serif;
-}
-</style>
-    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700"
+    rel="stylesheet" />
+
+  <script src="../assets/js/tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+  <style>
+    body {
+      font-family: 'Public Sans', sans-serif;
+    }
+
+    .login-bg {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1883&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .glass-dark {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-light {
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .light-ui-bg {
+      background-image:
+        linear-gradient(to bottom,
+          rgba(248, 250, 252, 0.65),
+          rgba(248, 250, 252, 0.85)),
+        url('../assets/images/light_car_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .social-box {
+      transition: 0.3s;
+    }
+
+    .social-box:hover {
+      transform: translateY(-3px);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100 dark:bg-[#030712] transition-all duration-500 min-h-screen flex items-center justify-center px-4">
+<body class="bg-background-light dark:bg-background-dark transition-colors duration-300 h-screen overflow-hidden">
 
-<!-- TOP BAR -->
-<div class="fixed top-5 left-1/2 -translate-x-1/2 flex items-center gap-4 z-50">
+  <!-- NAVBAR -->
+  <header id="navbar"
+    class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 lg:px-20 py-4">
 
-  <!-- BACK BUTTON -->
-  <button onclick="window.location.href='index.html'"
-    class="flex items-center gap-2 px-4 py-2 rounded-full
-    bg-white/70 dark:bg-slate-800/70 backdrop-blur-md
-    border border-gray-200 dark:border-white/10
-    text-gray-800 dark:text-white text-sm font-semibold
-    hover:scale-105 transition">
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center gap-3">
 
-    <span class="material-symbols-outlined text-[18px]">arrow_back</span>
-    Back
-  </button>
+      <img src="../assets/images/logo.png"
+        class="w-10 h-10 rounded-full border border-white/10 shadow-xl" />
 
-  <!-- THEME TOGGLE -->
-  <button id="theme-toggle-auth"
-    class="p-2 rounded-full
-    bg-white/70 dark:bg-slate-800/70 backdrop-blur-md
-    border border-gray-200 dark:border-white/10
-    text-gray-800 dark:text-white
-    hover:scale-105 transition">
+      <h2 class="text-white text-xl font-black uppercase italic tracking-tight">
+        Precision Detail
+      </h2>
 
-    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
-    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
-  </button>
+    </a>
 
-</div>
+    <!-- RIGHT -->
+    <div class="flex items-center gap-2">
 
-<!-- CARD -->
-<div class="w-full max-w-3xl grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden
-bg-white dark:bg-slate-900/60 backdrop-blur-xl
-border border-gray-200 dark:border-white/10 shadow-2xl">
+      <!-- RTL -->
+      <button id="dir-toggle-nav"
+        class="h-10 px-4 rounded-xl glass-dark text-white text-sm font-bold hover:scale-105 transition-all">
 
-  <!-- IMAGE -->
-  <div class="relative hidden lg:block overflow-hidden group">
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_vsxBP279VvA7EPfOiSLx6UpirErBqRkh3rV2l6wVkpX5BPnF8y3zSnbVBQTdlj7Rp0JNafo6Xi3pQYa1Fs1V9gFnbd6_SQD9TBLAGgEHRcFRqr0RtMXh9nCEa2j4_OoE8TQ56hq8kEdSqBjOi6vlNlME9tLq5Fy7gOnotc9cQ5sfXOjBbFRRxHUMemoQO0nt-OPcUML2_3B3AazzzdFo2J0snHFWFynkHBw1Xji31ENYYkP2S7UT5psoi3XAZG72R8OAiQ18DAU"
-    class="absolute inset-0 w-full h-full object-cover"/>
+        LTR
 
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-
-    <div class="relative z-10 p-6 h-full flex flex-col justify-end">
-      <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Excellence</span>
-      <h3 class="text-white text-2xl font-bold mt-2">Elite Care for Elite Vehicles</h3>
-      <p class="text-gray-300 text-sm mt-2">Premium detailing experience.</p>
-    </div>
-  </div>
-
-  <!-- FORM -->
-  <div class="p-6 flex flex-col justify-center">
-
-    <h1 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Welcome Back</h1>
-    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Login to continue</p>
-
-    <form class="space-y-4">
-
-      <!-- EMAIL -->
-      <div>
-        <label class="text-xs font-bold uppercase text-gray-500 dark:text-gray-400">Email</label>
-        <div class="relative mt-1">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">alternate_email</span>
-          <input type="email"
-            class="w-full pl-10 pr-3 py-2 rounded-lg
-            bg-gray-100 dark:bg-slate-800/50
-            border border-gray-200 dark:border-white/10
-            text-sm text-gray-900 dark:text-white
-            focus:ring-2 focus:ring-orange-500 outline-none"
-            placeholder="name@example.com"/>
-        </div>
-      </div>
-
-      <!-- PASSWORD -->
-      <div>
-        <label class="text-xs font-bold uppercase text-gray-500 dark:text-gray-400">Password</label>
-        <div class="relative mt-1">
-          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">lock</span>
-          <input type="password"
-            class="w-full pl-10 pr-10 py-2 rounded-lg
-            bg-gray-100 dark:bg-slate-800/50
-            border border-gray-200 dark:border-white/10
-            text-sm text-gray-900 dark:text-white
-            focus:ring-2 focus:ring-orange-500 outline-none"
-            placeholder="••••••••"/>
-
-          <!-- SHOW PASSWORD -->
-          <span onclick="togglePassword(this)"
-            class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-400">
-            visibility
-          </span>
-        </div>
-      </div>
-
-      <!-- LOGIN -->
-      <button type="submit"
-        class="w-full py-2 rounded-lg bg-orange-600 text-white font-bold text-sm
-        hover:brightness-110 transition active:scale-95">
-        Secure Login
       </button>
 
-      <div class="mt-4 text-center">
-  <p class="text-sm text-gray-500 dark:text-gray-400">
-    Don’t have an account?
-    <a href="register.html" class="text-orange-500 font-semibold hover:underline ml-1">
-      Create one
-    </a>
-  </p>
-</div>
+      <!-- THEME -->
+      <button id="theme-toggle"
+        class="w-10 h-10 rounded-xl glass-dark text-white flex items-center justify-center hover:scale-105 transition-all">
+
+        <span class="material-symbols-outlined dark:hidden">
+          dark_mode
+        </span>
+
+        <span class="material-symbols-outlined hidden dark:block">
+          light_mode
+        </span>
+
+      </button>
+
+    </div>
+
+  </header>
+
+<!-- Mobile Drawer Overlay -->
+<div id="drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] opacity-0 invisible transition-all duration-300"></div>
+
+<!-- Mobile Drawer -->
+<div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[280px] bg-white/80 dark:bg-[#030712]/80 backdrop-blur-xl text-slate-900 dark:text-white z-[101] translate-x-full transition-transform duration-300 ease-in-out border-l border-slate-200 dark:border-white/10 shadow-2xl flex flex-col overflow-hidden">
+    <!-- Header -->
+    <div class="flex items-center justify-between p-6">
+        <div class="flex items-center gap-2">
+            <img src="../assets/images/logo.png" alt="Precision Detail Logo" class="w-8 h-8 rounded-full object-cover object-center shadow-sm" />
+            <h2 class="text-slate-900 dark:text-white text-lg font-black leading-tight tracking-tighter uppercase italic relative hidden md:block">
+                Precision Detail
+                <span class="absolute -right-2 top-0 text-orange-500 text-[10px]">●</span>
+            </h2>
+        </div>
+        <button id="mobile-menu-close" class="text-slate-500 dark:text-slate-600 dark:text-white/60 hover:text-primary dark:hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="flex-1 overflow-y-auto px-6 py-4">
+        <nav class="flex flex-col gap-6">
+            <!-- Home Links -->
+            <div>
+                <div class="flex items-center justify-between text-slate-900 dark:text-white font-bold text-xl mb-4 group cursor-pointer border-b border-slate-200 dark:border-white/10 pb-2">
+                    Home
+                    <span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
+                </div>
+                <div class="flex flex-col gap-3 pl-4 border-l border-slate-200 dark:border-white/10 ml-1">
+                    <a href="index.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors flex items-center justify-between">
+                        Version 1
+                        <span class="text-[10px] bg-slate-100 dark:bg-white/5 px-2 py-0.5 rounded uppercase tracking-widest opacity-50">Default</span>
+                    </a>
+                    <a href="home2.html" class="text-slate-900 dark:text-slate-600 dark:text-white/70 hover:text-primary text-sm transition-colors">Version 2</a>
+                </div>
+            </div>
+
+            <a href="services.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Services
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            
+            <a href="gallery.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Gallery
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            <a href="blog.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Blog
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            <a href="contact.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                Contact
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+            <a href="about.html" class="flex items-center justify-between text-slate-900 dark:text-white hover:text-[#22d3ee] font-bold text-xl transition-colors">
+                About
+                <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+            </a>
+
+            <!-- Dashboard/Profile -->
+            <div class="mt-4 pt-6 border-t border-slate-200 dark:border-white/5 space-y-4">
+                 <a href="dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                    Dashboard
+                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+                </a>
+                <a href="user-dashboard.html" class="flex items-center justify-between text-slate-900 dark:text-white/90 hover:text-[#22d3ee] font-bold text-lg transition-colors">
+                    User Dashboard
+                    <span class="material-symbols-outlined text-sm opacity-30">chevron_right</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="p-6 bg-slate-50 dark:bg-white/5 border-t border-slate-200 dark:border-white/10 space-y-6">
+        <!-- Book Service Action -->
+        <a href="book-services.html" class="flex items-center justify-center gap-2 w-full h-14 bg-[#ec5b13] text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-xl shadow-[#ec5b13]/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <span class="material-symbols-outlined text-lg">auto_awesome</span>
+            Book Service
+        </a>
+
+        <!-- Social Icons -->
+        <div class="flex items-center justify-center gap-6 text-slate-400 dark:text-slate-600 dark:text-white/40 pt-2">
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">public</span>
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">share</span>
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">alternate_email</span>
+            <span class="material-symbols-outlined text-xl cursor-pointer hover:text-primary dark:hover:text-white transition-colors">chat_bubble</span>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-[9px] text-center text-slate-500 dark:text-white/30 uppercase tracking-[0.2em]">
+            © 2026 Precision Detail Automotive Group
+        </p>
+    </div>
+</div><!-- End Mobile Drawer -->
+
+  <!-- LOGIN -->
+  <section id="page-bg" class="login-bg h-screen flex items-center justify-center px-5 transition-all duration-500">
+
+    <div class="w-full max-w-5xl grid lg:grid-cols-2 gap-6 items-center">
+
+      <!-- LEFT -->
+      <div id="left-content" class="text-slate-900 dark:text-white transition-colors">
+
+        <h1 class="text-3xl md:text-5xl font-black leading-none">
+          Welcome <br />
+          Back
+        </h1>
+
+        <p class="mt-4 md:mt-6 dark:text-slate-300 text-slate-600 text-base leading-7 max-w-md">
+          Experience premium automotive detailing with precision,
+          elegance and luxury crafted for elite vehicles.
+        </p>
+
+        <!-- LINE -->
+        <div class="w-14 h-1 bg-primary mt-4 md:mt-7 rounded-full"></div>
+
+        <!-- SOCIAL -->
+        <div class="flex gap-3 mt-6 md:mt-10">
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl dark:bg-white bg-slate-100 dark:text-slate-900 text-slate-700 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg border dark:border-transparent border-slate-200">
+
+            <span class="material-symbols-outlined text-[20px]">
+              public
+            </span>
+
+          </a>
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl dark:bg-white bg-slate-100 dark:text-slate-900 text-slate-700 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg border dark:border-transparent border-slate-200">
+
+            <span class="material-symbols-outlined text-[20px]">
+              share
+            </span>
+
+          </a>
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl dark:bg-white bg-slate-100 dark:text-slate-900 text-slate-700 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg border dark:border-transparent border-slate-200">
+
+            <span class="material-symbols-outlined text-[20px]">
+              photo_camera
+            </span>
+
+          </a>
+
+          <a href="#"
+            class="social-box w-12 h-12 rounded-xl dark:bg-white bg-slate-100 dark:text-slate-900 text-slate-700 flex items-center justify-center hover:bg-primary hover:text-white shadow-lg border dark:border-transparent border-slate-200">
+
+            <span class="material-symbols-outlined text-[20px]">
+              play_arrow
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="w-full max-w-[420px] lg:ml-auto">
+
+        <!-- CARD -->
+        <div id="login-card"
+          class="glass-dark rounded-[28px] p-6 shadow-2xl transition-all duration-300">
+
+          <h2
+            class="text-3xl font-black text-slate-900 dark:text-white mb-6">
+
+            Sign in
+
+          </h2>
+
+          <form class="space-y-4">
+
+            <!-- EMAIL -->
+            <div class="relative">
+
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">
+
+                mail
+
+              </span>
+
+              <input type="email"
+                placeholder="Enter your email"
+                class="w-full h-11 rounded-2xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                pl-11 pr-4
+                text-[14px]
+                dark:text-white text-slate-900
+                placeholder:text-slate-400
+                focus:border-primary
+                focus:ring-primary
+                outline-none transition-all" />
+
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="relative">
+
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-[18px]">
+
+                lock
+
+              </span>
+
+              <input id="password"
+                type="password"
+                placeholder="Enter your password"
+                class="w-full h-11 rounded-2xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                pl-11 pr-11
+                text-[14px]
+                dark:text-white text-slate-900
+                placeholder:text-slate-400
+                focus:border-primary
+                focus:ring-primary
+                outline-none transition-all" />
+
+              <span onclick="togglePassword()"
+                class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer text-[18px]">
+
+                visibility
+
+              </span>
+
+            </div>
+
+            <!-- OPTIONS -->
+            <div class="flex items-center justify-between text-[12px]">
+
+              <label class="flex items-center gap-2 dark:text-slate-300 text-slate-600">
+
+                <input type="checkbox"
+                  class="rounded dark:border-white/20 border-slate-300 text-primary focus:ring-primary w-4 h-4">
+
+                Remember Me
+
+              </label>
+
+              <a href="#"
+                class="text-primary hover:underline font-semibold">
+
+                Forgot Password?
+
+              </a>
+
+            </div>
+
+            <!-- BUTTON -->
+            <button
+              class="w-full h-11 rounded-2xl bg-primary text-white font-bold text-[15px]
+              hover:brightness-110 active:scale-[0.98]
+              transition-all shadow-lg shadow-primary/20">
+
+              Sign in now
+
+            </button>
+
+            <!-- TERMS -->
+            <div
+              class="text-center text-[11px] dark:text-slate-300 text-slate-500 leading-5 pt-1">
+
+              By clicking on "Sign in now" you agree to
+
+              <div class="mt-1">
+
+                <a href="#" class="hover:text-primary">
+                  Terms
+                </a>
+
+                |
+
+                <a href="#" class="hover:text-primary">
+                  Privacy
+                </a>
+
+              </div>
+
+            </div>
+
+            <!-- REGISTER -->
+            <div
+              class="text-center text-[13px] dark:text-slate-300 text-slate-600 pt-1">
+
+              Don't have an account?
+
+              <a href="register.html"
+                class="text-primary font-bold hover:underline">
+
+                Create one
+
+              </a>
+
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="flex items-center gap-3 py-1">
+
+              <div class="flex-1 h-px bg-white/10"></div>
+
+              <span class="text-slate-400 text-[11px]">
+                continue with
+              </span>
+
+              <div class="flex-1 h-px bg-white/10"></div>
+
+            </div>
+
+            <!-- SOCIAL LOGIN -->
+            <div class="grid grid-cols-3 gap-2">
+
+              <button type="button"
+                class="h-10 rounded-xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                dark:text-white text-slate-700
+                text-[12px] font-semibold
+                hover:border-primary transition-all">
+
+                Google
+
+              </button>
+
+              <button type="button"
+                class="h-10 rounded-xl
+                dark:bg-slate-900/70 bg-slate-100
+                dark:border-white/10 border-slate-200
+                dark:text-white text-slate-700
+                text-[12px] font-semibold
+                hover:border-primary transition-all">
+
+                Facebook
+
+              </button>
+
+              <button type="button"
+                class="h-10 rounded-xl
+                bg-slate-900/70 dark:bg-slate-900/70 bg-white/70
+                border border-white/10
+                dark:text-white text-slate-900
+                text-[12px] font-semibold
+                hover:border-primary transition-all">
+
+                Apple
+
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+
+    // PASSWORD TOGGLE
+    function togglePassword() {
+
+      const password = document.getElementById("password");
+
+      if (password.type === "password") {
+        password.type = "text";
+      } else {
+        password.type = "password";
+      }
+
+    }
+
+    // THEME OBSERVER (React to main.js theme toggle)
+    const html = document.documentElement;
+    const loginCard = document.getElementById("login-card");
+    const pageBg = document.getElementById("page-bg");
+
+    function updateThemeUI() {
+      const isDark = html.classList.contains("dark");
       
-    </form>
+      if (isDark) {
+        loginCard?.classList.remove("glass-light");
+        loginCard?.classList.add("glass-dark");
+        pageBg?.classList.remove("light-ui-bg");
+        pageBg?.classList.add("login-bg");
+      } else {
+        loginCard?.classList.remove("glass-dark");
+        loginCard?.classList.add("glass-light");
+        pageBg?.classList.remove("login-bg");
+        pageBg?.classList.add("light-ui-bg");
+      }
 
-  </div>
-</div>
+      // Update Navbar Buttons
+      document.querySelectorAll('#dir-toggle-nav, #theme-toggle').forEach(btn => {
+        if (isDark) {
+          btn.classList.remove("glass-light", "text-slate-900");
+          btn.classList.add("glass-dark", "text-white");
+        } else {
+          btn.classList.remove("glass-dark", "text-white");
+          btn.classList.add("glass-light", "text-slate-900");
+        }
+      });
+    }
 
-<!-- SCRIPT -->
-<script>
-// PASSWORD TOGGLE
-function togglePassword(el) {
-  const input = el.previousElementSibling;
-  if (input.type === "password") {
-    input.type = "text";
-    el.textContent = "visibility_off";
-  } else {
-    input.type = "password";
-    el.textContent = "visibility";
-  }
-}
-</script>
-<script src="../assets/js/main.js"></script>
+    // Initial check
+    updateThemeUI();
+
+    // Observe class changes on html tag
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          updateThemeUI();
+        }
+      });
+    });
+    observer.observe(html, { attributes: true });
+
+  </script>
+
+  <!-- MAIN JS -->
+  <script src="../assets/js/main.js"></script>
 
 </body>
+
 </html>
